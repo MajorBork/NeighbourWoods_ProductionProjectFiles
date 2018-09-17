@@ -203,7 +203,7 @@ MonoBehaviour:
   - id: 8
     fields:
     - title: Name
-      value: Ball
+      value: BallQuest
       type: 0
       typeString: 
     - title: Pictures
@@ -211,7 +211,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 
+      value: You catch a ball for the owner
       type: 0
       typeString: 
     - title: Success Description
@@ -829,7 +829,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTime,,GameManager); Delay({{end}})
         type: 0
         typeString: 
       conversationID: 1
@@ -1238,7 +1238,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTime,,GameManager); Delay({{end}})
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -1305,7 +1305,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTime,,GameManager); Delay({{end}})
         type: 0
         typeString: 
       conversationID: 2
@@ -1329,8 +1329,8 @@ MonoBehaviour:
         y: 240
         width: 160
         height: 30
-    canvasScrollPosition: {x: 247.65146, y: 91.136}
-    canvasZoom: 0.7300002
+    canvasScrollPosition: {x: 63.40862, y: 50.094833}
+    canvasZoom: 0.58000034
   - id: 4
     fields:
     - title: Title
@@ -2010,7 +2010,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("BananaQuest") == "unassigned"
-      userScript: 
+      userScript: SendMessage();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2284,7 +2284,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(AddFood,2,GameManager);
+
+          SendMessage(UpdateTime,,GameManager); Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 5
@@ -2296,9 +2298,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SendMessage(AddFood,2,InventoryManager);
-
-        Variable["Food"] = Variable ["Food"] + 2'
+      userScript: Variable["Food"] = Variable ["Food"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2444,8 +2444,8 @@ MonoBehaviour:
         y: 252
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 80.8822}
-    canvasZoom: 0.68000126
+    canvasScrollPosition: {x: 177.64355, y: 0}
+    canvasZoom: 0.38000143
   - id: 6
     fields:
     - title: Title
@@ -2627,7 +2627,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("BananaQuest") == "unassigned"
+      conditionsString: CurrentQuestState("BallQuest") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2695,7 +2695,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: CurrentQuestState("BananaQuest") == "active"
+      userScript: SetQuestState("BallQuest", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2750,7 +2750,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(AddFood,2,GameManager);
+
+          SendMessage(UpdateTime,,GameManager); Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 6
@@ -2761,8 +2763,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: CurrentQuestState("BallQuest") == "success"
+      userScript: SetQuestState("BallQuest", "done")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2774,7 +2776,7 @@ MonoBehaviour:
         y: 48
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 41.149895, y: 4.4880996}
     canvasZoom: 0.7600002
   syncInfo:
     syncActors: 0
