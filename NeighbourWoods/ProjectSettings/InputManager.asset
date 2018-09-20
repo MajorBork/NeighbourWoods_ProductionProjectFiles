@@ -121,8 +121,8 @@ InputManager:
     m_Name: Dig
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: mouse 2
+    negativeButton: mouse 1
+    positiveButton: mouse 1
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -131,7 +131,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 1
     joyNum: 0
   - serializedVersion: 3
     m_Name: Jump

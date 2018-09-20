@@ -20,16 +20,18 @@ namespace Manager.UI
         //public CanvasGroup buttonPressBox;
         public CanvasGroup fadeCanvas;
         public CanvasGroup inventoryCanvas;
+        //TextMeshProUGUI object variables
         public TextMeshProUGUI dayText;
         public TextMeshProUGUI timeText;
         public TextMeshProUGUI tmpFoodText;
-        //public TextMeshProUGUI 
+        //Image Variables
         public Image itemImageUI;
         public Image nothingItemImageUI;
         public GameState gameState;
         public int taskPoints;
         public int newTaskPoints;
-        public int textFood;
+        public string textFood;
+        public int textFoodInt;
         public float fadeInTime = 1;
         #endregion
         #region Start and Update
@@ -49,19 +51,19 @@ namespace Manager.UI
         }
         #endregion
         #region Methods
-        public void UpdateItemIcon(Image itemIcon)
+        public void UpdateItemIcon() // trying to update the item Icon in the inventory
         {
             // replaces inventoryVis icon 
-            itemIcon = itemImageUI;
-            nothingItemImageUI.enabled = false;
+            //itemIcon = itemImageUI;
+            //nothingItemImageUI.enabled = false;
             itemImageUI.enabled = true;
         }
-        public void GetRidOfItemIcon()
+        public void GetRidOfItemIcon() // trying to get rid of the icon
         {
             itemImageUI.enabled = false;
-            nothingItemImageUI.enabled = true;
+            //nothingItemImageUI.enabled = true;
         }
-        void UpdateFoodText(int food)
+        void UpdateFoodText(string food) // trying to update food text
         {
             food = textFood;
             tmpFoodText.text = ("Food: " + textFood);
@@ -71,8 +73,9 @@ namespace Manager.UI
 
         }
         #endregion
-        #region Listeners
-        void OnEnable()
+        #region Listeners 
+        // Listeners for Game Events
+        void OnEnable() 
         {
             GameEvents.OnGameStateChange += OnGameStateChange;
             GameEvents.OnTimeChange += OnTimeChange;
@@ -84,7 +87,7 @@ namespace Manager.UI
         }
         #endregion
         #region OnGameStateChange
-        void OnGameStateChange(GameState gameState)
+        void OnGameStateChange(GameState gameState) // On game state change with the enum GameState
         {
             if (gameState == GameState.DIALOGUE)
             {
@@ -97,7 +100,7 @@ namespace Manager.UI
         }
         #endregion
         #region OnTimeChange
-        void OnTimeChange(TimeSlot timeSlot, Day day)
+        void OnTimeChange(TimeSlot timeSlot, Day day) // On time change with the enum TimeSlot and Day
         {
             StartCoroutine(WhileFadeCanvas(timeSlot, day));
         }

@@ -20,16 +20,11 @@ public class BallQuestObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //if (Input.GetButtonDown("Dig"))
-            //{
-            //uiManager.SendMessage();
+            uiManager.SendMessage(inventoryManagerMethodUpdateItemIcon);
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
             //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
-            uiManager.SendMessage(inventoryManagerMethodUpdateItemIcon, ballIcon);
             ballObject.SetActive(false);
-            //uiManager.
-            //}
         }
     }
 }

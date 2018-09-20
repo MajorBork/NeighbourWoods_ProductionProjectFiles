@@ -23,6 +23,7 @@ namespace Manager.Player
     public class PlayerManager : MonoBehaviour //Singleton<PlayerManager> // An script that will not be destroyed when going new levels (if we need to load new levels)
     {
         #region Variables
+        // 
         public Vision vision;
         public GameState gameState;
         //public TMP_Text testTMP;
@@ -74,7 +75,7 @@ namespace Manager.Player
         #region Start() and Update()
         void Start() // Use this for initialization
         {
-            //neighbourWoodsDatabase.variables.
+            // Setting 
             player = GameObject.FindWithTag("Player");
             playerCamera = GameObject.FindWithTag("MainCamera");
             playerCameraTransform = Camera.main.transform;
@@ -171,18 +172,18 @@ namespace Manager.Player
                 GameEvents.ReportVisionChange(vision);
             }
         }
-        public void AnimateVignette(bool value)
+        public void AnimateVignette(bool value) // Calucating the animation for the vignette for Smell-O-Vision
         {
             vignTween = DOTween.To(() => vignIntensity, x => vignIntensity = x, value ? maxVignIntensity : 0, vignDuration).OnUpdate(UpdateVignetteAnimation);
             vignTween.OnComplete(OnVignetteAnimationEnd);
         }
-        void UpdateVignetteAnimation()
+        void UpdateVignetteAnimation() // Updating the animation for the vignette
         {
             VignetteModel.Settings vign = smellOVision.profile.vignette.settings;
             vign.intensity = vignIntensity;
             smellOVision.profile.vignette.settings = vign;
         }
-        void OnVignetteAnimationEnd()
+        void OnVignetteAnimationEnd() // At the end of the animation
         {
             vignTween = null;
         }
@@ -200,7 +201,7 @@ namespace Manager.Player
         }
         #endregion
         #region JumpController()
-        void JumpController()
+        void JumpController() // Controls the jump functions 
         {
             if (Input.GetButtonDown("Jump"))
             {
@@ -233,7 +234,7 @@ namespace Manager.Player
         }
         #endregion
         #region InventoryController()
-        void InventoryController()
+        void InventoryController() // Contols the inventory functions 
         {
             if (Input.GetButtonDown("Inventory"))
             {
@@ -267,7 +268,7 @@ namespace Manager.Player
             GameEvents.OnVisionChange -= OnVisionChange;
         }
         //float visionLevel;
-        void OnVisionChange(Vision vision)
+        void OnVisionChange(Vision vision) // 
         {
             //Debug.Log("vision mode");
             if (vision == Vision.NORMAL)
