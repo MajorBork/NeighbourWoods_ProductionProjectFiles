@@ -19,7 +19,7 @@ public static class GameEvents
     //public static event Action<Tasks> OnTaskStartedChange = null;
     #endregion
     #region Events
-    public static void ReportVisionChange(Vision vision)
+    public static void ReportVisionChange(Vision vision) // reporting vision change 
     {
         //Debug.Log (">>> EVENT: ReportOnVisionChange((" + vision +")");
         if (OnVisionChange != null)

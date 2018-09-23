@@ -20,27 +20,37 @@ namespace Manager.Player
     }
     #endregion
     #region PlayerManager Class
-    public class PlayerManager : MonoBehaviour //Singleton<PlayerManager> // An script that will not be destroyed when going new levels (if we need to load new levels)
+    public class PlayerManager : Singleton<PlayerManager> // An script that will not be destroyed when going new levels (if we need to load new levels)
     {
         #region Variables
-        // 
+        // Enums
+        [Tooltip("The public Vision enum variable on the player object")]
         public Vision vision;
+        [Tooltip("The public GameState enum variable on the player object")]
         public GameState gameState;
-        //public TMP_Text testTMP;
         #region Object Variables
         // All of the Variables that link to objects or components
+        [Tooltip("The GameObject variable that is the player object in the scene")]
         public GameObject player;
+        [Tooltip("The variable that references the UIManager script on the canvas")]
         public UIManager gameManagerUI;
+        [Tooltip("The variable that references the GameManager Script on the GameManager object")]
         public GameManager gameManager;
+        [Tooltip("The variable that references the PlayerCamera script on the ColourBlind camera object")]
         public GameObject playerCamera;
+        [Tooltip("The variable that refernces the transform of the playerCamera")]
         public Transform playerCameraTransform;
+        [Tooltip("The PostProcessing Profile of smellOVision variable")]
         public PostProcessingBehaviour smellOVision;
+        [Tooltip("")]
         public CharacterController characterController;
+        [Tooltip("")]
         public GameObject[] smellObjects = new GameObject[0];
         #endregion
         #region Control Variables
         //Space//
         //All of the controls variables used in the movement functions
+        [Tooltip("")]
         public float mouseSensitivity = 10;
         public float walkSpeed = 2;
         public float runSpeed = 6;
