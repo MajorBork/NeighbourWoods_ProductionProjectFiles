@@ -38,47 +38,62 @@ namespace Manager.Player
         public GameManager gameManager;
         [Tooltip("The variable that references the PlayerCamera script on the ColourBlind camera object")]
         public GameObject playerCamera;
-        [Tooltip("The variable that refernces the transform of the playerCamera")]
+        [Tooltip("The variable that references the transform of the playerCamera")]
         public Transform playerCameraTransform;
         [Tooltip("The PostProcessing Profile of smellOVision variable")]
         public PostProcessingBehaviour smellOVision;
-        [Tooltip("")]
+        [Tooltip("The variable that references the Character Controller component on the player object")]
         public CharacterController characterController;
-        [Tooltip("")]
+        [Tooltip("The array variable that holds smellObject")]
         public GameObject[] smellObjects = new GameObject[0];
         #endregion
         #region Control Variables
         //Space//
         //All of the controls variables used in the movement functions
-        [Tooltip("")]
+        [Tooltip("The sensitivity of the Mouse for the camera movements")]
         public float mouseSensitivity = 10;
+        [Tooltip("The speed of the walk of the character")]
         public float walkSpeed = 2;
+        [Tooltip("The spped of the run of the character")]
         public float runSpeed = 6;
+        [Tooltip("The gravity of the character when in air")]
         public float gravity = -12;
+        [Tooltip("The jump height of the character")]
         public float jumpHeight = 1;
+        [Tooltip("The percent of the player control in the air")]
         [Range(0, 1)]
         public float airControlPercent;
         private float velocityY;
+        [Tooltip("")]
         public float turnSmoothTime = 0.2f;
+        [Tooltip("")]
         public float speedSmoothTime = 0.1f;
         private float turnSmoothVelocity;
         private float speedSmoothVelocity;
         private float currentSpeed;
+        [Tooltip("")]
         public bool lockCursor;
-        Vector3 currentRotation;
-        Vector3 rotationSmoothVelocity;
+        private Vector3 currentRotation;
+        private Vector3 rotationSmoothVelocity;
+        [Tooltip("")]
         public Vector2 pitchMinMax = new Vector2(-40,85);
+        [Tooltip("")]
         public float cameraRotation;
+        [Tooltip("")]
         public Transform target;
         private float yaw = 0;
         private float pitch = 0;
         #endregion
         #region Vision Variables
+        [Tooltip("")]
         [SerializeField]
         public float maxVignIntensity = 0.3f;
+        [Tooltip("")]
         [SerializeField]
         public float vignDuration = 0.5f;
+        [Tooltip("")]
         private float vignIntensity = 0;
+        [Tooltip("")]
         private Tween vignTween;
         #endregion
         #endregion
