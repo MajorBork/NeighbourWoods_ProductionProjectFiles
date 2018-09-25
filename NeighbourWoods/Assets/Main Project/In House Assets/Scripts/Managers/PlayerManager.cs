@@ -293,7 +293,7 @@ namespace Manager.Player
             GameEvents.OnVisionChange -= OnVisionChange;
         }
         //float visionLevel;
-        void OnVisionChange(Vision vision) // 
+        void OnVisionChange(Vision vision) // OnVisionChange function that run if statements if the vision state is in normal or smell
         {
             //Debug.Log("vision mode");
             if (vision == Vision.NORMAL)
