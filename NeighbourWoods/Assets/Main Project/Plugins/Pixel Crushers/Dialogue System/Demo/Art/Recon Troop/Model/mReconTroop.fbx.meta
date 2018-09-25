@@ -879,23 +879,23 @@ ModelImporter:
       average position error 41.7 mm and maximum position error 55.1 mm at time 2:22
       (96.5%) Frame 82\n\tRightHand average position error 38.7 mm and maximum position
       error 53.8 mm at time 2:22 (96.5%) Frame 82\n\tHead average position error 59.7
-      mm and maximum position error 61.3 mm at time 0: 7 (8.2%) Frame 7\n\nRetargeting
+      mm and maximum position error 61.3 mm at time 0: 6 (7.1%) Frame 6\n\nRetargeting
       quality report for clip 'PistolOneHandShottingStanding':\n\tLeftLowerLeg average
       position error 13.5 mm and maximum position error 16.1 mm at time 0:10 (28.6%)
       Frame 10\n\tLeftFoot average position error 25.0 mm and maximum position error
       30.2 mm at time 0:10 (28.6%) Frame 10\n\tRightLowerLeg average position error
       6.1 mm and maximum position error 8.5 mm at time 0:10 (28.6%) Frame 10\n\tRightFoot
       average position error 10.8 mm and maximum position error 15.8 mm at time 0:
-      7 (20.0%) Frame 7\n\tLeftUpperArm average position error 17.8 mm and maximum
+      1 (2.9%) Frame 1\n\tLeftUpperArm average position error 17.8 mm and maximum
       position error 21.0 mm at time 0:10 (28.6%) Frame 10\n\tLeftLowerArm average
       position error 9.6 mm and maximum position error 10.8 mm at time 1: 4 (97.1%)
       Frame 34\n\tLeftHand average position error 12.5 mm and maximum position error
       12.8 mm at time 1: 3 (94.3%) Frame 33\n\tRightUpperArm average position error
-      17.8 mm and maximum position error 21.0 mm at time 0: 9 (25.7%) Frame 9\n\tRightLowerArm
+      17.8 mm and maximum position error 21.0 mm at time 0: 3 (8.6%) Frame 3\n\tRightLowerArm
       average position error 18.3 mm and maximum position error 20.9 mm at time 0:
       7 (20.0%) Frame 7\n\tRightHand average position error 19.8 mm and maximum position
       error 23.5 mm at time 0: 7 (20.0%) Frame 7\n\tHead average position error 24.4
-      mm and maximum position error 27.7 mm at time 0: 9 (25.7%) Frame 9\n\nRetargeting
+      mm and maximum position error 27.7 mm at time 1: 5 (100.0%) Frame 35\n\nRetargeting
       quality report for clip 'PistolPuttingGunBack':\n\tLeftLowerLeg average position
       error 4.8 mm and maximum position error 14.0 mm at time 0: 0 (0.0%) Frame 0\n\tLeftFoot
       average position error 7.2 mm and maximum position error 25.4 mm at time 0:
@@ -906,8 +906,8 @@ ModelImporter:
       (45.0%) Frame 18\n\tLeftLowerArm average position error 9.3 mm and maximum position
       error 15.9 mm at time 0:15 (37.5%) Frame 15\n\tLeftHand average position error
       14.7 mm and maximum position error 17.4 mm at time 0:21 (52.5%) Frame 21\n\tRightUpperArm
-      average position error 24.2 mm and maximum position error 28.6 mm at time 0:19
-      (47.5%) Frame 19\n\tRightLowerArm average position error 18.7 mm and maximum
+      average position error 24.2 mm and maximum position error 28.6 mm at time 0:18
+      (45.0%) Frame 18\n\tRightLowerArm average position error 18.7 mm and maximum
       position error 30.3 mm at time 0:23 (57.5%) Frame 23\n\tRightHand average position
       error 13.8 mm and maximum position error 16.6 mm at time 0: 8 (20.0%) Frame
       8\n\tHead average position error 34.1 mm and maximum position error 36.5 mm
@@ -934,7 +934,7 @@ ModelImporter:
       error 14.5 mm and maximum position error 29.6 mm at time 0:14 (20.0%) Frame
       14\n\tRightFoot average position error 28.3 mm and maximum position error 58.7
       mm at time 0:14 (20.0%) Frame 14\n\tLeftUpperArm average position error 27.8
-      mm and maximum position error 33.8 mm at time 1:23 (75.7%) Frame 53\n\tLeftLowerArm
+      mm and maximum position error 33.8 mm at time 1:22 (74.3%) Frame 52\n\tLeftLowerArm
       average position error 15.5 mm and maximum position error 29.9 mm at time 1:
       8 (54.3%) Frame 38\n\tLeftHand average position error 16.4 mm and maximum position
       error 28.4 mm at time 1:25 (78.6%) Frame 55\n\tRightUpperArm average position
@@ -990,8 +990,8 @@ ModelImporter:
       17\n\tRightLowerArm average position error 22.4 mm and maximum position error
       47.0 mm at time 0:17 (43.6%) Frame 17\n\tRightHand average position error 14.2
       mm and maximum position error 18.4 mm at time 0:24 (61.5%) Frame 24\n\tHead
-      average position error 34.3 mm and maximum position error 36.5 mm at time 0:17
-      (43.6%) Frame 17\n\nRetargeting quality report for clip 'PistolTwoHandsLookingAround':\n\tLeftLowerLeg
+      average position error 34.3 mm and maximum position error 36.5 mm at time 0:15
+      (38.5%) Frame 15\n\nRetargeting quality report for clip 'PistolTwoHandsLookingAround':\n\tLeftLowerLeg
       average position error 19.1 mm and maximum position error 41.0 mm at time 3:
       9 (81.8%) Frame 99\n\tLeftFoot average position error 36.7 mm and maximum position
       error 80.4 mm at time 3:14 (86.0%) Frame 104\n\tRightLowerLeg average position
@@ -1006,14 +1006,14 @@ ModelImporter:
       83\n\tRightLowerArm average position error 30.9 mm and maximum position error
       46.9 mm at time 3: 1 (75.2%) Frame 91\n\tRightHand average position error 27.5
       mm and maximum position error 37.2 mm at time 1:17 (38.8%) Frame 47\n\tHead
-      average position error 41.8 mm and maximum position error 52.2 mm at time 3:18
-      (89.3%) Frame 108\n\nRetargeting quality report for clip 'PistolTwoHandsLyingShooting':\n\tLeftLowerLeg
-      average position error 6.3 mm and maximum position error 6.3 mm at time 0:18
-      (81.8%) Frame 18\n\tLeftFoot average position error 12.6 mm and maximum position
-      error 12.6 mm at time 0:18 (81.8%) Frame 18\n\tRightLowerLeg average position
-      error 3.3 mm and maximum position error 3.3 mm at time 0:18 (81.8%) Frame 18\n\tRightFoot
-      average position error 6.5 mm and maximum position error 6.5 mm at time 0:18
-      (81.8%) Frame 18\n\tLeftUpperArm average position error 23.0 mm and maximum
+      average position error 41.8 mm and maximum position error 52.2 mm at time 3:19
+      (90.1%) Frame 109\n\nRetargeting quality report for clip 'PistolTwoHandsLyingShooting':\n\tLeftLowerLeg
+      average position error 6.3 mm and maximum position error 6.3 mm at time 0:19
+      (86.4%) Frame 19\n\tLeftFoot average position error 12.6 mm and maximum position
+      error 12.6 mm at time 0:21 (95.5%) Frame 21\n\tRightLowerLeg average position
+      error 3.3 mm and maximum position error 3.3 mm at time 0:19 (86.4%) Frame 19\n\tRightFoot
+      average position error 6.5 mm and maximum position error 6.5 mm at time 0:19
+      (86.4%) Frame 19\n\tLeftUpperArm average position error 23.0 mm and maximum
       position error 23.0 mm at time 0:22 (100.0%) Frame 22\n\tLeftLowerArm average
       position error 22.9 mm and maximum position error 23.0 mm at time 0: 4 (18.2%)
       Frame 4\n\tLeftHand average position error 22.7 mm and maximum position error
@@ -1100,7 +1100,7 @@ ModelImporter:
       error 55.9 mm at time 1:19 (100.0%) Frame 49\n\tRightUpperArm average position
       error 26.9 mm and maximum position error 29.8 mm at time 1:19 (100.0%) Frame
       49\n\tRightLowerArm average position error 30.7 mm and maximum position error
-      31.7 mm at time 1:19 (100.0%) Frame 49\n\tRightHand average position error 24.1
+      31.7 mm at time 1:20 (102.0%) Frame 50\n\tRightHand average position error 24.1
       mm and maximum position error 25.8 mm at time 0:18 (36.7%) Frame 18\n\tHead
       average position error 58.8 mm and maximum position error 60.3 mm at time 1:19
       (100.0%) Frame 49\n\nRetargeting quality report for clip 'TwoHandGunIDyinglying':\n\tLeftLowerLeg
@@ -1152,26 +1152,26 @@ ModelImporter:
       error 57.5 mm at time 0: 6 (18.2%) Frame 6\n\tHead average position error 50.6
       mm and maximum position error 87.0 mm at time 0: 7 (21.2%) Frame 7\n\nRetargeting
       quality report for clip 'TwoHandGunIFirelying':\n\tLeftLowerLeg average position
-      error 14.1 mm and maximum position error 14.1 mm at time 0: 2 (13.3%) Frame
-      2\n\tLeftFoot average position error 27.2 mm and maximum position error 27.2
-      mm at time 0: 2 (13.3%) Frame 2\n\tRightLowerLeg average position error 29.9
-      mm and maximum position error 29.9 mm at time 0: 0 (0.0%) Frame 0\n\tRightFoot
-      average position error 59.3 mm and maximum position error 59.3 mm at time 0:
-      1 (6.7%) Frame 1\n\tLeftUpperArm average position error 27.0 mm and maximum
-      position error 27.0 mm at time 0:14 (93.3%) Frame 14\n\tLeftLowerArm average
-      position error 23.6 mm and maximum position error 23.7 mm at time 0:14 (93.3%)
-      Frame 14\n\tLeftHand average position error 20.8 mm and maximum position error
-      20.8 mm at time 0:14 (93.3%) Frame 14\n\tRightUpperArm average position error
-      6.8 mm and maximum position error 6.8 mm at time 0: 5 (33.3%) Frame 5\n\tRightLowerArm
-      average position error 13.0 mm and maximum position error 13.4 mm at time 0:
-      1 (6.7%) Frame 1\n\tRightHand average position error 9.6 mm and maximum position
-      error 9.7 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position error 8.6
-      mm and maximum position error 8.6 mm at time 0: 2 (13.3%) Frame 2\n\nRetargeting
-      quality report for clip 'TwoHandGunIFiresquat':\n\tLeftLowerLeg average position
-      error 21.9 mm and maximum position error 21.9 mm at time 0: 0 (0.0%) Frame 0\n\tLeftFoot
+      error 14.1 mm and maximum position error 14.1 mm at time 0: 1 (6.7%) Frame 1\n\tLeftFoot
+      average position error 27.2 mm and maximum position error 27.2 mm at time 0:13
+      (86.7%) Frame 13\n\tRightLowerLeg average position error 29.9 mm and maximum
+      position error 29.9 mm at time 0: 7 (46.7%) Frame 7\n\tRightFoot average position
+      error 59.3 mm and maximum position error 59.3 mm at time 0:15 (100.0%) Frame
+      15\n\tLeftUpperArm average position error 27.0 mm and maximum position error
+      27.0 mm at time 0: 5 (33.3%) Frame 5\n\tLeftLowerArm average position error
+      23.6 mm and maximum position error 23.7 mm at time 0:14 (93.3%) Frame 14\n\tLeftHand
+      average position error 20.8 mm and maximum position error 20.8 mm at time 0:14
+      (93.3%) Frame 14\n\tRightUpperArm average position error 6.8 mm and maximum
+      position error 6.8 mm at time 0: 5 (33.3%) Frame 5\n\tRightLowerArm average
+      position error 13.0 mm and maximum position error 13.4 mm at time 0:14 (93.3%)
+      Frame 14\n\tRightHand average position error 9.6 mm and maximum position error
+      9.7 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position error 8.6 mm and
+      maximum position error 8.6 mm at time 0:14 (93.3%) Frame 14\n\nRetargeting quality
+      report for clip 'TwoHandGunIFiresquat':\n\tLeftLowerLeg average position error
+      21.9 mm and maximum position error 21.9 mm at time 0: 1 (9.1%) Frame 1\n\tLeftFoot
       average position error 23.7 mm and maximum position error 23.7 mm at time 0:
-      9 (81.8%) Frame 9\n\tRightLowerLeg average position error 18.7 mm and maximum
-      position error 18.7 mm at time 0: 6 (54.5%) Frame 6\n\tRightFoot average position
+      8 (72.7%) Frame 8\n\tRightLowerLeg average position error 18.7 mm and maximum
+      position error 18.7 mm at time 0: 1 (9.1%) Frame 1\n\tRightFoot average position
       error 36.7 mm and maximum position error 36.7 mm at time 0: 8 (72.7%) Frame
       8\n\tLeftUpperArm average position error 18.0 mm and maximum position error
       18.3 mm at time 0: 3 (27.3%) Frame 3\n\tLeftLowerArm average position error
@@ -1179,10 +1179,10 @@ ModelImporter:
       average position error 16.0 mm and maximum position error 16.5 mm at time 0:
       1 (9.1%) Frame 1\n\tRightUpperArm average position error 23.8 mm and maximum
       position error 24.1 mm at time 0: 3 (27.3%) Frame 3\n\tRightLowerArm average
-      position error 21.4 mm and maximum position error 21.8 mm at time 0: 3 (27.3%)
+      position error 21.4 mm and maximum position error 21.9 mm at time 0: 3 (27.3%)
       Frame 3\n\tRightHand average position error 24.9 mm and maximum position error
       25.3 mm at time 0: 3 (27.3%) Frame 3\n\tHead average position error 13.3 mm
-      and maximum position error 13.3 mm at time 0:11 (100.0%) Frame 11\n\nRetargeting
+      and maximum position error 13.3 mm at time 0: 5 (45.5%) Frame 5\n\nRetargeting
       quality report for clip 'TwoHandGunIFirestanding':\n\tLeftLowerLeg average position
       error 21.1 mm and maximum position error 24.3 mm at time 0:20 (51.3%) Frame
       20\n\tLeftFoot average position error 27.3 mm and maximum position error 33.0
@@ -1249,8 +1249,8 @@ ModelImporter:
       100.7 mm and maximum position error 240.3 mm at time 0:22 (61.1%) Frame 22\n\nRetargeting
       quality report for clip 'touatndGunIFromstanding':\n\tLeftLowerLeg average position
       error 11.1 mm and maximum position error 16.9 mm at time 0: 0 (0.0%) Frame 0\n\tLeftFoot
-      average position error 14.1 mm and maximum position error 20.5 mm at time 0:26
-      (100.0%) Frame 26\n\tRightLowerLeg average position error 37.1 mm and maximum
+      average position error 14.1 mm and maximum position error 20.5 mm at time 0:25
+      (96.2%) Frame 25\n\tRightLowerLeg average position error 37.1 mm and maximum
       position error 46.0 mm at time 0: 2 (7.7%) Frame 2\n\tRightFoot average position
       error 58.0 mm and maximum position error 65.7 mm at time 0:13 (50.0%) Frame
       13\n\tLeftUpperArm average position error 103.5 mm and maximum position error
@@ -1331,7 +1331,7 @@ ModelImporter:
       position error 27.9 mm and maximum position error 63.3 mm at time 2:16 (58.9%)
       Frame 76\n\tLeftFoot average position error 27.6 mm and maximum position error
       48.9 mm at time 2:16 (58.9%) Frame 76\n\tRightLowerLeg average position error
-      36.3 mm and maximum position error 45.2 mm at time 4: 8 (99.2%) Frame 128\n\tRightFoot
+      36.3 mm and maximum position error 45.2 mm at time 4: 7 (98.4%) Frame 127\n\tRightFoot
       average position error 51.3 mm and maximum position error 57.5 mm at time 3:
       0 (69.8%) Frame 90\n\tLeftUpperArm average position error 62.4 mm and maximum
       position error 136.7 mm at time 3:19 (84.5%) Frame 109\n\tLeftLowerArm average
@@ -1353,12 +1353,12 @@ ModelImporter:
       position error 69.2 mm at time 0:18 (90.0%) Frame 18\n\tLeftLowerArm average
       position error 59.2 mm and maximum position error 59.4 mm at time 0:11 (55.0%)
       Frame 11\n\tLeftHand average position error 54.7 mm and maximum position error
-      56.0 mm at time 0:20 (100.0%) Frame 20\n\tRightUpperArm average position error
-      29.8 mm and maximum position error 29.8 mm at time 0:17 (85.0%) Frame 17\n\tRightLowerArm
+      56.0 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error
+      29.8 mm and maximum position error 29.8 mm at time 0:16 (80.0%) Frame 16\n\tRightLowerArm
       average position error 38.1 mm and maximum position error 43.5 mm at time 0:
       8 (40.0%) Frame 8\n\tRightHand average position error 23.4 mm and maximum position
       error 24.8 mm at time 0: 8 (40.0%) Frame 8\n\tHead average position error 60.3
-      mm and maximum position error 60.3 mm at time 0:15 (75.0%) Frame 15\n\nRetargeting
+      mm and maximum position error 60.3 mm at time 0:17 (85.0%) Frame 17\n\nRetargeting
       quality report for clip 'TwoHandGunIMovingright':\n\tLeftLowerLeg average position
       error 15.5 mm and maximum position error 16.7 mm at time 0:10 (52.6%) Frame
       10\n\tLeftFoot average position error 24.0 mm and maximum position error 25.8
@@ -1366,11 +1366,11 @@ ModelImporter:
       mm and maximum position error 41.3 mm at time 0: 4 (21.1%) Frame 4\n\tRightFoot
       average position error 50.2 mm and maximum position error 51.4 mm at time 0:10
       (52.6%) Frame 10\n\tLeftUpperArm average position error 69.2 mm and maximum
-      position error 69.2 mm at time 0: 3 (15.8%) Frame 3\n\tLeftLowerArm average
-      position error 60.6 mm and maximum position error 61.1 mm at time 0: 7 (36.8%)
-      Frame 7\n\tLeftHand average position error 55.9 mm and maximum position error
-      56.0 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error
-      29.8 mm and maximum position error 29.8 mm at time 0:10 (52.6%) Frame 10\n\tRightLowerArm
+      position error 69.2 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average position
+      error 60.6 mm and maximum position error 61.1 mm at time 0: 7 (36.8%) Frame
+      7\n\tLeftHand average position error 55.9 mm and maximum position error 56.0
+      mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error 29.8
+      mm and maximum position error 29.8 mm at time 0:19 (100.0%) Frame 19\n\tRightLowerArm
       average position error 35.1 mm and maximum position error 37.4 mm at time 0:
       7 (36.8%) Frame 7\n\tRightHand average position error 22.4 mm and maximum position
       error 22.8 mm at time 0: 7 (36.8%) Frame 7\n\tHead average position error 60.3
