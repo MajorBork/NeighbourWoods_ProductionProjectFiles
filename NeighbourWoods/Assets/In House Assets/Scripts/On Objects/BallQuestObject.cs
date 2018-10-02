@@ -8,7 +8,7 @@ public class BallQuestObject : MonoBehaviour
 {
     //private string inventoryManagerMethodPickupItem = "PickupItem";
     private string questTitle = "BallQuest";
-    private string inventoryManagerMethodUpdateItemIcon = "UpdateItemIcon";
+    //private string inventoryManagerUpdateItemIcon = "OnItemPickup";
     private QuestState newQuestState = QuestState.Success;
     private QuestState currentQuestState = QuestState.Active;
     public GameObject ballObject;
@@ -20,7 +20,7 @@ public class BallQuestObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiManager.SendMessage(inventoryManagerMethodUpdateItemIcon);
+            uiManager.SendMessage("UpdateItemIcon", ballIcon);
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
             //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);

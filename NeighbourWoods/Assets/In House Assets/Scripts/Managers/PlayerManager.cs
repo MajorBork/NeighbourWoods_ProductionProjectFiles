@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
+using Manager;
 using Manager.UI;
 using Manager.Inventory;
-using Manager;
 using TMPro;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
@@ -105,8 +105,7 @@ namespace Manager.Player
             playerCamera = GameObject.FindWithTag("MainCamera");
             playerCameraTransform = Camera.main.transform;
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
-            vision = Vision.NORMAL;
-            gameState = GameState.FREE_ROAM;
+            vision = Vision.NORMAL;;
             characterController = GetComponent<CharacterController>();
             if (lockCursor)
             {
@@ -119,7 +118,7 @@ namespace Manager.Player
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             Vector2 inputDir = input.normalized;
             bool running = Input.GetButton("Sprint"); // Sprinting in Game
-            switch (gameState)
+            switch (GameManager.instance.gameState)
             {
                 case GameState.FREE_ROAM: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     MovementController(inputDir, running);

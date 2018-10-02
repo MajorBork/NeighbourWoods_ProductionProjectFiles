@@ -24,7 +24,7 @@ namespace Manager.Inventory
         public bool inventoryShowing;
         public bool hasItem;
         public string uiManagerMethod = "UpdateFoodText";
-        public string masterFood;
+        public int masterFood;
         void Start() // Use this for initialization
         {
             inventoryShowing = false;
@@ -34,16 +34,30 @@ namespace Manager.Inventory
         {
             
         }
+        void OnBananaPickup()
+        {
+            //if()
+        }
         #region Food Methods
         public void AddFood(string food)
         {
-            food = masterFood;
-            SendMessage(uiManagerMethod,masterFood);
+            int foodValue;
+            // attempt to parse the value using the TryParse functionality of the integer type
+            int.TryParse(food, out foodValue);
+            masterFood += foodValue;
+            Debug.Log("I have Food " + masterFood);
+            //food = masterFood;
+            UIManager.instance.UpdateFoodText(masterFood);
         }
         public void MinusFood(string food)
         {
-            food = masterFood;
-            SendMessage(uiManagerMethod, masterFood);
+            int foodValue;
+            // attempt to parse the value using the TryParse functionality of the integer type
+            int.TryParse(food, out foodValue);
+            masterFood -= foodValue;
+            Debug.Log("I have Food " + masterFood);
+            //food = masterFood;
+            UIManager.instance.UpdateFoodText(masterFood);
         }
         #endregion
         #region Inventory Event Methods

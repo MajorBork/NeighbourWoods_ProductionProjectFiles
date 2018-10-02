@@ -27,7 +27,8 @@ namespace Manager
         
         void Start()
         {
-            
+            gameState = GameState.FREE_ROAM;
+            GameEvents.ReportGameStateChange(gameState);
         }
         void Update()
         {

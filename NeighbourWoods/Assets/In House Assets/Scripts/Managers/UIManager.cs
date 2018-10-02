@@ -55,18 +55,18 @@ namespace Manager.UI
         {
             // replaces inventoryVis icon 
             //itemIcon = itemImageUI;
-            //nothingItemImageUI.enabled = false;
+            nothingItemImageUI.enabled = false;
             itemImageUI.enabled = true;
+            Debug.Log("hey I am working");
         }
         public void GetRidOfItemIcon() // trying to get rid of the icon
         {
             itemImageUI.enabled = false;
             //nothingItemImageUI.enabled = true;
         }
-        void UpdateFoodText(string food) // trying to update food text
+        public void UpdateFoodText(int food) // trying to update food text
         {
-            food = textFood;
-            tmpFoodText.text = ("Food: " + textFood);
+            tmpFoodText.text = ("Food: " + food);
         }
         void UpdateCharacterIcon()
         {

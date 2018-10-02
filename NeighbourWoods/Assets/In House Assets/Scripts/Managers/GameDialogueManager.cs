@@ -19,7 +19,6 @@ namespace Manager.GameDialogue
         public GameManager gameManager;
         public int food;
         public int taskPoints;
-        public GameState gameState;
         #endregion
         #region Start and Update Methods
         void Start() // Use this for initialization
@@ -35,22 +34,20 @@ namespace Manager.GameDialogue
         public void StartDialogue()
         {
             Debug.Log("Start of converstion.");
-            if (gameState == GameState.FREE_ROAM)
+            if (GameManager.instance.gameState == GameState.FREE_ROAM)
             {
-                gameState = GameState.DIALOGUE;
-                Debug.Log(gameState);
+                GameManager.instance.gameState = GameState.DIALOGUE;
             }
-            GameEvents.ReportGameStateChange(gameState);
+            GameEvents.ReportGameStateChange(GameManager.instance.gameState);
         }
         public void EndDialogue()
         {
             Debug.Log("End of converstion.");
-            if (gameState == GameState.DIALOGUE)
+            if (GameManager.instance.gameState == GameState.DIALOGUE)
             {
-                gameState = GameState.FREE_ROAM;
-                Debug.Log(gameState);
+                GameManager.instance.gameState = GameState.FREE_ROAM;
             }
-            GameEvents.ReportGameStateChange(gameState);
+            GameEvents.ReportGameStateChange(GameManager.instance.gameState);
         }
         #endregion
     }
