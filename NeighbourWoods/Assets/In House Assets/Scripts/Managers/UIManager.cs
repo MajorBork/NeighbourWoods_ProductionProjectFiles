@@ -26,7 +26,6 @@ namespace Manager.UI
         public TextMeshProUGUI tmpFoodText;
         //Image Variables
         public Image itemImageUI;
-        public Image nothingItemImageUI;
         public GameState gameState;
         public int taskPoints;
         public int newTaskPoints;
@@ -51,13 +50,15 @@ namespace Manager.UI
         }
         #endregion
         #region Methods
-        public void UpdateItemIcon() // trying to update the item Icon in the inventory
+        public void UpdateItemIcon() // updates the item Icon in the inventory
         {
             // replaces inventoryVis icon 
-            //itemIcon = itemImageUI;
-            nothingItemImageUI.enabled = false;
             itemImageUI.enabled = true;
             Debug.Log("hey I am working");
+        }
+        public void UpdateItemTitle()
+        {
+
         }
         public void GetRidOfItemIcon() // trying to get rid of the icon
         {

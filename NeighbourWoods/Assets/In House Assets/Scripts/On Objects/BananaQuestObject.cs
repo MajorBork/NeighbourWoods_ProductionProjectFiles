@@ -19,16 +19,11 @@ public class BananaQuestObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //if (Input.GetButtonDown("Dig"))
-            //{
-                //uiManager.SendMessage();
-                QuestLog.SetQuestState(questTitle, newQuestState);
-                DialogueManager.ShowAlert(message);
-                //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
-                uiManager.SendMessage(inventoryYManagerMethodUpdateItemIcon, bananaIcon);
-                bananaObject.SetActive(false);
-                //uiManager.
-            //}
+            uiManager.SendMessage("UpdateItemIcon");
+            QuestLog.SetQuestState(questTitle, newQuestState);
+            DialogueManager.ShowAlert(message);
+            bananaObject.SetActive(false);
+            //uiManager.
         }
     }
 }

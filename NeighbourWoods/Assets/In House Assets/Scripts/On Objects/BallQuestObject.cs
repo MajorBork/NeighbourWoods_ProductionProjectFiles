@@ -20,7 +20,7 @@ public class BallQuestObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiManager.SendMessage("UpdateItemIcon", ballIcon);
+            uiManager.SendMessage("UpdateItemIcon");
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
             //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
