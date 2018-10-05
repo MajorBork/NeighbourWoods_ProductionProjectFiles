@@ -56,14 +56,13 @@ namespace Manager.UI
             itemImageUI.enabled = true;
             Debug.Log("hey I am working");
         }
-        public void UpdateItemTitle()
-        {
-
-        }
         public void GetRidOfItemIcon() // trying to get rid of the icon
         {
             itemImageUI.enabled = false;
-            //nothingItemImageUI.enabled = true;
+        }
+        public void UpdateItemTitle()
+        {
+
         }
         public void UpdateFoodText(int food) // trying to update food text
         {
