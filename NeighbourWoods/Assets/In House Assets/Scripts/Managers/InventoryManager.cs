@@ -4,7 +4,8 @@ using UnityEngine;
 using Manager.Item;
 using Manager.UI;
 using DG.Tweening;
-using TMPro;
+using Language.Lua;
+using PixelCrushers.DialogueSystem;
 
 namespace Manager.Inventory 
 {
@@ -32,20 +33,22 @@ namespace Manager.Inventory
         }
         void Update() // Update is called once per frame
         {
-            
+            //AddFood();
         }
         void OnBananaPickup()
         {
-            //if()
+            
         }
         #region Food Methods
-        public void AddFood(string food)
+        public void AddFood()
         {
-            int foodValue;
-            // attempt to parse the value using the TryParse functionality of the integer type
-            int.TryParse(food, out foodValue);
-            masterFood += foodValue;
-            Debug.Log("I have Food " + masterFood);
+            int DSfood = DialogueLua.GetVariable("Food").asInt;
+            masterFood = DSfood;
+            //int foodValue;
+            //attempt to parse the value using the TryParse functionality of the integer type
+            //int.TryParse(food, out foodValue);
+            //masterFood += foodValue;
+            //Debug.Log("I have Food " + masterFood);
             //food = masterFood;
             UIManager.instance.UpdateFoodText(masterFood);
         }

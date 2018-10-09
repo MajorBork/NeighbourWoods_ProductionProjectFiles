@@ -28,7 +28,7 @@ namespace Manager.Task
         {
             if (taskPoints == maxTaskPoints)
             {
-                levelManager.UpdateTime();
+                //levelManager.UpdateTime();
                 //uiManager.
             }
         }

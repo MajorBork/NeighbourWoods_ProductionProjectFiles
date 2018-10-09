@@ -72,6 +72,11 @@ public class OldCodeManager
     //{
 
     //}
+    //void OnTaskPointsChange(LuaWatchItem luaWatchItem, Lua.Result newValue)
+    //{
+    //    DialogueManager.AddLuaObserver("Variable['TaskPoints']", LuaWatchFrequency.EveryDialogueEntry, OnTaskPointsChange);
+    //    Debug.Log("Number of TaskPoints change to: " + newValue.AsInt);
+    //}
     // Old movement code
     //if (Input.GetKey(KeyCode.W))
     //{

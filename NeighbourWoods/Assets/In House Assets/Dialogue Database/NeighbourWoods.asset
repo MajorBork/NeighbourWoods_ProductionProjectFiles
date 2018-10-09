@@ -51,7 +51,11 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    - title: NodeColor
+      value: Blue
+      type: 0
+      typeString: 
+    portrait: {fileID: 2800000, guid: 17aca7e13c8518144834a2c73c6794a4, type: 3}
     alternatePortraits: []
   - id: 2
     fields:
@@ -2750,9 +2754,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(AddFood,2,GameManager);
+        value: 'SendMessage(AddFood,,GameManager);
 
-          SendMessage(UpdateTime,,GameManager); Delay({{end}})'
+          SendMessage(UpdateTime,,GameManager); Delay({{5}})'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -2768,21 +2772,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: CurrentQuestState("BallQuest") == "success"
-      userScript: SetQuestState("BallQuest", "done")
+      userScript: 'SetQuestState("BallQuest", "done");
+
+        Variable["Food"] = Variable["Food"] + 2;
+
+        Variable["TaskPoints"] = Variable["TaskPoints"] + 4'
       onExecute:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_MethodName: 
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+          m_Calls: []
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       canvasRect:

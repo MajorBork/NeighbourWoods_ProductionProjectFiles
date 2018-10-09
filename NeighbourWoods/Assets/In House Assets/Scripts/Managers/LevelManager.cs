@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Manager.Task;
 //using Manager.Player;
-//using PixelCrushers.DialogueSystem;
+using PixelCrushers.DialogueSystem;
+using Language.Lua;
 
 namespace Manager.Level
 {
@@ -87,7 +88,7 @@ namespace Manager.Level
         public GameObject[] eveningObjects;
 
         public int currentTime;
-        public int maxtask;
+        public int maxTaskPoints = 4;
         #endregion
         #region Start and Update Methods
         void Start() // Use this for initialization
@@ -101,10 +102,23 @@ namespace Manager.Level
 
         }
         #endregion
-        #region Time Methods
-        public void UpdateTime() // updates our time to the next increment 
+        public void CheckTime()
         {
+            Debug.Log("I am Working");
+            int DStaskPoints = DialogueLua.GetVariable("TaskPoints").asInt;
+            if (DStaskPoints >= maxTaskPoints)
+            {
+                StartCoroutine(UpdateTime());
+                //UpdateTime();
+            }
+        }
+        
+        #region Time Methods
+        public IEnumerator UpdateTime() // updates our time to the next increment 
+        {
+            yield return new WaitForSeconds(5);
             timeSlot++;
+            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
             if ((int)timeSlot == 4)
             {
                 day++;    
@@ -175,6 +189,7 @@ namespace Manager.Level
         }
         #endregion
         #endregion
+        #region OnTimeChange
         void OnEnable() //Subscribes to our game events
         {
             GameEvents.OnTimeChange += OnTimeChange;
@@ -262,6 +277,7 @@ namespace Manager.Level
                 }
             }
         }
+        #endregion
     }
     #endregion
     #region Levels Class

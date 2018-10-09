@@ -27,8 +27,8 @@ namespace Manager
         
         void Start()
         {
-            gameState = GameState.FREE_ROAM;
-            GameEvents.ReportGameStateChange(gameState);
+            //gameState = GameState.FREE_ROAM;
+            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
         }
         void Update()
         {
@@ -41,7 +41,18 @@ namespace Manager
                 startScreen.DOFade(0, 0.3f);
             }
         }
-        
+        private void OnEnable()
+        {
+            GameEvents.OnGameStateChange += OnGameStateChange;
+        }
+        private void OnDisable()
+        {
+            GameEvents.OnGameStateChange -= OnGameStateChange;
+        }
+        void OnGameStateChange(GameState gs)
+        {
+            gameState = gs;
+        }
     }
     #endregion
 }

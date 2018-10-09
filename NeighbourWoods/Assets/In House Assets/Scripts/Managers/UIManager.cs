@@ -32,21 +32,26 @@ namespace Manager.UI
         public string textFood;
         public int textFoodInt;
         public float fadeInTime = 1;
+        
         #endregion
         #region Start and Update
         void Start() // Use this for initialization
         {
+            
             dialogueBoxCanvas.alpha = 0;
             //buttonPressBox.alpha = 0;
             fadeCanvas.alpha = 0;
             timeText.text = "";
             dayText.text = "";
             taskPoints = 0;
+            
+            //Debug.Log(DSfood);
         }
         void Update() // Update is called once per frame
         {
             //OnTaskPointsChange(taskPoints);
             //Debug.Log(taskPoints);
+            
         }
         #endregion
         #region Methods
@@ -54,7 +59,7 @@ namespace Manager.UI
         {
             // replaces inventoryVis icon 
             itemImageUI.enabled = true;
-            Debug.Log("hey I am working");
+            //Debug.Log("hey I am working");
         }
         public void GetRidOfItemIcon() // trying to get rid of the icon
         {
@@ -110,19 +115,43 @@ namespace Manager.UI
             yield return new WaitForSeconds(fadeInTime * 2);
             //string temp = timeSlot.ToString();
             //temp.ToLower();
-            timeText.text = timeSlot.ToString();
-            dayText.text = day.ToString();
+            timeText.text = FormatDay(timeSlot.ToString());
+            dayText.text = FormatDay(day.ToString());
             yield return new WaitForSeconds(fadeInTime * 2);
             fadeCanvas.DOFade(0, fadeInTime);
             yield return new WaitForSeconds(1);
             timeText.text = "";
             dayText.text = "";
         }
-        //void OnTaskPointsChange(LuaWatchItem luaWatchItem, Lua.Result newValue)
-        //{
-        //    DialogueManager.AddLuaObserver("Variable['TaskPoints']", LuaWatchFrequency.EveryDialogueEntry, OnTaskPointsChange);
-        //    Debug.Log("Number of TaskPoints change to: " + newValue.AsInt);
-        //}
+        string FormatDay(string incoming)
+        {
+            switch (incoming)
+            {
+                case "MORNING":
+                    return "Morning";
+                case "AFTERNOON":
+                    return "Afternoon";
+                case "MIDDAY":
+                    return "Midday";
+                case "EVENING":
+                    return "Evening";
+                case "DAY_1":
+                    return "Day 1";
+                case "DAY_2":
+                    return "Day 2";
+                case "DAY_3":
+                    return "Day 3";
+                case "DAY_4":
+                    return "Day 4";
+                case "DAY_5":
+                    return "Day 5";
+                case "DAY_6":
+                    return "Day 6";
+                case "DAY_7":
+                    return "Day 7";
+                default: return "";
+            }
+        }
         #endregion
     }
     #endregion

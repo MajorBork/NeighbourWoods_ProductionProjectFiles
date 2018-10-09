@@ -36,18 +36,16 @@ namespace Manager.GameDialogue
             Debug.Log("Start of converstion.");
             if (GameManager.instance.gameState == GameState.FREE_ROAM)
             {
-                GameManager.instance.gameState = GameState.DIALOGUE;
+                GameEvents.ReportGameStateChange(GameState.DIALOGUE);
             }
-            GameEvents.ReportGameStateChange(GameManager.instance.gameState);
         }
         public void EndDialogue()
         {
             Debug.Log("End of converstion.");
             if (GameManager.instance.gameState == GameState.DIALOGUE)
             {
-                GameManager.instance.gameState = GameState.FREE_ROAM;
+                GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
             }
-            GameEvents.ReportGameStateChange(GameManager.instance.gameState);
         }
         #endregion
     }
