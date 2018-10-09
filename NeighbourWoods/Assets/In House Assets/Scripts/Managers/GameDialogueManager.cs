@@ -47,6 +47,7 @@ namespace Manager.GameDialogue
                 GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
             }
         }
+        // SendMessage(UpdateTime,,GameManager); Delay({{5}})
         #endregion
     }
     #region DialogueList Class

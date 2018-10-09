@@ -2756,7 +2756,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(AddFood,,GameManager);
 
-          SendMessage(UpdateTime,,GameManager); Delay({{5}})'
+          SendMessage(UpdateTime,,GameManager); Delay({{end}})'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -2789,7 +2789,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 5.2630615, y: 0}
-    canvasZoom: 0.7600002
+    canvasZoom: 0.923
   syncInfo:
     syncActors: 0
     syncItems: 0
