@@ -220,7 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vision: 0
   gameState: 0
-  testTMP: {fileID: 0}
   player: {fileID: 1101298275439518}
   gameManagerUI: {fileID: 0}
   gameManager: {fileID: 0}

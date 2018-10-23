@@ -1,0 +1,17 @@
+# This file uses meters as units for non-parametric coordinates.
+
+mtllib House_Roof_Walling.mtl
+g default
+v -1200.000000 300.000000 -600.000000
+v -800.000000 300.000000 -600.000000
+v -1200.000000 400.000000 -600.000000
+vt 0.251270 0.001119
+vt 0.500837 0.001119
+vt 0.251270 0.083043
+vn 0.000000 0.000000 1.000000
+vn 0.000000 0.000000 1.000000
+vn 0.000000 0.000000 1.000000
+s off
+g House_Roof_Walling_LP
+usemtl initialShadingGroup
+f 1/1/1 2/2/2 3/3/3
