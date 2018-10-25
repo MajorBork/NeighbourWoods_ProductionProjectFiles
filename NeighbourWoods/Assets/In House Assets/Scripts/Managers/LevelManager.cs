@@ -95,14 +95,14 @@ namespace Manager.Level
         {
             timeSlot = TimeSlot.MORNING;
             day = Day.DAY_1;
-            OnTimeChange(timeSlot,day);
+            OnTimeChange(timeSlot, day);
         }
         void Update() // Update is called once per frame
         {
 
         }
         #endregion
-        public void CheckTime()
+        public void CheckTime() // function to check if task points is reached
         {
             Debug.Log("I am Working");
             int DStaskPoints = DialogueLua.GetVariable("TaskPoints").asInt;
@@ -112,7 +112,25 @@ namespace Manager.Level
                 //UpdateTime();
             }
         }
-        
+        public void DebugUpdateTime()
+        {
+            timeSlot++;
+            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+            if ((int)timeSlot == 4)
+            {
+                day++;
+                timeSlot = TimeSlot.MORNING;
+                if ((int)day == 2)
+                {
+                    SceneManager.LoadScene("OverworldScene");
+                }
+                if ((int)day == 7)
+                {
+                    //make gameevent reportgameover 
+                }
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
         #region Time Methods
         public IEnumerator UpdateTime() // updates our time to the next increment 
         {

@@ -7,13 +7,12 @@ using Manager.UI;
 public class BallQuestObject : MonoBehaviour
 {
     //private string inventoryManagerMethodPickupItem = "PickupItem";
-    private string questTitle = "BallQuest";
+    private string questTitle = "NewspaperQuest";
     //private string inventoryManagerUpdateItemIcon = "OnItemPickup";
-    private QuestState newQuestState = QuestState.Success;
-    private QuestState currentQuestState = QuestState.Active;
+    private QuestState newQuestState = QuestState.Active;
     public GameObject ballObject;
     public string message;
-    public Image ballIcon;
+    //public Image ballIcon;
     public InventoryManager inventoryManager;
     public UIManager uiManager;
     public void OnTriggerEnter(Collider other)
