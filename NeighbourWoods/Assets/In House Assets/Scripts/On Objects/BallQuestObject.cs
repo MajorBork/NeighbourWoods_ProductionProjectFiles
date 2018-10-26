@@ -7,10 +7,10 @@ using Manager.UI;
 public class BallQuestObject : MonoBehaviour
 {
     //private string inventoryManagerMethodPickupItem = "PickupItem";
-    private string questTitle = "NewspaperQuest";
+    public string questTitle;
     //private string inventoryManagerUpdateItemIcon = "OnItemPickup";
-    private QuestState newQuestState = QuestState.Active;
-    public GameObject ballObject;
+    private QuestState newQuestState = QuestState.Success;
+    public GameObject questObject;
     public string message;
     //public Image ballIcon;
     public InventoryManager inventoryManager;
@@ -23,7 +23,7 @@ public class BallQuestObject : MonoBehaviour
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
             //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
-            ballObject.SetActive(false);
+            questObject.SetActive(false);
         }
     }
 }

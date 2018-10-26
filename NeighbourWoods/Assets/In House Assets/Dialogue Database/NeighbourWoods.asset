@@ -348,6 +348,36 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 10
+    fields:
+    - title: Name
+      value: BreadQuest
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: You get the missing bread for the owner in the convenience
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
   - id: 7
     fields:
     - title: Name
@@ -484,6 +514,34 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: 
+      type: 0
+      typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: MishkaFriendPoint
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 5
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: The friend points for Mishka
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: ShobeFriendPoint
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 5
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: The friend points for Shobe
       type: 0
       typeString: 
   conversations:
@@ -1499,7 +1557,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetQuestState("TutorialQuest", "success");
+      userScript: 'SetQuestState("TutorialQuest", "success");
+
+        SetQuestState("NewspaperQuest", "active");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2832,7 +2892,7 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 51.219604, y: 204.87813}
+    canvasScrollPosition: {x: 84.14636, y: 287.805}
     canvasZoom: 0.8199997
   - id: 10
     fields:
@@ -3663,8 +3723,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("NewspaperQuest") == "active"
-      userScript: SetQuestState("NewspaperQuest", "success")
+      conditionsString: CurrentQuestState("NewspaperQuest") == "success"
+      userScript: Variable["Food"] = Variable["Food"] + 4
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3672,11 +3732,11 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 499.5454
+        x: 500.8612
         y: 89.77272
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 2.6315308}
+    canvasScrollPosition: {x: 0, y: 5.2631073}
     canvasZoom: 0.7600002
   - id: 11
     fields:
@@ -3859,7 +3919,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: (CurrentQuestState("BreadQuest") == "unassigned") or (CurrentQuestState("BreadQuest")
+        == "active")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3927,7 +3988,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("BreadQuest", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3999,7 +4060,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("BreadQuest") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4590,7 +4651,7 @@ MonoBehaviour:
         y: 483.97952
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 42.999954}
     canvasZoom: 0.9999999
   - id: 12
     fields:
@@ -6914,7 +6975,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 7
+      value: 8
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -6956,7 +7017,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 8
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7442,8 +7503,8 @@ MonoBehaviour:
         y: 278
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 180}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.73000014
   syncInfo:
     syncActors: 0
     syncItems: 0

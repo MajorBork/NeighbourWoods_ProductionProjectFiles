@@ -8,9 +8,9 @@ public class BananaQuestObject : MonoBehaviour
 {
     //private string inventoryManagerMethodPickupItem = "PickupItem";
     private string questTitle = "BananaQuest";
-    private string inventoryYManagerMethodUpdateItemIcon = "UpdateItemIcon";
+    //private string inventoryYManagerMethodUpdateItemIcon = "UpdateItemIcon";
     private QuestState newQuestState = QuestState.Success;
-    public GameObject bananaObject;
+    public GameObject questObject;
     public string message;
     public Image bananaIcon;
     public InventoryManager inventoryManager;
@@ -22,7 +22,7 @@ public class BananaQuestObject : MonoBehaviour
             uiManager.SendMessage("UpdateItemIcon");
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
-            bananaObject.SetActive(false);
+            questObject.SetActive(false);
             //uiManager.
         }
     }
