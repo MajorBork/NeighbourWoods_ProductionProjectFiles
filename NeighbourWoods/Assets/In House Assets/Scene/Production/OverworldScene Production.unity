@@ -293,6 +293,75 @@ Transform:
   m_Father: {fileID: 1646615462}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &36998011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36998012}
+  - component: {fileID: 36998014}
+  - component: {fileID: 36998013}
+  m_Layer: 5
+  m_Name: CharacterFriendshipIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &36998012
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36998011}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 0.590625, y: 0.590625, z: 0.590625}
+  m_Children: []
+  m_Father: {fileID: 948890177}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 250, y: 94}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &36998013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36998011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &36998014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36998011}
+  m_CullTransparentMesh: 0
 --- !u!1 &46042177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1995,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1061687704}
     m_Modifications:
+    - target: {fileID: 114755358585789010, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: sendMessages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4922359037679458, guid: 0a1824452083f0f4880a598d08b77b7c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -77.96
@@ -1988,6 +2067,36 @@ Prefab:
       propertyPath: showCursorDuringConversation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1101306668}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnConversationStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762418997328536, guid: 0a1824452083f0f4880a598d08b77b7c,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 747776544}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a1824452083f0f4880a598d08b77b7c, type: 2}
   m_IsPrefabAsset: 0
@@ -8314,6 +8423,7 @@ RectTransform:
   - {fileID: 1637048240}
   - {fileID: 823646391}
   - {fileID: 1288046730}
+  - {fileID: 36998012}
   m_Father: {fileID: 1589123131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9974,6 +10084,7 @@ MonoBehaviour:
   gameManager: {fileID: 1101306671}
   food: 0
   taskPoints: 0
+  currentActor: 
 --- !u!114 &1101306669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19909,6 +20020,7 @@ MonoBehaviour:
   textFood: 
   textFoodInt: 0
   fadeInTime: 1
+  characterFriendshipIcon: {fileID: 36998013}
 --- !u!114 &1918485836
 MonoBehaviour:
   m_ObjectHideFlags: 0

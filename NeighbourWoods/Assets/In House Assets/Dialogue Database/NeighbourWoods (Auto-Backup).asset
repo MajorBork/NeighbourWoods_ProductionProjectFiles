@@ -54,7 +54,11 @@ MonoBehaviour:
     - title: NodeColor
       value: Blue
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Friendship
+      value: 5
+      type: 1
+      typeString: CustomFieldType_Number
     portrait: {fileID: 2800000, guid: 17aca7e13c8518144834a2c73c6794a4, type: 3}
     alternatePortraits: []
   - id: 2
@@ -516,6 +520,34 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: MishkaFriendPoint
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 5
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: The friend points for Mishka
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: ShobeFriendPoint
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 5
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: The friend points for Shobe
+      type: 0
+      typeString: 
   conversations:
   - id: 7
     fields:
@@ -792,7 +824,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["ShobeFriendPoint"] = Variable["ShobeFriendPoint"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2864,7 +2896,7 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 84.14636, y: 287.805}
+    canvasScrollPosition: {x: 0, y: 87.80488}
     canvasZoom: 0.8199997
   - id: 10
     fields:
@@ -4801,7 +4833,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["MishkaFriendPoint"] = Variable["MishkaFriendPoint"] +
+        2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6417,8 +6450,8 @@ MonoBehaviour:
         y: 434
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 147.3683}
+    canvasZoom: 0.7600002
   - id: 13
     fields:
     - title: Title

@@ -16,6 +16,7 @@ public static class GameEvents
     //public static event Action<TimeSlot> OnTimeSlotChange = null;
     public static event Action<TimeSlot, Day> OnTimeChange = null;
     public static event Action<bool> OnInventoryVisChange = null;
+    public static event Action<int> OnCharacterTalk = null;
     //public static event Action<Tasks> OnTaskStartedChange = null;
     #endregion
     #region Events
@@ -61,6 +62,13 @@ public static class GameEvents
         if (OnInventoryVisChange != null)
         {
             OnInventoryVisChange(inventoryShowing);
+        }
+    }
+    public static void ReportCharacterTalkingChange(int friendshipPoint)
+    {
+        if(OnCharacterTalk != null)
+        {
+            OnCharacterTalk(friendshipPoint);
         }
     }
     #endregion

@@ -32,6 +32,7 @@ namespace Manager.UI
         public string textFood;
         public int textFoodInt;
         public float fadeInTime = 1;
+        public Image characterFriendshipIcon;
         
         #endregion
         #region Start and Update
@@ -69,6 +70,25 @@ namespace Manager.UI
         {
 
         }
+        public void OnCharacterTalk (int friendshipPoint)
+        {
+            if (friendshipPoint < 4)
+            {
+                characterFriendshipIcon.color = Color.red;
+            }
+            if (friendshipPoint >= 4 && friendshipPoint <= 6)
+            {
+                characterFriendshipIcon.color = Color.grey;
+            }
+            else
+            {
+                characterFriendshipIcon.color = Color.green;
+            }
+        }
+        public void UpdateCharacterFriendship(string characterTalking)
+        {
+
+        }
         public void UpdateFoodText(int food) // trying to update food text
         {
             tmpFoodText.text = ("Food: " + food);
@@ -84,11 +104,13 @@ namespace Manager.UI
         {
             GameEvents.OnGameStateChange += OnGameStateChange;
             GameEvents.OnTimeChange += OnTimeChange;
+            GameEvents.OnCharacterTalk += OnCharacterTalk;
         }
         void OnDisable()
         {
             GameEvents.OnGameStateChange -= OnGameStateChange;
             GameEvents.OnTimeChange -= OnTimeChange;
+            GameEvents.OnCharacterTalk -= OnCharacterTalk;
         }
         #endregion
         #region OnGameStateChange
