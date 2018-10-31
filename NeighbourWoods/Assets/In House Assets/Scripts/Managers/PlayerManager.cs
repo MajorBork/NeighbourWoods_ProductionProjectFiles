@@ -95,6 +95,7 @@ namespace Manager.Player
         private float vignIntensity = 0;
         [Tooltip("")]
         private Tween vignTween;
+        public float dstFromTarget = 2;
         #endregion
         #endregion
         #region Start() and Update()
@@ -222,6 +223,7 @@ namespace Manager.Player
             float rotationSmoothTime = 0.12f;
             currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);
             playerCamera.transform.eulerAngles = targetRotation;
+            transform.position = target.position - transform.forward * dstFromTarget;
         }
         #endregion
         #region JumpController()
