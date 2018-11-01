@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ColorDeficiencySimulation
   m_Shader: {fileID: 4800000, guid: 2bac4540ce87203469fa04c452c848c1, type: 3}
@@ -67,7 +67,7 @@ Material:
     - _DstBlend: 0
     - _ErrorBlinkSpeed: 0
     - _ErrorSpeed: 0
-    - _ErrorStrength: 0.233
+    - _ErrorStrength: 0.139
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

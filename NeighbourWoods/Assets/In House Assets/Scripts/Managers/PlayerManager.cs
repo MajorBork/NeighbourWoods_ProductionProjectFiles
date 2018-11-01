@@ -36,10 +36,6 @@ namespace Manager.Player
         public UIManager gameManagerUI;
         [Tooltip("The variable that references the GameManager Script on the GameManager object")]
         public GameManager gameManager;
-        [Tooltip("The variable that references the PlayerCamera script on the ColourBlind camera object")]
-        public GameObject playerCamera;
-        [Tooltip("The variable that references the transform of the playerCamera")]
-        public Transform playerCameraTransform;
         [Tooltip("The PostProcessing Profile of smellOVision variable")]
         public PostProcessingBehaviour smellOVision;
         [Tooltip("The variable that references the Character Controller component on the player object")]
@@ -50,8 +46,6 @@ namespace Manager.Player
         #region Control Variables
         //Space//
         //All of the controls variables used in the movement functions
-        [Tooltip("The sensitivity of the Mouse for the camera movements")]
-        public float mouseSensitivity = 10;
         [Tooltip("The speed of the walk of the character")]
         public float walkSpeed = 2;
         [Tooltip("The spped of the run of the character")]
@@ -73,18 +67,13 @@ namespace Manager.Player
         private float currentSpeed;
         [Tooltip("")]
         public bool lockCursor;
+        [Tooltip("The variable that references the transform of the playerCamera")]
+        public Transform playerCameraTransform;
         private Vector3 currentRotation;
         private Vector3 rotationSmoothVelocity;
-        [Tooltip("")]
-        public Vector2 pitchMinMax = new Vector2(-40,85);
-        [Tooltip("")]
-        public float cameraRotation;
-        [Tooltip("")]
-        public Transform target;
-        private float yaw = 0;
-        private float pitch = 0;
         #endregion
         #region Vision Variables
+
         [Tooltip("")]
         [SerializeField]
         public float maxVignIntensity = 0.3f;
@@ -95,7 +84,6 @@ namespace Manager.Player
         private float vignIntensity = 0;
         [Tooltip("")]
         private Tween vignTween;
-        public float dstFromTarget = 2;
         #endregion
         #endregion
         #region Start() and Update()
@@ -103,7 +91,7 @@ namespace Manager.Player
         {
             // Setting 
             player = GameObject.FindWithTag("Player");
-            playerCamera = GameObject.FindWithTag("MainCamera");
+            playerCameraTransform = Camera.main.transform;
             playerCameraTransform = Camera.main.transform;
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
             vision = Vision.NORMAL;;
@@ -124,7 +112,6 @@ namespace Manager.Player
                 case GameState.FREE_ROAM: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     MovementController(inputDir, running);
                     VisionController();
-                    CameraController();
                     BarkController();
                     DigController();
                     JumpController();
@@ -213,19 +200,6 @@ namespace Manager.Player
             vignTween = null;
         }
         #endregion
-        #region CameraController()
-        void CameraController() // Controls the third person camera
-        {
-            yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
-            pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-            pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
-            Vector3 targetRotation = new Vector3(pitch, yaw);
-            float rotationSmoothTime = 0.12f;
-            currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);
-            playerCamera.transform.eulerAngles = targetRotation;
-            transform.position = target.position - transform.forward * dstFromTarget;
-        }
-        #endregion
         #region JumpController()
         void JumpController() // Controls the jump functions 
         {
@@ -279,7 +253,7 @@ namespace Manager.Player
             }
         }
         #endregion
-        void DialogueController()
+        public void DialogueController()
         {
 
         }
