@@ -4,8 +4,9 @@ using UnityEngine;
 namespace Manager.Player
 {
 
-    public class CameraManager : MonoBehaviour
+    public class CameraManager : Singleton<CameraManager>
     {
+        public PlayerManager PM;
         [Tooltip("The variable that references the PlayerCamera script on the ColourBlind camera object")]
         public GameObject playerCamera;
         [Tooltip("The sensitivity of the Mouse for the camera movements")]
@@ -21,7 +22,6 @@ namespace Manager.Player
         private float yaw = 0;
         private float pitch = 0;
         public float dstFromTarget = 2;
-        public PlayerManager PM;
         void Start() // Use this for initialization
         {
             playerCamera = GameObject.FindWithTag("MainCamera");
