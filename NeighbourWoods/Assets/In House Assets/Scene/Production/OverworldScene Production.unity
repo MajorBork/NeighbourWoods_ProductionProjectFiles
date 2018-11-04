@@ -21238,6 +21238,21 @@ Prefab:
       propertyPath: condition.acceptedTags.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationCancelled.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4250091212459616, guid: 6ef969423267ab149ae331ae2db6a92e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -186.09875
@@ -21320,6 +21335,61 @@ Prefab:
       propertyPath: conversationConversant
       value: 
       objectReference: {fileID: 611177714}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationCancelled.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationCancelled.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1101306663}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1101306663}
+    - target: {fileID: 114799217566778340, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationEvents.onConversationCancelled.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1101306663}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ef969423267ab149ae331ae2db6a92e, type: 2}
   m_IsPrefabAsset: 0
