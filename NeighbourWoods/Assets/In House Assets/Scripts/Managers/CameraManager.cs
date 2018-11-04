@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Manager.Player
 {
-
     public class CameraManager : Singleton<CameraManager>
     {
         public PlayerManager PM;

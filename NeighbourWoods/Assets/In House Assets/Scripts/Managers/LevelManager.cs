@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Manager.Task;
-//using Manager.Player;
 using PixelCrushers.DialogueSystem;
-using Language.Lua;
-
 namespace Manager.Level
 {
     #region Days Enum
@@ -29,50 +25,6 @@ namespace Manager.Level
         MIDDAY,
         AFTERNOON,
         EVENING,
-    }
-    #endregion
-    #region LocationID Enum
-    public enum LocationID
-    {
-        HOME,
-        STREETS,
-        HOUSES_OF_THE_NEIGHBOURHOOD,
-        SHOBES_HOUSE,
-        EBONYS_AND_ROGERS_HOUSE,
-        OSCAR_MILY_AND_LIEAS_HOUSE,
-        THE_CHICKENS_HOUSE,
-        MURPHY_CALLIE_FRANGELINA_AND_GINGIES_HOUSE,
-        ARCHIES_HOUSE,
-        THE_TRIOS_HOUSE,
-        BUNDY_AND_SNOWBALLS_HOUSE,
-        MIDNIGHT_AND_GINGERS_HOUSE,
-        MUFFLES_AND_KEGS_HOUSE,
-        LILLAS_HOUSE,
-        ABANDONED_HOUSE,
-        WTICHS_HOUSE,
-        HOUSE_1,
-        HOUSE_2,
-        HOUSE_3,
-        HOUSE_4,
-        HOUSE_5,
-        HOUSE_6,
-        HOUSE_7,
-        HOUSE_8,
-        HOUSE_9,
-        HOUSE_10,
-        CONCESSION_STORE,
-        PARK,
-        JUNKYARD,
-        STRAYS_DEN,
-        WOOD_TRAIL,
-        THE_BRAMBLES,
-        FOX_DEN,
-        PINIC_AREA,
-        THE_WARREN,
-        THE_CLEARING,
-        KELPIE_POOL,
-        UNICORN_GLADE,
-        THE_MYSTERIOUS_ENTITYS_LAIR,
     }
     #endregion
     #region LevelManager Class
@@ -134,14 +86,14 @@ namespace Manager.Level
         #region Time Methods
         public IEnumerator UpdateTime() // updates our time to the next increment 
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             timeSlot++;
             GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
             if ((int)timeSlot == 4)
             {
                 day++;    
                 timeSlot = TimeSlot.MORNING;
-                if ((int)day == 2)
+                if ((int)day == 3)
                 {
                     SceneManager.LoadScene("OverworldScene");
                 }

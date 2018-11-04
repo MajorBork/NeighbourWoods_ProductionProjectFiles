@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
-using UnityEngine.UI;
-using Manager;
 using Manager.UI;
 using Manager.Inventory;
 using TMPro;
 using DG.Tweening;
-using PixelCrushers.DialogueSystem;
-using Language.Lua;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -72,8 +68,7 @@ namespace Manager.Player
         private Vector3 currentRotation;
         private Vector3 rotationSmoothVelocity;
         #endregion
-        #region Vision Variables
-
+        #region Vision Variables=
         [Tooltip("")]
         [SerializeField]
         public float maxVignIntensity = 0.3f;

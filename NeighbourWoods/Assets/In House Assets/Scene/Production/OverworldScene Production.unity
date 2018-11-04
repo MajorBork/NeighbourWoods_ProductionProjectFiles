@@ -21295,6 +21295,31 @@ Prefab:
       propertyPath: m_Size.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 65424045889759260, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205513997418496, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversation
+      value: Day 1/Midday/Get Welcome Gift
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205513997418496, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: stopConversationOnTriggerExit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205513997418496, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 506313177}
+    - target: {fileID: 114205513997418496, guid: 6ef969423267ab149ae331ae2db6a92e,
+        type: 2}
+      propertyPath: conversationConversant
+      value: 
+      objectReference: {fileID: 611177714}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ef969423267ab149ae331ae2db6a92e, type: 2}
   m_IsPrefabAsset: 0
