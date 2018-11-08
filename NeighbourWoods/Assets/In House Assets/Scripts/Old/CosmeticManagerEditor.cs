@@ -1,5 +1,4 @@
 ﻿using UnityEditor;
-using EasyEditor;
 using Manager.Cosmetics;
 
 //[Groups("Base Settings")]

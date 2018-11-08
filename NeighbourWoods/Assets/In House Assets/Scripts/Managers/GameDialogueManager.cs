@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
-using EasyEditor;
 using PixelCrushers.DialogueSystem;
 using Language.Lua;
 using Manager.Character;

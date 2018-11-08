@@ -21,7 +21,7 @@ namespace Manager
     public class GameManager : Singleton<GameManager>
     {
         public int foodLevel;
-        public ItemType itemType;
+        //public ItemType itemType;
         public GameState gameState;
         public Image startScreen;
         

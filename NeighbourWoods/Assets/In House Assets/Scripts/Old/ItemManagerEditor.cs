@@ -1,5 +1,4 @@
 ﻿using UnityEditor;
-using EasyEditor;
 using Manager.Item;
 
 //[Groups("Base Settings")]

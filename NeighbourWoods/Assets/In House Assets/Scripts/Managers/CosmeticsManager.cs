@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using EasyEditor;
 using UnityEngine.UI;
 using UnityEngine;
 namespace Manager.Cosmetics
@@ -21,14 +20,14 @@ namespace Manager.Cosmetics
         }
     }
     #endregion
-    #region Comsmetics Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class Cosmetics
-    {
-        public string cosmeticName;
-        public GameObject cosmeticObject;
-        public Image cosmeticImage;
-    }
-    #endregion
+    //#region Comsmetics Class
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class Cosmetics
+    //{
+    //    public string cosmeticName;
+    //    public GameObject cosmeticObject;
+    //    public Image cosmeticImage;
+    //}
+    //#endregion
 }

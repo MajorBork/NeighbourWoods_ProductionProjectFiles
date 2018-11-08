@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EasyEditor;
 using Manager.Character;
 
 namespace Manager.Hint

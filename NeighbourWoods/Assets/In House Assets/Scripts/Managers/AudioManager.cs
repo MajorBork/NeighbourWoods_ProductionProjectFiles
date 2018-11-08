@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using Manager.Player;
-using EasyEditor;
 namespace Manager.Audio
 {
     #region AudioType Enum
@@ -38,13 +37,13 @@ namespace Manager.Audio
         }
     }
     #endregion
-    #region AudioFiles Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class AudioFiles
-    {
-        public AudioClip audioClip;
-        public AudioType audioType;
-    }
-    #endregion
+    //#region AudioFiles Class
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class AudioFiles
+    //{
+    //    public AudioClip audioClip;
+    //    public AudioType audioType;
+    //}
+    //#endregion
 }
