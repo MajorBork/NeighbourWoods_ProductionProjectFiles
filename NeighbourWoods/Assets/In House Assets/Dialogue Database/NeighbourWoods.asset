@@ -621,7 +621,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: 8
+      value: 5
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
@@ -635,7 +635,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: 5
+      value: 0
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
@@ -900,7 +900,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 7
@@ -926,7 +928,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 187.86813
+        x: 189.43063
         y: 198.64836
         width: 160
         height: 30
@@ -1000,7 +1002,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 427.4286
-        y: 193.15382
+        y: 191.59132
         width: 160
         height: 30
     - id: 4
@@ -1492,7 +1494,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 7
@@ -1510,7 +1514,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["ShobeFriendPoint"] = Variable["ShobeFriendPoint"] + -2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1518,7 +1522,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1046.5105
+        x: 1049.6355
         y: 292.28766
         width: 160
         height: 30
@@ -1565,7 +1569,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 7
@@ -1583,7 +1589,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["ShobeFriendPoint"] = Variable["ShobeFriendPoint"] + -1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1872,7 +1878,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 7
@@ -1890,7 +1898,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["ShobeFriendPoint"] = Variable["ShobeFriendPoint"] + 3
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2046,7 +2054,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1776.837
+        x: 1775.2745
         y: 236.6723
         width: 160
         height: 30
@@ -2265,7 +2273,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1589.837
+        x: 1591.3995
         y: 286.6723
         width: 160
         height: 30
@@ -2994,7 +3002,7 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 101.56252}
+    canvasScrollPosition: {x: 0, y: 6.2500305}
     canvasZoom: 0.63999987
   - id: 10
     fields:
@@ -3097,7 +3105,7 @@ MonoBehaviour:
         destinationConversationID: 10
         destinationDialogueID: 10
         isConnector: 0
-        priority: 4
+        priority: 2
       - originConversationID: 10
         originDialogueID: 0
         destinationConversationID: 10
@@ -3178,7 +3186,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("TutorialQuest") ~= "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3248,7 +3256,13 @@ MonoBehaviour:
       - originConversationID: 10
         originDialogueID: 2
         destinationConversationID: 10
-        destinationDialogueID: 3
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      - originConversationID: 10
+        originDialogueID: 2
+        destinationConversationID: 10
+        destinationDialogueID: 13
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3333,8 +3347,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 231.35483
-        y: 300.90308
+        x: 233.66248
+        y: 347.2492
         width: 160
         height: 30
     - id: 4
@@ -3406,8 +3420,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 231.35483
-        y: 350.90308
+        x: 233.66248
+        y: 397.2492
         width: 160
         height: 30
     - id: 5
@@ -3479,8 +3493,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 231.35483
-        y: 400.90308
+        x: 233.66248
+        y: 447.2492
         width: 160
         height: 30
     - id: 6
@@ -3552,8 +3566,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 232.38577
-        y: 450.90308
+        x: 234.69342
+        y: 497.2493
         width: 160
         height: 30
     - id: 7
@@ -3625,8 +3639,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 231.35483
-        y: 500.90308
+        x: 233.66248
+        y: 547.2495
         width: 160
         height: 30
     - id: 8
@@ -3698,8 +3712,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 231.35483
-        y: 551.9342
+        x: 233.66248
+        y: 598.28076
         width: 160
         height: 30
     - id: 9
@@ -3767,8 +3781,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 232.49118
-        y: 603.1012
+        x: 234.79883
+        y: 649.44775
         width: 160
         height: 30
     - id: 10
@@ -3825,8 +3839,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("NewspaperQuest") == "success"
-      userScript: Variable["Food"] = Variable["Food"] + 4
+      conditionsString: CurrentQuestState("NewspaperQuest") == "active"
+      userScript: 'Variable["Food"] = Variable["Food"] + 4;
+
+        SetQuestState("NewspaperQuest", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3838,8 +3854,221 @@ MonoBehaviour:
         y: 89.77272
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 187.78519}
-    canvasZoom: 0.52000046
+    - id: 11
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '{You run away}'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 11
+        destinationConversationID: 10
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 426.54694
+        y: 250.9206
+        width: 160
+        height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: No, come back
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 426.54694
+        y: 300.9206
+        width: 160
+        height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '{You bark}'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 10
+        originDialogueID: 13
+        destinationConversationID: 10
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 231.35483
+        y: 299.76672
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 68.36224}
+    canvasZoom: 0.40000045
   - id: 11
     fields:
     - title: Title

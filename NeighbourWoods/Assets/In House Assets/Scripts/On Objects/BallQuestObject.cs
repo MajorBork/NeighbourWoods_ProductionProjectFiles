@@ -9,7 +9,7 @@ public class BallQuestObject : MonoBehaviour
     //private string inventoryManagerMethodPickupItem = "PickupItem";
     public string questTitle;
     //private string inventoryManagerUpdateItemIcon = "OnItemPickup";
-    private QuestState newQuestState = QuestState.Success;
+    private QuestState newQuestState = QuestState.Active;
     public GameObject questObject;
     public string message;
     //public Image ballIcon;

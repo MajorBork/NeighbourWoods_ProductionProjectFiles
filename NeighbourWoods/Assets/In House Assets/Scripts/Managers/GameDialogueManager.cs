@@ -39,7 +39,7 @@ namespace Manager.GameDialogue
                 GameEvents.ReportGameStateChange(GameState.DIALOGUE);
             }
         }
-        public void OnConversationStart(Transform actor)
+        public void GetActor(Transform actor)
         {
             currentActor = actor.name;
             Debug.Log(string.Format("Starting conversation with {0}", actor.name));
