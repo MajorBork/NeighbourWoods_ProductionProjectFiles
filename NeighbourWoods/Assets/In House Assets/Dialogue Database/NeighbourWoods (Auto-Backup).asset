@@ -614,18 +614,18 @@ MonoBehaviour:
       value: The Currency of the Game
       type: 0
       typeString: 
-  - id: 2
+  - id: 4
     fields:
     - title: Name
-      value: TaskPoints
+      value: ShobeFriendPoint
       type: 0
       typeString: 
     - title: Initial Value
-      value: 0
+      value: 8
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
-      value: 
+      value: The friend points for Shobe
       type: 0
       typeString: 
   - id: 3
@@ -640,20 +640,6 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: The friend points for Mishka
-      type: 0
-      typeString: 
-  - id: 4
-    fields:
-    - title: Name
-      value: ShobeFriendPoint
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: 8
-      type: 1
-      typeString: CustomFieldType_Number
-    - title: Description
-      value: The friend points for Shobe
       type: 0
       typeString: 
   conversations:
@@ -1795,7 +1781,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
         type: 0
         typeString: 
       conversationID: 7
@@ -2032,7 +2018,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 7
@@ -2050,7 +2038,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["ShobeFriendPoint"] = Variable["ShobeFriendPoint"] + -3
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3006,7 +2994,7 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 101.56252}
     canvasZoom: 0.63999987
   - id: 10
     fields:
@@ -3826,7 +3814,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Send
+        value: 
         type: 0
         typeString: 
       conversationID: 10
@@ -3850,8 +3838,8 @@ MonoBehaviour:
         y: 89.77272
         width: 160
         height: 30
-    canvasScrollPosition: {x: 15.62899, y: 411.9814}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 0, y: 328.16968}
+    canvasZoom: 0.52000046
   - id: 11
     fields:
     - title: Title
