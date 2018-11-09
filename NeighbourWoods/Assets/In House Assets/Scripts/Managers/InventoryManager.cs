@@ -40,7 +40,7 @@ namespace Manager.Inventory
             
         }
         #region Food Methods
-        public void AddFood()
+        public void UpdateFood()
         {
             int DSfood = DialogueLua.GetVariable("Food").asInt;
             masterFood = DSfood;
@@ -48,18 +48,7 @@ namespace Manager.Inventory
             //attempt to parse the value using the TryParse functionality of the integer type
             //int.TryParse(food, out foodValue);
             //masterFood += foodValue;
-            //Debug.Log("I have Food " + masterFood);
-            //food = masterFood;
-            UIManager.instance.UpdateFoodText(masterFood);
-        }
-        public void MinusFood(string food)
-        {
-            int foodValue;
-            // attempt to parse the value using the TryParse functionality of the integer type
-            int.TryParse(food, out foodValue);
-            masterFood -= foodValue;
             Debug.Log("I have Food " + masterFood);
-            //food = masterFood;
             UIManager.instance.UpdateFoodText(masterFood);
         }
         #endregion

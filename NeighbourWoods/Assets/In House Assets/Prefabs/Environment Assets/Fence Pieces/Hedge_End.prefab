@@ -21,12 +21,13 @@ GameObject:
   - component: {fileID: 4560806324860326}
   - component: {fileID: 33502275212179152}
   - component: {fileID: 23450862515757764}
+  - component: {fileID: 64941562940993038}
   m_Layer: 0
   m_Name: Hedge_End_LP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1886395244972942
 GameObject:
@@ -41,7 +42,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4560806324860326
 Transform:
@@ -111,4 +112,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339589442800276}
+  m_Mesh: {fileID: 4300000, guid: b6ec2b2077221a24cb8a16aa75cf2cb1, type: 3}
+--- !u!64 &64941562940993038
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339589442800276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b6ec2b2077221a24cb8a16aa75cf2cb1, type: 3}

@@ -853,8 +853,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 454.6842
-        y: 97
+        x: 453.1217
+        y: 98.5625
         width: 160
         height: 30
     - id: 2
@@ -1979,7 +1979,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1589.837
+        x: 1591.3995
         y: 236.6723
         width: 160
         height: 30
@@ -3002,7 +3002,7 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 6.2500305}
+    canvasScrollPosition: {x: 7.8125, y: 46.875}
     canvasZoom: 0.63999987
   - id: 10
     fields:
@@ -3169,7 +3169,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateCharacterTalking,"Owner",GameManager);
         type: 0
         typeString: 
       conversationID: 10
@@ -3828,7 +3828,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Owner",GameManager);
+
+          SendMessage(UpdateFood,,GameManager)
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 10
@@ -4067,8 +4071,8 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 68.36224}
-    canvasZoom: 0.40000045
+    canvasScrollPosition: {x: 63.699646, y: 45.37224}
+    canvasZoom: 0.7900002
   - id: 11
     fields:
     - title: Title
@@ -5142,7 +5146,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateCharacterTalking,"Miskha",GameManager);
         type: 0
         typeString: 
       conversationID: 12
@@ -6817,11 +6821,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -6901,7 +6905,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 253.86365
+        x: 255.2922
         y: 276.86365
         width: 160
         height: 30
@@ -7960,8 +7964,8 @@ MonoBehaviour:
         y: 566.0571
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 374.45233}
-    canvasZoom: 0.43000057
+    canvasScrollPosition: {x: 146.17087, y: 246.99994}
+    canvasZoom: 1.0000002
   - id: 13
     fields:
     - title: Title

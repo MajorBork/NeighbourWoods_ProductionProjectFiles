@@ -72,7 +72,7 @@ namespace Manager.UI
         }
         public void OnCharacterTalk (int friendshipPoint)
         {
-            if (friendshipPoint > -4)
+            if (friendshipPoint < -4)
             {
                 characterFriendshipIcon.color = Color.red;
             }
@@ -80,7 +80,7 @@ namespace Manager.UI
             {
                 characterFriendshipIcon.color = Color.grey;
             }
-            else
+            if(friendshipPoint > 4)
             {
                 characterFriendshipIcon.color = Color.green;
             }

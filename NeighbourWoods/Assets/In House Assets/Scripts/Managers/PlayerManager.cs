@@ -233,6 +233,7 @@ namespace Manager.Player
         {
             if (Input.GetButtonDown("Inventory"))
             {
+                Debug.Log("Working");
                 InventoryManager.instance.inventoryShowing = !InventoryManager.instance.inventoryShowing;
                 GameEvents.ReportOnInventoryChange(InventoryManager.instance.inventoryShowing);
             }

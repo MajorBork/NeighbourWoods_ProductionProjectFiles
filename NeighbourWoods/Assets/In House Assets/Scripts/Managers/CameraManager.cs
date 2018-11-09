@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Manager.Player
 {
-    public class CameraManager : Singleton<CameraManager>
+    public class CameraManager : MonoBehaviour
     {
         public PlayerManager PM;
         [Tooltip("The variable that references the PlayerCamera script on the ColourBlind camera object")]
