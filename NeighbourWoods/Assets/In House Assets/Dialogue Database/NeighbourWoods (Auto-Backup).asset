@@ -341,6 +341,26 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
     alternatePortraits: []
+  - id: 17
+    fields:
+    - title: Name
+      value: Liea's Owner
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    alternatePortraits: []
   items:
   - id: 9
     fields:
@@ -700,6 +720,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: The friend points for Mishka
+      type: 0
+      typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: BullyDog
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
       type: 0
       typeString: 
   conversations:
@@ -2704,7 +2738,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1839.8384
+        x: 1841.4009
         y: 503.69342
         width: 160
         height: 30
@@ -2876,7 +2910,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Come to think of it, I've recently started hearing weird noises at
-          night. Really spooky ones.
+          night. Really spooky ones- coming from the forest, mostly...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2949,7 +2983,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you think they might be from the thing you saw?
+        value: Hm... do you think those noises might be from the thing you saw?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3010,11 +3044,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 6
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3022,7 +3056,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: (You got a clue!)
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3062,8 +3096,8 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 7.8125, y: 46.875}
-    canvasZoom: 0.63999987
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.36999997
   - id: 10
     fields:
     - title: Title
@@ -3511,7 +3545,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: That's great {PlayerName}, now speak!.
+        value: Great job {PlayerName}, now speak!.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3657,7 +3691,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ha ha. Okay now {PlayerName}, stay.
+        value: Ha ha, nice! Okay now, {PlayerName}, stay.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3803,7 +3837,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good dog, I'll see you later!
+        value: Good dog, I'll see you soon!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3890,7 +3924,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(UpdateCharacterTalking,"Owner",GameManager);
 
-          SendMessage(UpdateFood,,GameManager)
+          SendMessage(UpdateFood,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -4131,8 +4165,8 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 63.699646, y: 45.37224}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 0, y: 338.1818}
+    canvasZoom: 0.54999995
   - id: 11
     fields:
     - title: Title
@@ -15762,7 +15796,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.42999914
+    canvasZoom: 0.69999903
   - id: 22
     fields:
     - title: Title
@@ -16769,7 +16803,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.4600004
+    canvasZoom: 1.5399995
   - id: 23
     fields:
     - title: Title
@@ -19238,8 +19272,8 @@ MonoBehaviour:
         y: 931.567
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 230.76819}
-    canvasZoom: 0.26000112
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.620001
   - id: 24
     fields:
     - title: Title
@@ -22776,8 +22810,8 @@ MonoBehaviour:
         y: 618.9673
         width: 160
         height: 30
-    canvasScrollPosition: {x: 484.3108, y: 76.065735}
-    canvasZoom: 0.8599984
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.70999855
   - id: 25
     fields:
     - title: Title
@@ -24382,6 +24416,12 @@ MonoBehaviour:
         destinationDialogueID: 21
         isConnector: 0
         priority: 2
+      - originConversationID: 25
+        originDialogueID: 20
+        destinationConversationID: 25
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -24560,7 +24600,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 17
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -24572,7 +24612,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: 'Good girl! Isn''t it fun to actually fetch the ball, yeah?
+
+          Hey? Cheeky girl.
+
+          Oh, did your friend help you figure it out?
+
+          Here you go then, good dog.'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24612,8 +24658,8 @@ MonoBehaviour:
         y: 1130
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 1012}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.55000013
   syncInfo:
     syncActors: 0
     syncItems: 0
