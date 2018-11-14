@@ -551,6 +551,36 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
+      value: You get the Welcome Gift from the shopkeeper
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 13
+    fields:
+    - title: Name
+      value: MillyQuest
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
       value: 
       type: 0
       typeString: 
@@ -570,12 +600,12 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-  - id: 7
+  - id: 14
     fields:
     - title: Name
-      value: Banana
+      value: DeerQuest
       type: 0
-      typeString: CustomFieldType_Text
+      typeString: 
     - title: Pictures
       value: '[]'
       type: 3
@@ -583,99 +613,21 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: CustomFieldType_Text
-    - title: Is Item
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-  - id: 2
-    fields:
-    - title: Name
-      value: Welcome Accessory
+      typeString: 
+    - title: Success Description
+      value: 
       type: 0
       typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Welcome Accessory
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
       type: 0
       typeString: 
     - title: Is Item
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-  - id: 3
-    fields:
-    - title: Name
-      value: Ninja Band
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Ninja Band
-      type: 0
-      typeString: 
-    - title: Is Item
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-  - id: 4
-    fields:
-    - title: Name
-      value: Robber Bandana
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Robber Bandana
-      type: 0
-      typeString: 
-    - title: Is Item
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-  - id: 5
-    fields:
-    - title: Name
-      value: Police Bandana
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Police Bandana
-      type: 0
-      typeString: 
-    - title: Is Item
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-  - id: 6
-    fields:
-    - title: Name
-      value: Flower Bandana
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: Flower Bandana
-      type: 0
-      typeString: 
-    - title: Is Item
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
   locations: []
@@ -4315,7 +4267,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Let's go into the store, {PlayerName}. I've gotta pick up some groceries.
+        value: Let's get out of the store, {PlayerName}. We're got our groceries.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4456,7 +4408,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh! here's the bread. Hmm now where can i find the milk
+        value: Oh! here's the bread. Hmm now where can I find the milk
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5080,7 +5032,7 @@ MonoBehaviour:
         y: 483.97952
         width: 160
         height: 30
-    canvasScrollPosition: {x: 7, y: 423.99994}
+    canvasScrollPosition: {x: 0, y: 330.99994}
     canvasZoom: 0.9999999
   - id: 12
     fields:
@@ -6217,7 +6169,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1714.4253
+        x: 1716.2435
         y: 422.48148
         width: 160
         height: 30
@@ -8058,8 +8010,8 @@ MonoBehaviour:
         y: 566.0571
         width: 160
         height: 30
-    canvasScrollPosition: {x: 146.17087, y: 246.99994}
-    canvasZoom: 1.0000002
+    canvasScrollPosition: {x: 0, y: 359.6416}
+    canvasZoom: 0.55000037
   - id: 13
     fields:
     - title: Title
@@ -8745,7 +8697,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("StrangerQuest", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9186,6 +9138,12 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
+      - originConversationID: 14
+        originDialogueID: 7
+        destinationConversationID: 14
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -9447,7 +9405,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good Riddance
+        value: Good Riddance. Hey, you can get a reward from the Storeowner
         type: 0
         typeString: 
       - title: Parenthetical
@@ -9565,124 +9523,7 @@ MonoBehaviour:
         y: 182.07498
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.40000063
-  - id: 15
-    fields:
-    - title: Title
-      value: Day 1/Midday/Investigate Stranger Shopkeeper
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: Actor
-      value: 1
-      type: 5
-      typeString: CustomFieldType_Actor
-    - title: Conversant
-      value: 2
-      type: 5
-      typeString: CustomFieldType_Actor
-    overrideSettings:
-      useOverrides: 0
-      overrideSubtitleSettings: 0
-      showNPCSubtitlesDuringLine: 1
-      showNPCSubtitlesWithResponses: 1
-      showPCSubtitlesDuringLine: 0
-      skipPCSubtitleAfterResponseMenu: 0
-      subtitleCharsPerSecond: 30
-      minSubtitleSeconds: 2
-      continueButton: 0
-      overrideSequenceSettings: 0
-      defaultSequence: 
-      defaultPlayerSequence: 
-      defaultResponseMenuSequence: 
-      overrideInputSettings: 0
-      alwaysForceResponseMenu: 1
-      includeInvalidEntries: 0
-      responseTimeout: 0
-    nodeColor: 
-    dialogueEntries:
-    - id: 0
-      fields:
-      - title: Title
-        value: START
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: None()
-        type: 0
-        typeString: 
-      conversationID: 15
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 15
-        originDialogueID: 0
-        destinationConversationID: 15
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 20
-        y: 30
-        width: 160
-        height: 30
-    - id: 1
+    - id: 13
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -9697,11 +9538,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 8
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -9709,10 +9550,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'It was you that got my attention about that Wanna-be thief, wasn''t
-          it?
-
-          Here, have this on the house.'
+        value: '{Stop Barking}'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -9731,7 +9569,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 15
+      conversationID: 14
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -9740,7 +9578,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Food"] = Variable["Food"] + 3
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9748,12 +9586,12 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 80
+        x: 55.272964
+        y: 430.2388
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 452.56293}
+    canvasZoom: 0.9400003
   - id: 16
     fields:
     - title: Title
@@ -9856,6 +9694,12 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 16
+        originDialogueID: 0
+        destinationConversationID: 16
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -9938,7 +9782,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 20
+        x: 21.176483
         y: 80
         width: 160
         height: 30
@@ -10082,8 +9926,78 @@ MonoBehaviour:
         y: 179
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 55}
-    canvasZoom: 1
+    - id: 4
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 'It was you that got my attention about that Wanna-be thief, wasn''t
+          it?
+
+          Here, have this on the house.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["Food"] = Variable["Food"] + 3
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 290
+        y: 79
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 18.823486}
+    canvasZoom: 0.85000014
   - id: 17
     fields:
     - title: Title
