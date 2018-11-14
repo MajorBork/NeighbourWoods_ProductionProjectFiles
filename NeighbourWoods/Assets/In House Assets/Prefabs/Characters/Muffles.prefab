@@ -9,23 +9,23 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1980600934367886}
+  m_RootGameObject: {fileID: 1017491371589474}
   m_IsPrefabAsset: 1
---- !u!1 &1980600934367886
+--- !u!1 &1017491371589474
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4880791641872564}
-  - component: {fileID: 33145059170759830}
-  - component: {fileID: 23961510258046128}
-  - component: {fileID: 65224364536080542}
-  - component: {fileID: 114074922497383288}
-  - component: {fileID: 114821500540801838}
-  - component: {fileID: 114864965460099808}
-  - component: {fileID: 65200769807854356}
+  - component: {fileID: 4603374946777664}
+  - component: {fileID: 33210725457667748}
+  - component: {fileID: 23912770077639018}
+  - component: {fileID: 65432033013664612}
+  - component: {fileID: 114374625638378560}
+  - component: {fileID: 114768352637710248}
+  - component: {fileID: 114827669689336440}
+  - component: {fileID: 65055609197455358}
   m_Layer: 0
   m_Name: Muffles
   m_TagString: Untagged
@@ -33,12 +33,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4880791641872564
+--- !u!4 &4603374946777664
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.2, y: 16.72, z: -17.04}
   m_LocalScale: {x: 0.5, y: 0.7, z: 2}
@@ -46,12 +46,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23961510258046128
+--- !u!23 &23912770077639018
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -81,43 +81,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33145059170759830
+--- !u!33 &33210725457667748
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65200769807854356
+--- !u!65 &65055609197455358
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 3, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65224364536080542
+--- !u!65 &65432033013664612
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114074922497383288
+--- !u!114 &114374625638378560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
@@ -139,12 +139,12 @@ MonoBehaviour:
     applyColorToPrependedName: 0
     prependActorNameSeparator: ': '
     subtitleColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &114821500540801838
+--- !u!114 &114768352637710248
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
@@ -169,7 +169,7 @@ MonoBehaviour:
           m_MethodName: OnConversationStart
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 4880791641872564}
+            m_ObjectArgument: {fileID: 4603374946777664}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -299,12 +299,12 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
---- !u!114 &114864965460099808
+--- !u!114 &114827669689336440
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980600934367886}
+  m_GameObject: {fileID: 1017491371589474}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
@@ -346,7 +346,7 @@ MonoBehaviour:
   cacheBarkLines: 0
   conversation: Day 2/Midday/Muffles and Keg
   conversationConversant: {fileID: 0}
-  conversationActor: {fileID: 4880791641872564}
+  conversationActor: {fileID: 4603374946777664}
   exclusive: 0
   skipIfNoValidEntries: 1
   stopConversationOnTriggerExit: 1

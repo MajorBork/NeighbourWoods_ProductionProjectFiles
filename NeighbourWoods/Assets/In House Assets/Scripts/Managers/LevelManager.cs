@@ -190,6 +190,22 @@ namespace Manager.Level
                 {
                     day1eveningObject.SetActive(false);
                 }
+                foreach (GameObject day2morningObject in day2morningObjects)
+                {
+                    day2morningObject.SetActive(false);
+                }
+                foreach (GameObject day2middayObject in day2middayObjects)
+                {
+                    day2middayObject.SetActive(false);
+                }
+                foreach (GameObject day2afternoonObject in day1afternoonObjects)
+                {
+                    day2afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day2eveningObject in day1eveningObjects)
+                {
+                    day2eveningObject.SetActive(false);
+                }
             }
             if (timeSlot == TimeSlot.MIDDAY && day == Day.DAY_1)
             {
@@ -208,6 +224,22 @@ namespace Manager.Level
                 foreach (GameObject day1eveningObject in day1eveningObjects)
                 {
                     day1eveningObject.SetActive(false);
+                }
+                foreach (GameObject day2morningObject in day2morningObjects)
+                {
+                    day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day2middayObject in day2middayObjects)
+                {
+                    day2middayObject.SetActive(false);
+                }
+                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                {
+                    day2afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day2eveningObject in day2eveningObjects)
+                {
+                    day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_1)
@@ -228,6 +260,22 @@ namespace Manager.Level
                 {
                     day1eveningObject.SetActive(false);
                 }
+                foreach (GameObject day2morningObject in day2morningObjects)
+                {
+                    day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day2middayObject in day2middayObjects)
+                {
+                    day2middayObject.SetActive(false);
+                }
+                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                {
+                    day2afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day2eveningObject in day2eveningObjects)
+                {
+                    day2eveningObject.SetActive(false);
+                }
             }
             if (timeSlot == TimeSlot.EVENING && day == Day.DAY_1)
             {
@@ -247,81 +295,161 @@ namespace Manager.Level
                 {
                     day1eveningObject.SetActive(true);
                 }
+                foreach (GameObject day2morningObject in day2morningObjects)
+                {
+                    day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day2middayObject in day2middayObjects)
+                {
+                    day2middayObject.SetActive(false);
+                }
+                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                {
+                    day2afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day2eveningObject in day2eveningObjects)
+                {
+                    day2eveningObject.SetActive(false);
+                }
             }
             if (timeSlot == TimeSlot.MORNING && day == Day.DAY_2)
             {
+                foreach (GameObject day1morningObject in day1morningObjects)
+                {
+                    day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day1middayObject in day1middayObjects)
+                {
+                    day1middayObject.SetActive(false);
+                }
+                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                {
+                    day1afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day1eveningObject in day1eveningObjects)
+                {
+                    day1eveningObject.SetActive(false);
+                }
                 foreach (GameObject day2morningObject in day2morningObjects)
                 {
                     day2morningObject.SetActive(true); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject middayObject in day1middayObjects)
+                foreach (GameObject day2middayObject in day2middayObjects)
                 {
-                    middayObject.SetActive(false);
+                    day2middayObject.SetActive(false);
                 }
-                foreach (GameObject afternoonObject in day1afternoonObjects)
+                foreach (GameObject day2afternoonObject in day1afternoonObjects)
                 {
-                    afternoonObject.SetActive(false);
+                    day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject eveningObject in day1eveningObjects)
+                foreach (GameObject day2eveningObject in day1eveningObjects)
                 {
-                    eveningObject.SetActive(false);
+                    day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.MIDDAY && day == Day.DAY_2)
             {
+                foreach (GameObject day1morningObject in day1morningObjects)
+                {
+                    day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day1middayObject in day1middayObjects)
+                {
+                    day1middayObject.SetActive(false);
+                }
+                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                {
+                    day1afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day1eveningObject in day1eveningObjects)
+                {
+                    day1eveningObject.SetActive(false);
+                }
                 foreach (GameObject day2morningObject in day2morningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject middayObject in day1middayObjects)
+                foreach (GameObject day2middayObject in day2middayObjects)
                 {
-                    middayObject.SetActive(true);
+                    day2middayObject.SetActive(true);
                 }
-                foreach (GameObject afternoonObject in day1afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2afternoonObjects)
                 {
-                    afternoonObject.SetActive(false);
+                    day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject eveningObject in day1eveningObjects)
+                foreach (GameObject day2eveningObject in day2eveningObjects)
                 {
-                    eveningObject.SetActive(false);
+                    day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_2)
             {
+                foreach (GameObject day1morningObject in day1morningObjects)
+                {
+                    day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day1middayObject in day1middayObjects)
+                {
+                    day1middayObject.SetActive(false);
+                }
+                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                {
+                    day1afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day1eveningObject in day1eveningObjects)
+                {
+                    day1eveningObject.SetActive(false);
+                }
                 foreach (GameObject day2morningObject in day2morningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject middayObject in day1middayObjects)
+                foreach (GameObject day2middayObject in day2middayObjects)
                 {
-                    middayObject.SetActive(false);
+                    day2middayObject.SetActive(false);
                 }
-                foreach (GameObject afternoonObject in day1afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2afternoonObjects)
                 {
-                    afternoonObject.SetActive(true);
+                    day2afternoonObject.SetActive(true);
                 }
-                foreach (GameObject eveningObject in day1eveningObjects)
+                foreach (GameObject day2eveningObject in day2eveningObjects)
                 {
-                    eveningObject.SetActive(false);
+                    day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.EVENING && day == Day.DAY_2)
             {
+                foreach (GameObject day1morningObject in day1morningObjects)
+                {
+                    day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
+                }
+                foreach (GameObject day1middayObject in day1middayObjects)
+                {
+                    day1middayObject.SetActive(false);
+                }
+                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                {
+                    day1afternoonObject.SetActive(false);
+                }
+                foreach (GameObject day1eveningObject in day1eveningObjects)
+                {
+                    day1eveningObject.SetActive(false);
+                }
                 foreach (GameObject day2morningObject in day2morningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject middayObject in day1middayObjects)
+                foreach (GameObject day2middayObject in day2middayObjects)
                 {
-                    middayObject.SetActive(false);
+                    day2middayObject.SetActive(false);
                 }
-                foreach (GameObject afternoonObject in day1afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2afternoonObjects)
                 {
-                    afternoonObject.SetActive(false);
+                    day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject eveningObject in day1eveningObjects)
+                foreach (GameObject day2eveningObject in day2eveningObjects)
                 {
-                    eveningObject.SetActive(true);
+                    day2eveningObject.SetActive(true);
                 }
             }
         }
