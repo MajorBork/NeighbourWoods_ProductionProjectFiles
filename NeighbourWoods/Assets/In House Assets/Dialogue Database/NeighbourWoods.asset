@@ -3048,7 +3048,7 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 211.35132, y: 100.115814}
+    canvasScrollPosition: {x: 274.2085, y: 161.5444}
     canvasZoom: 0.6999998
   - id: 10
     fields:
@@ -3900,7 +3900,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 500.8612
+        x: 499.04297
         y: 89.77272
         width: 160
         height: 30
@@ -4117,7 +4117,7 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 338.1818}
+    canvasScrollPosition: {x: 10.909088, y: 436.36368}
     canvasZoom: 0.54999995
   - id: 11
     fields:
@@ -4300,8 +4300,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestState("BreadQuest") == "unassigned") or (CurrentQuestState("BreadQuest")
-        == "active")
+      conditionsString: (CurrentQuestState("BreadQuest") == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4369,7 +4368,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("BreadQuest", "active")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4441,7 +4440,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("BreadQuest") == "success"
+      conditionsString: CurrentQuestState("BreadQuest") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5008,7 +5007,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 11
@@ -5032,8 +5033,8 @@ MonoBehaviour:
         y: 483.97952
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 330.99994}
-    canvasZoom: 0.9999999
+    canvasScrollPosition: {x: 35.28658, y: 384.99576}
+    canvasZoom: 0.9399999
   - id: 12
     fields:
     - title: Title
@@ -5192,7 +5193,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(UpdateCharacterTalking,"Miskha",GameManager);
+        value: 'SendMessage(UpdateCharacterTalking,"Miskha",GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 12
@@ -5656,8 +5659,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1271.6129
-        y: 370.849
+        x: 1273.4312
+        y: 369.03082
         width: 160
         height: 30
     - id: 8
@@ -5850,7 +5853,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 12
@@ -6487,7 +6492,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1631.6129
+        x: 1629.7948
         y: 470.849
         width: 160
         height: 30
@@ -8010,7 +8015,7 @@ MonoBehaviour:
         y: 566.0571
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 359.6416}
+    canvasScrollPosition: {x: 0, y: 191.3984}
     canvasZoom: 0.55000037
   - id: 13
     fields:
@@ -8696,7 +8701,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("StrangerQuest") == "unassigned"
       userScript: SetQuestState("StrangerQuest", "active")
       onExecute:
         m_PersistentCalls:
@@ -9226,7 +9231,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 248
+        x: 246.93616
         y: 430.2388
         width: 160
         height: 30
@@ -9435,10 +9440,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["MishkaFriendPoint"] = Variable["MishkaFriendPoint"] +
-        3;
-
-        SetQuestState("StrangerQuest", "success")'
+      userScript: SetQuestState("StrangerQuest", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9590,7 +9592,7 @@ MonoBehaviour:
         y: 430.2388
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 452.56293}
+    canvasScrollPosition: {x: 0, y: 12.137375}
     canvasZoom: 0.9400003
   - id: 16
     fields:
@@ -9756,7 +9758,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Shopkeeper",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 16
@@ -9773,8 +9777,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
-      userScript: 
+      conditionsString: CurrentQuestState("GetWelcomeGiftQuest") == "unassigned"
+      userScript: SetQuestState("GetWelcomeGiftQuest", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9902,7 +9906,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateFood,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 16
@@ -9914,7 +9920,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("GetWelcomeGiftQuest", "success");
+
+        Variable["Food"] = Variable["Food"] + 4'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9972,6 +9980,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 'SendMessage(UpdateCharacterTalking,"Shopkeeper",GameManager);
+
+          SendMessage(UpdateFood,,GameManager);
+
+          Delay({{end}})'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -9983,7 +9999,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestState("StrangerQuest") == "success"
       userScript: Variable["Food"] = Variable["Food"] + 3
       onExecute:
         m_PersistentCalls:
@@ -9992,7 +10008,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 290
+        x: 291.17645
         y: 79
         width: 160
         height: 30
@@ -24577,7 +24593,7 @@ MonoBehaviour:
   - id: 26
     fields:
     - title: Title
-      value: Day 2/Afternoon/Owner
+      value: Day 2/Midday/Owner
       type: 0
       typeString: 
     - title: Pictures
