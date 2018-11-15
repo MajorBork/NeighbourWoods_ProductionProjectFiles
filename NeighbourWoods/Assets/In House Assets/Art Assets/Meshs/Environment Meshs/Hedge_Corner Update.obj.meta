@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d885fb9ecaa71fd4384b4346aa08c522
+guid: 2627dd13caead77438ac33eba26e262b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Hedge_Cross_Juction_LP
+    100002: Hedge_Corner_LP
     400000: //RootNode
-    400002: Hedge_Cross_Juction_LP
-    2100000: Hedge_Cross_Juction_LPMat
-    2300000: Hedge_Cross_Juction_LP
-    3300000: Hedge_Cross_Juction_LP
-    4300000: Hedge_Cross_Juction_LP
+    400002: Hedge_Corner_LP
+    2100000: Hedge_Corner_LPMat
+    2300000: Hedge_Corner_LP
+    3300000: Hedge_Corner_LP
+    4300000: Hedge_Corner_LP
   externalObjects: {}
   materials:
     importMaterials: 1

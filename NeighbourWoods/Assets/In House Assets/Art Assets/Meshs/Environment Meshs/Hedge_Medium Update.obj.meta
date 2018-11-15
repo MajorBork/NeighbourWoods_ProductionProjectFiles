@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: bc2215916515fcb4bb5a8a29407498fa
+guid: 738db4378fabcbc469a2db5282f69324
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Pillar_Fence_LP
+    100002: Hedge_Medium_LP
     400000: //RootNode
-    400002: Pillar_Fence_LP
-    2100000: Pillar_Fence_LPMat
-    2300000: Pillar_Fence_LP
-    3300000: Pillar_Fence_LP
-    4300000: Pillar_Fence_LP
+    400002: Hedge_Medium_LP
+    2100000: Hedge_Medium_LPMat
+    2300000: Hedge_Medium_LP
+    3300000: Hedge_Medium_LP
+    4300000: Hedge_Medium_LP
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b6ec2b2077221a24cb8a16aa75cf2cb1
+guid: 2c7ad069d35fd1e49bc7a04d912c5ac3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Hedge_End_LP
+    100002: Hedge_Cross_Juction_LP
     400000: //RootNode
-    400002: Hedge_End_LP
-    2100000: Hedge_End_LPMat
-    2300000: Hedge_End_LP
-    3300000: Hedge_End_LP
-    4300000: Hedge_End_LP
+    400002: Hedge_Cross_Juction_LP
+    2100000: Hedge_Cross_Juction_LPMat
+    2300000: Hedge_Cross_Juction_LP
+    3300000: Hedge_Cross_Juction_LP
+    4300000: Hedge_Cross_Juction_LP
   externalObjects: {}
   materials:
     importMaterials: 1
