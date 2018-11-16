@@ -21,12 +21,13 @@ GameObject:
   - component: {fileID: 4944005533128938}
   - component: {fileID: 33901208684674768}
   - component: {fileID: 23338193776776244}
+  - component: {fileID: 64951142973552660}
   m_Layer: 0
   m_Name: Roof_Long_LP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1882661809092118
 GameObject:
@@ -41,7 +42,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4824646323518128
 Transform:
@@ -50,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882661809092118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38, y: 0, z: -13}
+  m_LocalPosition: {x: 1, y: 0, z: 16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4944005533128938}
@@ -111,4 +112,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1518992605801922}
-  m_Mesh: {fileID: 4300000, guid: b93b32e7c1c1bac478bab05875f3067b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 872fb0f0a5862d94cb9217f93770be96, type: 3}
+--- !u!64 &64951142973552660
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518992605801922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 872fb0f0a5862d94cb9217f93770be96, type: 3}

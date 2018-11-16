@@ -24,7 +24,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1356257049538888
 GameObject:
@@ -36,13 +36,13 @@ GameObject:
   - component: {fileID: 4564370120222774}
   - component: {fileID: 33391587448029828}
   - component: {fileID: 23693753371668514}
-  - component: {fileID: 64807500635472984}
+  - component: {fileID: 64098691249652858}
   m_Layer: 0
   m_Name: Window_Small_LP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4034086851935314
 Transform:
@@ -50,14 +50,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209380475734554}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9, y: 0, z: -15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -11, y: 0, z: 9}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children:
   - {fileID: 4564370120222774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &4564370120222774
 Transform:
   m_ObjectHideFlags: 1
@@ -112,8 +112,8 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356257049538888}
-  m_Mesh: {fileID: 4300000, guid: 17c0ac2c59045574694e388b90c95321, type: 3}
---- !u!64 &64807500635472984
+  m_Mesh: {fileID: 4300000, guid: 5619f7bf8381efb49b444e9d7838085f, type: 3}
+--- !u!64 &64098691249652858
 MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,4 +126,4 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 17c0ac2c59045574694e388b90c95321, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5619f7bf8381efb49b444e9d7838085f, type: 3}

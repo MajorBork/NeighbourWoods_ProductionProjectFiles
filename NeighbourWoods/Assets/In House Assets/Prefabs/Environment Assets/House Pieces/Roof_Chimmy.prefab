@@ -27,7 +27,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1727357353034904
 GameObject:
@@ -42,7 +42,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4132269507626920
 Transform:
@@ -112,7 +112,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1136499611252738}
-  m_Mesh: {fileID: 4300000, guid: 68c53b2ba3d494949a86c34e87227239, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 91d7dc4e624592544b2f47e31de15f28, type: 3}
 --- !u!64 &64083501154195704
 MeshCollider:
   m_ObjectHideFlags: 1
