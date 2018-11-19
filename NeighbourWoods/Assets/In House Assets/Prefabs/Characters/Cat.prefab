@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4545700010477392}
   - component: {fileID: 33940903890569776}
   - component: {fileID: 23707753776663272}
+  - component: {fileID: 65627078435397878}
   m_Layer: 0
   m_Name: Kitty
   m_TagString: Untagged
@@ -51,10 +52,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4273391582597026}
-  - component: {fileID: 64180187872085338}
   - component: {fileID: 195259832061710808}
   - component: {fileID: 114115341874377742}
-  - component: {fileID: 65209682596807534}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -145,32 +144,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372873723612536}
   m_Mesh: {fileID: 4300000, guid: a94d97195ed24d64c9c47c8ba9add1e8, type: 3}
---- !u!64 &64180187872085338
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967739070010016}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65209682596807534
+--- !u!65 &65627078435397878
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967739070010016}
+  m_GameObject: {fileID: 1372873723612536}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 4, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 22.935389, y: 54.201187, z: 81.21122}
+  m_Center: {x: -0.0050315857, y: 27.070892, z: -10.767795}
 --- !u!114 &114115341874377742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +187,6 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
