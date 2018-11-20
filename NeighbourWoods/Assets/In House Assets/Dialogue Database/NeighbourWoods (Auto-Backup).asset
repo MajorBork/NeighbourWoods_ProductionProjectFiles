@@ -5193,7 +5193,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateCharacterTalking,"Miskha",GameManager);;
+        value: 'SendMessage(UpdateCharacterTalking,"Miskha",GameManager);
 
           Delay({{end}})'
         type: 0
@@ -5882,7 +5882,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 244.99661
+        x: 246.91968
         y: 414.2452
         width: 160
         height: 30
@@ -7877,7 +7877,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 703.2469
+        x: 705.17
         y: 569.6986
         width: 160
         height: 30
@@ -8015,8 +8015,8 @@ MonoBehaviour:
         y: 566.0571
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 191.3984}
-    canvasZoom: 0.55000037
+    canvasScrollPosition: {x: 85.77356, y: 23.869278}
+    canvasZoom: 0.6100003
   - id: 13
     fields:
     - title: Title

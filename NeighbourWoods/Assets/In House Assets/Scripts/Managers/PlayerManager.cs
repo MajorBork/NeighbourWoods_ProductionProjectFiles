@@ -251,10 +251,6 @@ namespace Manager.Player
             }
         }
         #endregion
-        public void DialogueController()
-        {
-
-        }
         #region DebugController()
         public void DebugController()
         {
@@ -295,6 +291,10 @@ namespace Manager.Player
             }
         }
         #endregion
+        public void DialogueController()
+        {
+
+        }
         #endregion
         #region Vision Event Methods
         void OnEnable() //Subscribes to our game events

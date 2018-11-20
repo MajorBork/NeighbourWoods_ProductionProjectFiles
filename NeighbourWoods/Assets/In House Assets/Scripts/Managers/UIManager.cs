@@ -25,6 +25,7 @@ namespace Manager.UI
         public TextMeshProUGUI timeText;
         public TextMeshProUGUI tmpFoodText;
         //Image Variables
+        public Icons icons;
         public Image itemImageUI;
         public TextMeshProUGUI itemName;
         public GameState gameState;
@@ -60,20 +61,33 @@ namespace Manager.UI
         #region Methods
         public void UpdateItem(string incomingItemName) // updates the item Icon in the inventory
         {
+            switch (incomingItemName)
+            {
+                case "Newspaper":
+                    itemImageUI.sprite = icons.newspaperIcon;
+                    break;
+                case "Clue":
+                    itemImageUI.sprite = icons.clueIcon;
+                    break;
+                default: itemImageUI.sprite = null;
+                    break;
+            }
             //if ()
             //{
 
             //}
             // replaces inventoryVis icon 
-            itemImageUI.enabled = true;
+            //itemImageUI.enabled = true;
             itemNameString = incomingItemName;
+            itemName.text = itemNameString;
             //Debug.Log("hey I am working");
         }
         public void GetRidOfItem() // trying to get rid of the icon
         {
-            itemImageUI.enabled = false;
+            //itemImageUI.enabled = false;
             itemNameString = "";
             itemName.text = itemNameString;
+            itemImageUI.sprite = null;
         }
         public void OnCharacterTalk (int friendshipPoint)
         {

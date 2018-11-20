@@ -4387,6 +4387,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 23887726842952310, guid: 7eb980be0c176ba4c9e31892bf7a7c27,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ca40f139fe93cb4d87c3f530febe808, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb980be0c176ba4c9e31892bf7a7c27, type: 2}
   m_IsPrefabAsset: 0
@@ -6170,10 +6175,6 @@ Prefab:
     - target: {fileID: 1983795235365372, guid: 13fa349a8f063884cb8b706048518f48, type: 2}
       propertyPath: m_Name
       value: House_Door (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162141922594736, guid: 13fa349a8f063884cb8b706048518f48, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13fa349a8f063884cb8b706048518f48, type: 2}
@@ -17747,14 +17748,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 4770146007494734, guid: 3b0029e3451f0de43bed4b3eca5aa39c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770146007494734, guid: 3b0029e3451f0de43bed4b3eca5aa39c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000005
-      objectReference: {fileID: 0}
     - target: {fileID: 1405926324183416, guid: 3b0029e3451f0de43bed4b3eca5aa39c, type: 2}
       propertyPath: m_Name
       value: Window_Long (1)
@@ -26595,14 +26588,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1209380475734554, guid: 52bc3c45abe1e804cba541a0616c0248, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1356257049538888, guid: 52bc3c45abe1e804cba541a0616c0248, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52bc3c45abe1e804cba541a0616c0248, type: 2}
   m_IsPrefabAsset: 0
@@ -28103,6 +28088,7 @@ MonoBehaviour:
   questTitle: BreadQuest
   questObject: {fileID: 1027751104}
   message: I've caught the bread, return it to owner
+  itemNameOnObject: 
   inventoryManager: {fileID: 1101306670}
   uiManager: {fileID: 1918485835}
 --- !u!23 &1027751108
@@ -28560,30 +28546,6 @@ Prefab:
     - target: {fileID: 4944286074536582, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
       propertyPath: m_RootOrder
       value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4362921154422040, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4362921154422040, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944286074536582, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944286074536582, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 1244571448981894, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1901530557400232, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1244571448981894, guid: 41208ebec2328314bb88047d81d1bb03, type: 2}
       propertyPath: m_Name
@@ -29863,7 +29825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodLevel: 0
   gameState: 0
-  Debug: 0
+  Debug: 1
   startScreen: {fileID: 0}
 --- !u!4 &1101306672
 Transform:
@@ -32023,6 +31985,7 @@ MonoBehaviour:
   questTitle: NewspaperQuest
   questObject: {fileID: 1148464320}
   message: I've caught the newspaper, return it to owner
+  itemNameOnObject: Newspaper
   inventoryManager: {fileID: 1101306670}
   uiManager: {fileID: 1918485835}
 --- !u!1001 &1156552360
@@ -35692,7 +35655,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1261393199}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -47114,6 +47077,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23887726842952310, guid: 7eb980be0c176ba4c9e31892bf7a7c27,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ca40f139fe93cb4d87c3f530febe808, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb980be0c176ba4c9e31892bf7a7c27, type: 2}
   m_IsPrefabAsset: 0
@@ -55045,6 +55013,7 @@ GameObject:
   - component: {fileID: 1918485837}
   - component: {fileID: 1918485836}
   - component: {fileID: 1918485835}
+  - component: {fileID: 1918485840}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -55070,8 +55039,9 @@ MonoBehaviour:
   dayText: {fileID: 1182032178}
   timeText: {fileID: 1852224073}
   tmpFoodText: {fileID: 414514583}
+  icons: {fileID: 1918485840}
   itemImageUI: {fileID: 1261393201}
-  itemName: {fileID: 0}
+  itemName: {fileID: 459238213}
   gameState: 0
   taskPoints: 0
   newTaskPoints: 0
@@ -55163,6 +55133,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1918485840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918485834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfa300ec66507b46b45ac1051aaf814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newspaperIcon: {fileID: 21300000, guid: bf620ccab2744cf449b4c4ee4598620c, type: 3}
+  clueIcon: {fileID: 21300000, guid: 7ffb896967c24bb4e8de91ddf28df6ab, type: 3}
 --- !u!1 &1922731720
 GameObject:
   m_ObjectHideFlags: 0

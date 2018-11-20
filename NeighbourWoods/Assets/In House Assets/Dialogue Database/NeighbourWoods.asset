@@ -3878,6 +3878,8 @@ MonoBehaviour:
 
           SendMessage(UpdateFood,,GameManager);
 
+          SendMessage(GetRidOfItem,,GameManager);
+
           Delay({{end}})'
         type: 0
         typeString: 
@@ -4117,7 +4119,7 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 10.909088, y: 436.36368}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.54999995
   - id: 11
     fields:

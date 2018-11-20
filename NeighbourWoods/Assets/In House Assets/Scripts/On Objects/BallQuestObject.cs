@@ -13,6 +13,7 @@ public class BallQuestObject : MonoBehaviour
     //private QuestState newQuestState = QuestState.Success;
     public GameObject questObject;
     public string message;
+    public string itemNameOnObject;
     //public Image ballIcon;
     public InventoryManager inventoryManager;
     public UIManager uiManager;
@@ -21,6 +22,7 @@ public class BallQuestObject : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             uiManager.SendMessage("UpdateItemIcon");
+            uiManager.SendMessage("UpdateItem",itemNameOnObject);
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
             //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
