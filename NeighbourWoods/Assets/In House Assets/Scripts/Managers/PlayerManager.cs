@@ -6,6 +6,7 @@ using Manager.UI;
 using Manager.Inventory;
 using TMPro;
 using DG.Tweening;
+using Manager.Level;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -22,14 +23,14 @@ namespace Manager.Player
         // Enums
         [Tooltip("The public Vision enum variable on the player object")]
         public Vision vision;
-        [Tooltip("The public GameState enum variable on the player object")]
-        public GameState gameState;
         #region Object Variables
         // All of the Variables that link to objects or components
         [Tooltip("The GameObject variable that is the player object in the scene")]
         public GameObject player;
         [Tooltip("The variable that references the UIManager script on the canvas")]
         public UIManager gameManagerUI;
+        [Tooltip("The variable that references the LevelManager Script on the GameManager object")]
+        public LevelManager levelManager;
         [Tooltip("The variable that references the GameManager Script on the GameManager object")]
         public GameManager gameManager;
         [Tooltip("The PostProcessing Profile of smellOVision variable")]
@@ -68,7 +69,7 @@ namespace Manager.Player
         private Vector3 currentRotation;
         private Vector3 rotationSmoothVelocity;
         #endregion
-        #region Vision Variables=
+        #region Vision Variables
         [Tooltip("")]
         [SerializeField]
         public float maxVignIntensity = 0.3f;
@@ -111,6 +112,7 @@ namespace Manager.Player
                     DigController();
                     JumpController();
                     InventoryController();
+                    DebugController();
                     break;
                 case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
                     DialogueController();
@@ -253,6 +255,46 @@ namespace Manager.Player
         {
 
         }
+        #region DebugController()
+        public void DebugController()
+        {
+            if (gameManager.Debug)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    levelManager.UpdateTimeToMorningDay1();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    levelManager.UpdateTimeToMiddayDay1();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    levelManager.UpdateTimeToAfternoonDay1();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha4))
+                {
+                    levelManager.UpdateTimeToEveningDay1();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha5))
+                {
+                    levelManager.UpdateTimeToMorningDay2();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha6))
+                {
+                    levelManager.UpdateTimeToMiddayDay2();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha7))
+                {
+                    levelManager.UpdateTimeToAfternoonDay2();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha8))
+                {
+                    levelManager.UpdateTimeToEveningDay2();
+                }
+            }
+        }
+        #endregion
         #endregion
         #region Vision Event Methods
         void OnEnable() //Subscribes to our game events

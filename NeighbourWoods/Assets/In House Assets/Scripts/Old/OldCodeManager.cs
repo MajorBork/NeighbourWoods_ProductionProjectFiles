@@ -120,6 +120,10 @@ public class OldCodeManager
     //    DialogueManager.AddLuaObserver("Variable['TaskPoints']", LuaWatchFrequency.EveryDialogueEntry, OnTaskPointsChange);
     //    Debug.Log("Number of TaskPoints change to: " + newValue.AsInt);
     //}
+    //public void MorningTime()// to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
+    //{
+
+    //}
     // Old movement code
     //if (Input.GetKey(KeyCode.W))
     //{

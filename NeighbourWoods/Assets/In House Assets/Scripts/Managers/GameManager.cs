@@ -23,6 +23,7 @@ namespace Manager
         public int foodLevel;
         //public ItemType itemType;
         public GameState gameState;
+        public bool Debug;
         public Image startScreen;
         
         void Start()

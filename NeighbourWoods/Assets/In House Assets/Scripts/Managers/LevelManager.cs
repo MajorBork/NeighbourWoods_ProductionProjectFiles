@@ -106,56 +106,132 @@ namespace Manager.Level
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
         }
-        public void MorningTime()// to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
-        {
-
-        }
         #region Utility Time Methods
-        public void UpdateTimeToMorning()
+        public void UpdateTimeToMorningDay1()
         {
-            if (timeSlot == TimeSlot.MORNING)
+            if (day == Day.DAY_2)
             {
-                return;
+                day = Day.DAY_1;
             }
             if (timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.MORNING;
             }
-            GameEvents.ReportOnTimeChange(timeSlot, day);
-        }
-        public void UpdateTimeToMidday()
-        {
-            if (timeSlot == TimeSlot.MIDDAY)
+            else
             {
                 return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToMiddayDay1()
+        {
+            if (day == Day.DAY_2)
+            {
+                day = Day.DAY_1;
             }
             if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.MIDDAY;
             }
-            GameEvents.ReportOnTimeChange(timeSlot, day);
-        }
-        public void UpdateTimeToAfternoon()
-        {
-            if (timeSlot == TimeSlot.AFTERNOON)
+            else
             {
                 return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToAfternoonDay1()
+        {
+            if (day == Day.DAY_2)
+            {
+                day = Day.DAY_1;
             }
             if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.AFTERNOON;
             }
-            GameEvents.ReportOnTimeChange(timeSlot, day);
-        }
-        public void UpdateTimeToEvening()
-        {
-            if (timeSlot == TimeSlot.EVENING)
+            else
             {
                 return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToEveningDay1()
+        {
+            if (day == Day.DAY_2)
+            {
+                day = Day.DAY_1;
             }
             if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON)
             {
                 timeSlot = TimeSlot.EVENING;
+            }
+            else
+            {
+                return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToMorningDay2()
+        {
+            if (day == Day.DAY_1)
+            {
+                day = Day.DAY_2;
+            }
+            if (timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
+            {
+                timeSlot = TimeSlot.MORNING;
+            }
+            else
+            {
+                return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToMiddayDay2()
+        {
+            if (day == Day.DAY_1)
+            {
+                day = Day.DAY_2;
+            }
+            if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
+            {
+                timeSlot = TimeSlot.MIDDAY;
+            }
+            else
+            {
+                return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToAfternoonDay2()
+        {
+            if (day == Day.DAY_1)
+            {
+                day = Day.DAY_2;
+            }
+            if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.EVENING)
+            {
+                timeSlot = TimeSlot.AFTERNOON;
+            }
+            else
+            {
+                return;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToEveningDay2()
+        {
+            if (day == Day.DAY_1)
+            {
+                day = Day.DAY_2;
+            }
+            if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON)
+            {
+                timeSlot = TimeSlot.EVENING;
+            }
+            else
+            {
+                return;
             }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
