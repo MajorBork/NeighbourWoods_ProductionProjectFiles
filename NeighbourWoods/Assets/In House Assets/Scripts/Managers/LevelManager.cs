@@ -61,6 +61,27 @@ namespace Manager.Level
 
         }
         #endregion
+
+        //public void DebugUpdateTime()
+        //{
+        //    timeSlot++;
+        //    GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+        //    if ((int)timeSlot == 4)
+        //    {
+        //        day++;
+        //        timeSlot = TimeSlot.MORNING;
+        //        if ((int)day == 2)
+        //        {
+        //            SceneManager.LoadScene("OverworldScene");
+        //        }
+        //        if ((int)day == 7)
+        //        {
+        //            //make gameevent reportgameover 
+        //        }
+        //    }
+        //    GameEvents.ReportOnTimeChange(timeSlot, day);
+        //}
+        #region Time Methods
         public void CheckTime() // function to check if task points is reached
         {
             Debug.Log("I am Working");
@@ -71,26 +92,6 @@ namespace Manager.Level
                 //UpdateTime();
             }
         }
-        public void DebugUpdateTime()
-        {
-            timeSlot++;
-            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
-            if ((int)timeSlot == 4)
-            {
-                day++;
-                timeSlot = TimeSlot.MORNING;
-                if ((int)day == 2)
-                {
-                    SceneManager.LoadScene("OverworldScene");
-                }
-                if ((int)day == 7)
-                {
-                    //make gameevent reportgameover 
-                }
-            }
-            GameEvents.ReportOnTimeChange(timeSlot, day);
-        }
-        #region Time Methods
         public IEnumerator UpdateTime() // updates our time to the next increment 
         {
             StartCoroutine(TeleportPlayer());
@@ -112,22 +113,6 @@ namespace Manager.Level
                 }
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
-        }
-        public IEnumerator TeleportPlayer()
-        {
-            yield return new WaitForSeconds(3);
-            if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_1)
-            {
-                Player.transform.position = day1AfternoonTeleportLocation.transform.position;
-            }
-            if (timeSlot == TimeSlot.MORNING && day == Day.DAY_2)
-            {
-                Player.transform.position = day2MorningTeleportLocation.transform.position;
-            }
-            if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_2)
-            {
-                Player.transform.position = day2AfternoonTeleportLocation.transform.position;
-            }
         }
         #region Utility Time Methods
         public void UpdateTimeToMorningDay1()
@@ -551,6 +536,24 @@ namespace Manager.Level
                 {
                     day2eveningObject.SetActive(true);
                 }
+            }
+        }
+        #endregion
+        #region TeleportPlayer()
+        public IEnumerator TeleportPlayer()
+        {
+            yield return new WaitForSeconds(3);
+            if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_1)
+            {
+                Player.transform.position = day1AfternoonTeleportLocation.transform.position;
+            }
+            if (timeSlot == TimeSlot.MORNING && day == Day.DAY_2)
+            {
+                Player.transform.position = day2MorningTeleportLocation.transform.position;
+            }
+            if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_2)
+            {
+                Player.transform.position = day2AfternoonTeleportLocation.transform.position;
             }
         }
         #endregion

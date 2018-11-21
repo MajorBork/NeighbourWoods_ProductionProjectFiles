@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Manager.Inventory;
 using Manager.UI;
+using PixelCrushers.DialogueSystem;
 
 public class DogBoneBehaviour : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class DogBoneBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             uiManager.SendMessage("UpdateItemIcon");
+            DialogueManager.ShowAlert("Dig! There is a bone here!");
+            //if ()
+            //{
+
+            //}
             questObject.SetActive(false);
         }
     }
