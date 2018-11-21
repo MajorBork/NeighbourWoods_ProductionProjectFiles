@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PixelCrushers.DialogueSystem;
+using Manager.Player;
 namespace Manager.Level
 {
     #region Days Enum
@@ -33,14 +34,18 @@ namespace Manager.Level
         //public Levels[] levels;
         public Day day;
         public TimeSlot timeSlot;
-        public GameObject[] day1morningObjects;
-        public GameObject[] day1middayObjects;
-        public GameObject[] day1afternoonObjects;
-        public GameObject[] day1eveningObjects;
-        public GameObject[] day2morningObjects;
-        public GameObject[] day2middayObjects;
-        public GameObject[] day2afternoonObjects;
-        public GameObject[] day2eveningObjects;
+        public GameObject[] day1MorningObjects;
+        public GameObject[] day1MiddayObjects;
+        public GameObject[] day1AfternoonObjects;
+        public GameObject[] day1EveningObjects;
+        public GameObject[] day2MorningObjects;
+        public GameObject[] day2MiddayObjects;
+        public GameObject[] day2AfternoonObjects;
+        public GameObject[] day2EveningObjects;
+        public GameObject Player;
+        public Transform day1AfternoonTeleportLocation;
+        public Transform day2MorningTeleportLocation;
+        public Transform day2AfternoonTeleportLocation;
         public int currentTime;
         public int maxTaskPoints = 4;
         #endregion
@@ -88,6 +93,7 @@ namespace Manager.Level
         #region Time Methods
         public IEnumerator UpdateTime() // updates our time to the next increment 
         {
+            StartCoroutine(TeleportPlayer());
             yield return new WaitForSeconds(3);
             timeSlot++;
             GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
@@ -95,6 +101,7 @@ namespace Manager.Level
             {
                 day++;    
                 timeSlot = TimeSlot.MORNING;
+                
                 if ((int)day == 3)
                 {
                     SceneManager.LoadScene("OverworldScene");
@@ -105,6 +112,22 @@ namespace Manager.Level
                 }
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
+        }
+        public IEnumerator TeleportPlayer()
+        {
+            yield return new WaitForSeconds(3);
+            if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_1)
+            {
+                Player.transform.position = day1AfternoonTeleportLocation.transform.position;
+            }
+            if (timeSlot == TimeSlot.MORNING && day == Day.DAY_2)
+            {
+                Player.transform.position = day2MorningTeleportLocation.transform.position;
+            }
+            if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_2)
+            {
+                Player.transform.position = day2AfternoonTeleportLocation.transform.position;
+            }
         }
         #region Utility Time Methods
         public void UpdateTimeToMorningDay1()
@@ -250,280 +273,281 @@ namespace Manager.Level
         {
             if (timeSlot == TimeSlot.MORNING && day == Day.DAY_1)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(true); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false);
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day1afternoonObjects)
+                foreach (GameObject day2afternoonObject in day1AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day1eveningObjects)
+                foreach (GameObject day2eveningObject in day1EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.MIDDAY && day == Day.DAY_1)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(true);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day2eveningObjects)
+                foreach (GameObject day2eveningObject in day2EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_1)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(true);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day2eveningObjects)
+                foreach (GameObject day2eveningObject in day2EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.EVENING && day == Day.DAY_1)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(true);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day2eveningObjects)
+                foreach (GameObject day2eveningObject in day2EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.MORNING && day == Day.DAY_2)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(true); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day1afternoonObjects)
+                foreach (GameObject day2afternoonObject in day1AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day1eveningObjects)
+                foreach (GameObject day2eveningObject in day1EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
+
             }
             if (timeSlot == TimeSlot.MIDDAY && day == Day.DAY_2)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(true);
                 }
-                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day2eveningObjects)
+                foreach (GameObject day2eveningObject in day2EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_2)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(true);
                 }
-                foreach (GameObject day2eveningObject in day2eveningObjects)
+                foreach (GameObject day2eveningObject in day2EveningObjects)
                 {
                     day2eveningObject.SetActive(false);
                 }
             }
             if (timeSlot == TimeSlot.EVENING && day == Day.DAY_2)
             {
-                foreach (GameObject day1morningObject in day1morningObjects)
+                foreach (GameObject day1morningObject in day1MorningObjects)
                 {
                     day1morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day1middayObject in day1middayObjects)
+                foreach (GameObject day1middayObject in day1MiddayObjects)
                 {
                     day1middayObject.SetActive(false);
                 }
-                foreach (GameObject day1afternoonObject in day1afternoonObjects)
+                foreach (GameObject day1afternoonObject in day1AfternoonObjects)
                 {
                     day1afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day1eveningObject in day1eveningObjects)
+                foreach (GameObject day1eveningObject in day1EveningObjects)
                 {
                     day1eveningObject.SetActive(false);
                 }
-                foreach (GameObject day2morningObject in day2morningObjects)
+                foreach (GameObject day2morningObject in day2MorningObjects)
                 {
                     day2morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable
                 }
-                foreach (GameObject day2middayObject in day2middayObjects)
+                foreach (GameObject day2middayObject in day2MiddayObjects)
                 {
                     day2middayObject.SetActive(false);
                 }
-                foreach (GameObject day2afternoonObject in day2afternoonObjects)
+                foreach (GameObject day2afternoonObject in day2AfternoonObjects)
                 {
                     day2afternoonObject.SetActive(false);
                 }
-                foreach (GameObject day2eveningObject in day2eveningObjects)
+                foreach (GameObject day2eveningObject in day2EveningObjects)
                 {
                     day2eveningObject.SetActive(true);
                 }

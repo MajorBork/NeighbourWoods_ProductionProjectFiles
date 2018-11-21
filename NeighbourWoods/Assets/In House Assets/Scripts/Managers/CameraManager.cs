@@ -33,7 +33,6 @@ namespace Manager.Player
                     CameraController();
                     break;
                 case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
-                    PM.DialogueController();
                     break;
                 case GameState.TITLE_SCREEN:
                     break;

@@ -111,11 +111,10 @@ namespace Manager.Player
                     BarkController();
                     DigController();
                     JumpController();
-                    InventoryController();
                     DebugController();
                     break;
                 case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
-                    DialogueController();
+                    InventoryController();
                     break;
                 case GameState.TITLE_SCREEN:
                     break;
@@ -259,42 +258,46 @@ namespace Manager.Player
                 if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
                     levelManager.UpdateTimeToMorningDay1();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
                     levelManager.UpdateTimeToMiddayDay1();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     levelManager.UpdateTimeToAfternoonDay1();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha4))
                 {
                     levelManager.UpdateTimeToEveningDay1();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha5))
                 {
                     levelManager.UpdateTimeToMorningDay2();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha6))
                 {
                     levelManager.UpdateTimeToMiddayDay2();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha7))
                 {
                     levelManager.UpdateTimeToAfternoonDay2();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha8))
                 {
                     levelManager.UpdateTimeToEveningDay2();
+                    StartCoroutine(levelManager.TeleportPlayer());
                 }
             }
         }
         #endregion
-        public void DialogueController()
-        {
-
-        }
         #endregion
         #region Vision Event Methods
         void OnEnable() //Subscribes to our game events
