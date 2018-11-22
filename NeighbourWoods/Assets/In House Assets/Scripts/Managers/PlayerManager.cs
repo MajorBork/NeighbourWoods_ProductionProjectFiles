@@ -107,6 +107,7 @@ namespace Manager.Player
             {
                 case GameState.FREE_ROAM: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     MovementController(inputDir, running);
+                    InventoryController();
                     VisionController();
                     BarkController();
                     DigController();

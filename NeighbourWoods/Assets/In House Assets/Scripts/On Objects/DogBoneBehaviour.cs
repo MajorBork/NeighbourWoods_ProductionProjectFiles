@@ -22,6 +22,12 @@ public class DogBoneBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DialogueManager.ShowAlert("Dig! There is a bone here!");
+        }
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
             if (Input.GetButtonDown("Dig"))
             {
                 uiManager.DogBoneUpdate();
