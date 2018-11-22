@@ -43,6 +43,7 @@ namespace Manager.Level
         public GameObject[] day2AfternoonObjects;
         public GameObject[] day2EveningObjects;
         public GameObject Player;
+        public Transform day1MorningTeleportLocation;
         public Transform day1AfternoonTeleportLocation;
         public Transform day2MorningTeleportLocation;
         public Transform day2AfternoonTeleportLocation;
@@ -61,26 +62,6 @@ namespace Manager.Level
 
         }
         #endregion
-
-        //public void DebugUpdateTime()
-        //{
-        //    timeSlot++;
-        //    GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
-        //    if ((int)timeSlot == 4)
-        //    {
-        //        day++;
-        //        timeSlot = TimeSlot.MORNING;
-        //        if ((int)day == 2)
-        //        {
-        //            SceneManager.LoadScene("OverworldScene");
-        //        }
-        //        if ((int)day == 7)
-        //        {
-        //            //make gameevent reportgameover 
-        //        }
-        //    }
-        //    GameEvents.ReportOnTimeChange(timeSlot, day);
-        //}
         #region Time Methods
         public void CheckTime() // function to check if task points is reached
         {
@@ -543,6 +524,10 @@ namespace Manager.Level
         public IEnumerator TeleportPlayer()
         {
             yield return new WaitForSeconds(3);
+            if (timeSlot == TimeSlot.MORNING && day == Day.DAY_1)
+            {
+                Player.transform.position = day1MorningTeleportLocation.transform.position;
+            }
             if (timeSlot == TimeSlot.AFTERNOON && day == Day.DAY_1)
             {
                 Player.transform.position = day1AfternoonTeleportLocation.transform.position;

@@ -7,7 +7,7 @@ using PixelCrushers.DialogueSystem;
 
 public class DogBoneBehaviour : MonoBehaviour
 {
-    public GameObject questObject;
+    public GameObject dogBoneObject;
     public UIManager uiManager;
     void Start () // Use this for initialization
     {
@@ -21,13 +21,12 @@ public class DogBoneBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiManager.SendMessage("UpdateItemIcon");
             DialogueManager.ShowAlert("Dig! There is a bone here!");
-            //if ()
-            //{
-
-            //}
-            questObject.SetActive(false);
+            if (Input.GetButtonDown("Dig"))
+            {
+                uiManager.DogBoneUpdate();
+                dogBoneObject.SetActive(false);
+            }
         }
     }
 }

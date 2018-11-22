@@ -108,12 +108,12 @@ public class OldCodeManager
     //public int dialogueEntryID;
     //void Start()
     //{
-    //sentences = new Queue<string>();
-    //sent = new List<string>();
+    //    sentences = new Queue<string>();
+    //    sent = new List<string>();
     //}
     //void Update()
     //{
-
+    //    itemImageUI.enabled = true;
     //}
     //void OnTaskPointsChange(LuaWatchItem luaWatchItem, Lua.Result newValue)
     //{
@@ -123,6 +123,25 @@ public class OldCodeManager
     //public void MorningTime()// to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
     //{
 
+    //}
+    //public void DebugUpdateTime()
+    //{
+    //    timeSlot++;
+    //    GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+    //    if ((int)timeSlot == 4)
+    //    {
+    //        day++;
+    //        timeSlot = TimeSlot.MORNING;
+    //        if ((int)day == 2)
+    //        {
+    //            SceneManager.LoadScene("OverworldScene");
+    //        }
+    //        if ((int)day == 7)
+    //        {
+    //            //make gameevent reportgameover 
+    //        }
+    //    }
+    //    GameEvents.ReportOnTimeChange(timeSlot, day);
     //}
     // Old movement code
     //if (Input.GetKey(KeyCode.W))

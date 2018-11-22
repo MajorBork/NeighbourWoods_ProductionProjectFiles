@@ -16,7 +16,7 @@ namespace Manager.UI
     public class UIManager : Singleton<UIManager>
     {
         #region Variables
-        public CanvasGroup dialogueBoxCanvas;
+        //public CanvasGroup dialogueBoxCanvas;
         //public CanvasGroup buttonPressBox;
         public CanvasGroup fadeCanvas;
         public CanvasGroup inventoryCanvas;
@@ -24,13 +24,16 @@ namespace Manager.UI
         public TextMeshProUGUI dayText;
         public TextMeshProUGUI timeText;
         public TextMeshProUGUI tmpFoodText;
+        public TextMeshProUGUI itemName;
+        public TextMeshProUGUI dogBoneText;
         //Image Variables
         public Icons icons;
         public Image itemImageUI;
-        public TextMeshProUGUI itemName;
+        // other Variables
         public GameState gameState;
         public int taskPoints;
         public int newTaskPoints;
+        public int dogBoneCollected;
         public string textFood;
         public string itemNameString;
         public int textFoodInt;
@@ -42,7 +45,7 @@ namespace Manager.UI
         void Start() // Use this for initialization
         {
             
-            dialogueBoxCanvas.alpha = 0;
+            //InventoryCanvas.alpha = 0;
             //buttonPressBox.alpha = 0;
             fadeCanvas.alpha = 0;
             timeText.text = "";
@@ -77,7 +80,6 @@ namespace Manager.UI
 
             //}
             // replaces inventoryVis icon 
-            //itemImageUI.enabled = true;
             itemNameString = incomingItemName;
             itemName.text = itemNameString;
             //Debug.Log("hey I am working");
@@ -112,9 +114,10 @@ namespace Manager.UI
         {
             tmpFoodText.text = ("Food: " + food);
         }
-        void UpdateCharacterIcon()
+        public void DogBoneUpdate()
         {
-
+            dogBoneCollected++;
+            dogBoneText.text = "Bones: " + dogBoneCollected + "/20";
         }
         #endregion
         #region Listeners 
@@ -137,11 +140,11 @@ namespace Manager.UI
         {
             if (gameState == GameState.DIALOGUE)
             {
-                dialogueBoxCanvas.alpha = 1;
+                //dialogueBoxCanvas.alpha = 1;
             }
             else
             {
-                dialogueBoxCanvas.alpha = 0;
+                //dialogueBoxCanvas.alpha = 0;
             }
         }
         #endregion
