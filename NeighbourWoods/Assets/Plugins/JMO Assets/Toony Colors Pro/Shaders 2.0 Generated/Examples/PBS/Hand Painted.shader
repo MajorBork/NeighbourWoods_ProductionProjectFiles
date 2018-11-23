@@ -59,6 +59,7 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 	SubShader
 	{
 		Blend [_SrcBlend] [_DstBlend]
+		ZWrite [_ZWrite]
 		Tags { "RenderType"="Opaque" "PerformanceChecks"="False" }
 
 		CGPROGRAM
@@ -75,24 +76,6 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 		{
 			float2 uv_MainTex;
 			#define uv_TexturedThreshold uv_MainTex
-		};
-
-		struct SurfaceOutputStandardTCP2
-		{
-			fixed3 Albedo;      // base (diffuse or specular) color
-			fixed3 Normal;      // tangent space normal, if written
-			half3 Emission;
-
-			half Metallic;      // 0=non-metal, 1=metal
-
-			//Smoothness is the user facing name, it should be perceptual smoothness but user should not have to deal with it.
-			// Everywhere in the code you meet smoothness it is perceptual smoothness
-			half Smoothness;    // 0=rough, 1=smooth
-			half Occlusion;     // occlusion (default 1)
-			fixed Alpha;        // alpha for transparencies
-
-			fixed atten;
-			float2 texThresholdTexcoords;
 		};
 
 		//================================================================================================================================
@@ -117,7 +100,7 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 			fixed atten = 1;
 		#endif
 
-			half4 c = TCP2_BRDF_PBS(s.Albedo, specColor, oneMinusReflectivity, s.Smoothness, s.Normal, viewDir, gi.light, gi.indirect, /* TCP2 */ atten
+			half4 c = TCP2_BRDF_PBS(s.Albedo, specColor, oneMinusReflectivity, s.Smoothness, s.Normal, viewDir, gi.light, gi.indirect, /* TCP2 */ atten, s
 
 				,s.texThresholdTexcoords
 				);
@@ -139,17 +122,19 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 
 		void surf (Input IN, inout SurfaceOutputStandardTCP2 o)
 		{
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-			o.Alpha = c.a;
+
+			fixed4 mainTex = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			o.Albedo = mainTex.rgb;
+			o.Alpha = mainTex.a;
 
 		#if _ALPHATEST_ON
 			clip(o.Alpha - _Cutoff);
 		#endif
-			
+
 
 			//Metallic Workflow
-			half2 metallicGloss = MetallicGloss(IN.uv_MainTex.xy);
+			fixed4 metalGlossMap = fixed4(0,0,0,0);
+			half2 metallicGloss = MetallicGloss(mainTex.a, metalGlossMap);
 			half metallic = metallicGloss.x;
 			half smoothness = metallicGloss.y;
 			o.Metallic = metallic;
@@ -157,6 +142,9 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 
 
 			o.texThresholdTexcoords = IN.uv_TexturedThreshold;
+		#ifdef _ALPHABLEND_ON
+			o.Albedo *= o.Alpha;
+		#endif
 		}
 		ENDCG
 
@@ -166,6 +154,27 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 
 	#if !defined(TCP2_SHADOW_PASS)
 		#include "Lighting.cginc"
+
+		//================================================================================================================================
+		// STRUCT
+
+		struct SurfaceOutputStandardTCP2
+		{
+			fixed3 Albedo;      // base (diffuse or specular) color
+			fixed3 Normal;      // tangent space normal, if written
+			half3 Emission;
+
+			half Metallic;      // 0=non-metal, 1=metal
+
+			//Smoothness is the user facing name, it should be perceptual smoothness but user should not have to deal with it.
+			// Everywhere in the code you meet smoothness it is perceptual smoothness
+			half Smoothness;    // 0=rough, 1=smooth
+			half Occlusion;     // occlusion (default 1)
+			fixed Alpha;        // alpha for transparencies
+
+			fixed atten;
+			float2 texThresholdTexcoords;
+		};
 
 		//================================================================================================================================
 		// VARIABLES
@@ -223,7 +232,8 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 		//-------------------------------------------------------------------------------------
 		// Standard Shader inputs
 
-		half2 MetallicGloss(float2 uv)
+
+		half2 MetallicGloss(float mainTexAlpha, fixed4 metalGlossMap)
 		{
 			half2 mg;
 			mg.r = _Metallic;
@@ -249,7 +259,7 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 		// * Smith for Visiblity term
 		// * Schlick approximation for Fresnel
 		half4 TCP2_BRDF_PBS(half3 diffColor, half3 specColor, half oneMinusReflectivity, half smoothness, half3 normal, half3 viewDir, UnityLight light, UnityIndirect gi,
-			/* TCP2 */ half atten
+			/* TCP2 */ half atten, SurfaceOutputStandardTCP2 s
 			,half2 texThresholdTexcoords
 			)
 		{
@@ -369,7 +379,7 @@ Shader "Toony Colors Pro 2/Examples/PBS/Hand Painted"
 	#endif
 	ENDCG
 
-	//FallBack "VertexLit"
+	FallBack "VertexLit"
 	CustomEditor "TCP2_MaterialInspector_SurfacePBS_SG"
 }
 

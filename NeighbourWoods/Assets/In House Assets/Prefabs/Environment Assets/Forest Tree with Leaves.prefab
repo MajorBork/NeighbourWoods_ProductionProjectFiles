@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4668925758010152}
   - component: {fileID: 33230426505754414}
   - component: {fileID: 23086280110120016}
-  - component: {fileID: 64603077187812130}
   m_Layer: 0
   m_Name: Forest Tree with Leaves
   m_TagString: Untagged
@@ -83,18 +82,4 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847557219014028}
-  m_Mesh: {fileID: 4300000, guid: f1c1c48712f7e7347bde7511e9166dcc, type: 3}
---- !u!64 &64603077187812130
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1847557219014028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f1c1c48712f7e7347bde7511e9166dcc, type: 3}
