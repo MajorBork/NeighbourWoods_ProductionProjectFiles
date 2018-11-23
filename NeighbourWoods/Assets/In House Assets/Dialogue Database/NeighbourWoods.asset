@@ -11001,7 +11001,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Honestly, the food's the best here, though the really good stuff is
-          in the yeards, like those flowers over there.
+          in the yards, like those flowers over there.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -11383,7 +11383,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6100003
+    canvasZoom: 0.76000017
   - id: 18
     fields:
     - title: Title

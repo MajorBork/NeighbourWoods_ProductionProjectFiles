@@ -70,7 +70,6 @@ namespace Manager.Level
             if (DStaskPoints >= maxTaskPoints)
             {
                 StartCoroutine(UpdateTime());
-                //UpdateTime();
             }
         }
         public IEnumerator UpdateTime() // updates our time to the next increment 
@@ -169,10 +168,6 @@ namespace Manager.Level
             if (timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.MORNING;
-            }
-            else
-            {
-                return;
             }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
