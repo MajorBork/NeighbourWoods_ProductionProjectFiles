@@ -105,10 +105,6 @@ namespace Manager.Level
             {
                 timeSlot = TimeSlot.MORNING;
             }
-            else
-            {
-                return;
-            }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
         public void UpdateTimeToMiddayDay1()
@@ -120,10 +116,6 @@ namespace Manager.Level
             if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.MIDDAY;
-            }
-            else
-            {
-                return;
             }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
@@ -137,10 +129,6 @@ namespace Manager.Level
             {
                 timeSlot = TimeSlot.AFTERNOON;
             }
-            else
-            {
-                return;
-            }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
         public void UpdateTimeToEveningDay1()
@@ -152,10 +140,6 @@ namespace Manager.Level
             if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON)
             {
                 timeSlot = TimeSlot.EVENING;
-            }
-            else
-            {
-                return;
             }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
@@ -181,10 +165,6 @@ namespace Manager.Level
             {
                 timeSlot = TimeSlot.MIDDAY;
             }
-            else
-            {
-                return;
-            }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
         public void UpdateTimeToAfternoonDay2()
@@ -197,10 +177,6 @@ namespace Manager.Level
             {
                 timeSlot = TimeSlot.AFTERNOON;
             }
-            else
-            {
-                return;
-            }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
         public void UpdateTimeToEveningDay2()
@@ -212,10 +188,6 @@ namespace Manager.Level
             if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON)
             {
                 timeSlot = TimeSlot.EVENING;
-            }
-            else
-            {
-                return;
             }
             GameEvents.ReportOnTimeChange(timeSlot, day);
         }
