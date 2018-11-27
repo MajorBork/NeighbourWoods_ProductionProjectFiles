@@ -75,10 +75,7 @@ namespace Manager.UI
                 default: itemImageUI.sprite = null;
                     break;
             }
-            //if ()
-            //{
-
-            //}
+            OnPlayerObjects.instance.EnableItem(incomingItemName);
             // replaces inventoryVis icon 
             itemNameString = incomingItemName;
             itemName.text = itemNameString;
@@ -86,10 +83,13 @@ namespace Manager.UI
         }
         public void GetRidOfItem() // trying to get rid of the icon
         {
+            Debug.Log("Getting rid of items");
             //itemImageUI.enabled = false;
             itemNameString = "";
             itemName.text = itemNameString;
             itemImageUI.sprite = null;
+            OnPlayerObjects.instance.DisableAll();
+            
         }
         public void OnCharacterTalk (int friendshipPoint)
         {

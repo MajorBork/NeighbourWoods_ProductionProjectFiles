@@ -26354,8 +26354,8 @@ MonoBehaviour:
         y: 732.7241
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 267.49973}
-    canvasZoom: 0.40000045
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5800004
   - id: 28
     fields:
     - title: Title
@@ -27125,8 +27125,8 @@ MonoBehaviour:
         y: 273.61682
         width: 160
         height: 30
-    canvasScrollPosition: {x: 174.60182, y: 190.17665}
-    canvasZoom: 1.4799995
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.3899996
   syncInfo:
     syncActors: 0
     syncItems: 0

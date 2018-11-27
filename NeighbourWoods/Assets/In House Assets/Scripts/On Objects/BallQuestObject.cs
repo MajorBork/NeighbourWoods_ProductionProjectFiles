@@ -21,7 +21,7 @@ public class BallQuestObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiManager.SendMessage("UpdateItemIcon");
+            //uiManager.SendMessage("UpdateItemIcon");
             uiManager.SendMessage("UpdateItem",itemNameOnObject);
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
