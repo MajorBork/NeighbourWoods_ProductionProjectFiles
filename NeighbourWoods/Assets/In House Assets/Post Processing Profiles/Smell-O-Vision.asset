@@ -40,9 +40,9 @@ MonoBehaviour:
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      intensity: 1
+      intensity: 1.38
       radius: 0.3
       sampleCount: 10
       downsampling: 1
@@ -50,7 +50,7 @@ MonoBehaviour:
       ambientOnly: 0
       highPrecision: 0
   screenSpaceReflection:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       reflection:
         blendType: 0
@@ -72,16 +72,16 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       focusDistance: 10
-      aperture: 5.6
+      aperture: 6.1
       focalLength: 50
-      useCameraFov: 0
+      useCameraFov: 1
       kernelSize: 1
   motionBlur:
     m_Enabled: 0
     m_Settings:
-      shutterAngle: 270
-      sampleCount: 10
-      frameBlending: 0
+      shutterAngle: 360
+      sampleCount: 32
+      frameBlending: 0.812
   eyeAdaptation:
     m_Enabled: 1
     m_Settings:
@@ -109,7 +109,7 @@ MonoBehaviour:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
@@ -120,23 +120,23 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: -0.19
+        postExposure: 0.65
         temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 1.01
+        saturation: 1.05
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
-        blue: {x: 0, y: 0, z: 0.9}
-        currentEditingChannel: 2
+        blue: {x: 0, y: 0, z: 1}
+        currentEditingChannel: 0
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 0.74306065, b: 0.0036930442, a: 0}
-          power: {r: 0, g: 0.36789203, b: 1, a: 0}
-          offset: {r: 1, g: 0, b: 0.89941263, a: 0}
+          slope: {r: 1, g: 1, b: 1, a: 0}
+          power: {r: 1, g: 1, b: 1, a: 0}
+          offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
           lift: {r: 1, g: 1, b: 1, a: 0}
           gamma: {r: 1, g: 1, b: 1, a: 0}
@@ -322,7 +322,7 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0
+      intensity: 0.3
       smoothness: 0.346
       roundness: 1
       mask: {fileID: 0}
