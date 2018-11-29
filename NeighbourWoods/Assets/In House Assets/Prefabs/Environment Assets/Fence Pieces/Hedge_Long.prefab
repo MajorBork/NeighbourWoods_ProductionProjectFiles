@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4513250609987828}
   - component: {fileID: 33213312159144770}
   - component: {fileID: 23335960028275210}
-  - component: {fileID: 64313096185771138}
+  - component: {fileID: 65289953626075192}
   m_Layer: 0
   m_Name: Hedge_Long_LP
   m_TagString: Untagged
@@ -113,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383431826694650}
   m_Mesh: {fileID: 4300000, guid: 7ce235086be56874bba5f15021f9cbf8, type: 3}
---- !u!64 &64313096185771138
-MeshCollider:
+--- !u!65 &65289953626075192
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,8 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 7ce235086be56874bba5f15021f9cbf8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 400.0001, y: 200, z: 200.00005}
+  m_Center: {x: 200.00005, y: 100, z: -100.000084}

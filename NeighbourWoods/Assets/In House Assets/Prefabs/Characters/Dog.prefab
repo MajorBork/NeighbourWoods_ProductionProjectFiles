@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   dogChaseRange: 6
+  dogStopRange: 2
 --- !u!195 &195271410315158594
 NavMeshAgent:
   m_ObjectHideFlags: 1

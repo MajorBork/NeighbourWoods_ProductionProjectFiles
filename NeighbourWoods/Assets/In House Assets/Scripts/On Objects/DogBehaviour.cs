@@ -6,8 +6,10 @@ using UnityEngine.AI;
 public class DogBehaviour : MonoBehaviour
 {
     private NavMeshAgent dogAgent;
+    private GameObject dog;
     public GameObject Player;
     public float dogChaseRange = 4.0f; // the distance that the dog chases you
+    public float dogStopRange = 2.0f; // the distance that the dog stops
     void Start() // Use this for initialization
     {
         dogAgent = GetComponent<NavMeshAgent>();
@@ -19,6 +21,7 @@ public class DogBehaviour : MonoBehaviour
         if (distance <= dogChaseRange)
         {
             dogAgent.SetDestination(Player.transform.position);
+            dogAgent.stoppingDistance = dogStopRange;
         }
     }
 }
