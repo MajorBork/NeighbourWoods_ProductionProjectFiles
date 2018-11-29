@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4135453293991358}
   - component: {fileID: 33544651645379868}
   - component: {fileID: 23455650487070880}
-  - component: {fileID: 64201529724028262}
+  - component: {fileID: 65597846366622806}
   m_Layer: 0
   m_Name: Pillar_Fence_LP
   m_TagString: Untagged
@@ -113,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1752540010989320}
   m_Mesh: {fileID: 4300000, guid: 5c7081350fac6734c8a54a2bd04c455f, type: 3}
---- !u!64 &64201529724028262
-MeshCollider:
+--- !u!65 &65597846366622806
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,8 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 5c7081350fac6734c8a54a2bd04c455f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 100, y: 200, z: 100}
+  m_Center: {x: -750, y: 100, z: -50}

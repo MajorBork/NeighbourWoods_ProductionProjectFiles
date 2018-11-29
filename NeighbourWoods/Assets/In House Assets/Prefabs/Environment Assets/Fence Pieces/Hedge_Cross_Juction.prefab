@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4741248684710368}
   - component: {fileID: 33730484240752650}
   - component: {fileID: 23696434594522880}
-  - component: {fileID: 64642291937941778}
+  - component: {fileID: 65632930792564812}
   m_Layer: 0
   m_Name: Hedge_Cross_Juction_LP
   m_TagString: Untagged
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165718047320618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16, y: 0, z: -9}
+  m_LocalPosition: {x: -38, y: 0, z: -105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4741248684710368}
@@ -113,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1035833991146914}
   m_Mesh: {fileID: 4300000, guid: 2c7ad069d35fd1e49bc7a04d912c5ac3, type: 3}
---- !u!64 &64642291937941778
-MeshCollider:
+--- !u!65 &65632930792564812
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,8 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 2c7ad069d35fd1e49bc7a04d912c5ac3, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 200, y: 29.996994, z: 200}
+  m_Center: {x: 600, y: 185.0015, z: 300}
