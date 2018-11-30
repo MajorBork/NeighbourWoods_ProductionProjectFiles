@@ -76,9 +76,9 @@ namespace Manager.Player
         [Tooltip("")]
         [SerializeField]
         public float vignDuration = 0.5f;
-        [Tooltip("")]
+        [Tooltip("Used for the intensity for the vignTween")]
         private float vignIntensity = 0;
-        [Tooltip("")]
+        [Tooltip("Used for the vignW")]
         private Tween vignTween;
         #endregion
         #endregion
