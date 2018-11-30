@@ -701,6 +701,26 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
     alternatePortraits: []
+  - id: 35
+    fields:
+    - title: Name
+      value: Lilla
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    alternatePortraits: []
   items:
   - id: 9
     fields:
@@ -2013,7 +2033,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 860.6283
+        x: 863.4854
         y: 292.28763
         width: 160
         height: 30
@@ -2762,7 +2782,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1776.837
+        x: 1775.4084
         y: 286.6723
         width: 160
         height: 30
@@ -3418,8 +3438,8 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 202.7799, y: 115.83011}
-    canvasZoom: 0.6999998
+    canvasScrollPosition: {x: 0, y: 141.54437}
+    canvasZoom: 0.45999998
   - id: 10
     fields:
     - title: Title
@@ -32030,8 +32050,8 @@ MonoBehaviour:
         y: 380
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 285}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.76000017
   - id: 31
     fields:
     - title: Title
@@ -39508,11 +39528,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 32
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 32
+        value: 34
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -39581,11 +39601,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 32
+        value: 33
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 32
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -39654,11 +39674,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 34
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 32
+        value: 33
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -39708,7 +39728,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 20
+        x: 18.50747
         y: 630
         width: 160
         height: 30
@@ -39731,7 +39751,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 34
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -39802,7 +39822,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 33
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -39875,11 +39895,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 32
+        value: 34
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 33
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -39950,11 +39970,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 32
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 32
+        value: 34
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -40002,8 +40022,8 @@ MonoBehaviour:
         y: 830
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 509.4596}
-    canvasZoom: 0.90999985
+    canvasScrollPosition: {x: 0, y: 682.2253}
+    canvasZoom: 0.58000016
   - id: 37
     fields:
     - title: Title
