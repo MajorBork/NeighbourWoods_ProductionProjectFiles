@@ -3438,8 +3438,8 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 141.54437}
-    canvasZoom: 0.45999998
+    canvasScrollPosition: {x: 635.61646, y: 188.83455}
+    canvasZoom: 0.72999984
   - id: 10
     fields:
     - title: Title
@@ -3588,8 +3588,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good morning, {PlayerName}. First morning in our new home, huh? Do
-          you like it?
+        value: Good morning, Lucky. First morning in our new home, huh? Do you like
+          it?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3741,7 +3741,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sit {PlayerName}!
+        value: Sit Lucky!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3887,7 +3887,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Great job {PlayerName}, now speak!.
+        value: Great job Lucky, now speak!.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4033,7 +4033,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ha ha, nice! Okay now, {PlayerName}, stay.
+        value: Ha ha, nice! Okay now, Lucky, stay.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4248,7 +4248,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh! Good {PlayerName}! Here, you deserve a treat for that.
+        value: Oh! Good Lucky! Here, you deserve a treat for that.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4509,8 +4509,8 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.54999995
+    canvasScrollPosition: {x: 0, y: 381.39536}
+    canvasZoom: 0.42999998
   - id: 11
     fields:
     - title: Title
@@ -4659,7 +4659,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Let's get out of the store, {PlayerName}. We're got our groceries.
+        value: Let's get out of the store, Lucky. We're got our groceries.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5383,7 +5383,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Bye! Okay {PlayerName}, time to head home.
+        value: Bye! Okay Lucky, time to head home.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5425,7 +5425,7 @@ MonoBehaviour:
         y: 483.97952
         width: 160
         height: 30
-    canvasScrollPosition: {x: 35.28658, y: 384.99576}
+    canvasScrollPosition: {x: 0, y: 66.91058}
     canvasZoom: 0.9399999
   - id: 12
     fields:
@@ -26765,7 +26765,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 23
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -26807,7 +26807,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -26894,7 +26894,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -26971,7 +26971,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -27040,7 +27040,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27130,7 +27130,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -27203,15 +27203,16 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: 
+        value: I'm not going to eat any squirrels.
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'm not going to eat any squirrels.
+        value: I'm not going to eat any squirrels, I promise. I just want to help
+          you.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -27276,7 +27277,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -27345,7 +27346,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27414,7 +27415,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27426,8 +27427,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'm not going to eat any aquirrels, I promise. I just want to help
-          you.
+        value: Really?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -27488,7 +27488,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27555,80 +27555,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Really?
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 28
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 28
-        originDialogueID: 10
-        destinationConversationID: 28
-        destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 465.38153
-        y: 322.2655
-        width: 160
-        height: 30
-    - id: 11
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27669,15 +27596,15 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 28
-        originDialogueID: 11
+        originDialogueID: 10
         destinationConversationID: 28
-        destinationDialogueID: 12
+        destinationDialogueID: 13
         isConnector: 0
         priority: 2
       - originConversationID: 28
-        originDialogueID: 11
+        originDialogueID: 10
         destinationConversationID: 28
-        destinationDialogueID: 13
+        destinationDialogueID: 12
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -27690,7 +27617,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 465.38153
-        y: 372.2655
+        y: 322.2655
         width: 160
         height: 30
     - id: 12
@@ -27712,7 +27639,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -27768,8 +27695,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 422.2655
+        x: 364.13675
+        y: 373.1746
         width: 160
         height: 30
     - id: 13
@@ -27791,7 +27718,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -27842,8 +27769,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 465.38153
-        y: 422.2655
+        x: 560.2014
+        y: 374.118
         width: 160
         height: 30
     - id: 14
@@ -27861,7 +27788,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -27916,8 +27843,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 472.2655
+        x: 364.13675
+        y: 423.1746
         width: 160
         height: 30
     - id: 15
@@ -27935,11 +27862,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -27948,7 +27875,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Well you see, I buried all of my acorns for winter but well... now
-          I need tjem and as silly as it sounds I can't remember where they are.
+          I need them and as silly as it sounds I can't remember where they are.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -27990,8 +27917,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 522.2655
+        x: 364.13675
+        y: 473.17456
         width: 160
         height: 30
     - id: 16
@@ -28009,11 +27936,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28063,8 +27990,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 572.2655
+        x: 364.13675
+        y: 523.1747
         width: 160
         height: 30
     - id: 17
@@ -28082,11 +28009,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28142,8 +28069,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 620.6261
+        x: 364.13675
+        y: 571.5353
         width: 160
         height: 30
     - id: 18
@@ -28161,11 +28088,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28215,8 +28142,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 90.7211
-        y: 672.0111
+        x: 172.33347
+        y: 622.9203
         width: 160
         height: 30
     - id: 19
@@ -28234,11 +28161,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28288,8 +28215,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 670.6261
+        x: 364.13675
+        y: 621.5353
         width: 160
         height: 30
     - id: 20
@@ -28307,11 +28234,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28355,8 +28282,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 282.52438
-        y: 720.6261
+        x: 364.13675
+        y: 671.5353
         width: 160
         height: 30
     - id: 21
@@ -28374,11 +28301,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28422,8 +28349,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 90.7211
-        y: 722.0111
+        x: 172.33347
+        y: 672.9203
         width: 160
         height: 30
     - id: 22
@@ -28441,7 +28368,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -28491,8 +28418,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 465.38153
-        y: 472.2655
+        x: 560.2014
+        y: 424.118
         width: 160
         height: 30
     - id: 23
@@ -28510,11 +28437,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28583,11 +28510,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28595,9 +28522,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Thank you so much!
-
-'
+        value: Thank you so much!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -28658,7 +28583,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -28737,7 +28662,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28806,7 +28731,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -28881,11 +28806,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -28954,11 +28879,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -29028,11 +28953,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -29096,11 +29021,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -29169,11 +29094,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -29245,7 +29170,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -29317,11 +29242,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -29390,11 +29315,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 23
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -29444,8 +29369,8 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 18.181808}
-    canvasZoom: 0.54999995
+    canvasScrollPosition: {x: 398.21057, y: 131.20232}
+    canvasZoom: 0.45999962
   - id: 29
     fields:
     - title: Title
@@ -29892,13 +29817,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Well... normally I would be able to help you with that, but recently
-          the forest hasn''
-
-          t exactly been safe.
-
-          People have gone missing, you know, so I''m not really comfortable letting
-          anybody go out there.'
+        value: Well... normally I would be able to help you with that, but recently
+          the forest hasn't exactly been safe. People have gone missing, you know,
+          so I'm not really comfortable letting anybody go out there.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30193,10 +30114,9 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: 'Hm, well then...Tell you what, lets test your investigation skills
-          before I let you go into the forest
-
-          My sis Milly and me had a fight and she''s gone sulking off and has hidden
-          herself somewhere.'
+          before I let you go into the forest. My sis Milly and me had a fight and
+          she''s gone sulking off and has hidden herself somewhere. If you manage
+          to find her and tell her I''m sorry for me, I''ll open the gate for you. '
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30226,85 +30146,11 @@ MonoBehaviour:
       - originConversationID: 29
         originDialogueID: 9
         destinationConversationID: 29
-        destinationDialogueID: 10
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 382
-        y: 379
-        width: 160
-        height: 30
-    - id: 10
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 21
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'If you manage to find her and tell her I''m sorry for me, I''ll open
-          the gate for you. '
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 29
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 29
-        originDialogueID: 10
-        destinationConversationID: 29
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
       - originConversationID: 29
-        originDialogueID: 10
+        originDialogueID: 9
         destinationConversationID: 29
         destinationDialogueID: 12
         isConnector: 0
@@ -30319,7 +30165,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 382
-        y: 429
+        y: 379
         width: 160
         height: 30
     - id: 11
@@ -30391,8 +30237,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 276
-        y: 481
+        x: 277.58566
+        y: 432.15625
         width: 160
         height: 30
     - id: 12
@@ -30464,8 +30310,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497
-        y: 484.4286
+        x: 497.40918
+        y: 432.05542
         width: 160
         height: 30
     - id: 13
@@ -30537,8 +30383,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 276
-        y: 531
+        x: 277.58566
+        y: 482.15625
         width: 160
         height: 30
     - id: 14
@@ -30613,8 +30459,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 273.56097
-        y: 634.6586
+        x: 275.14664
+        y: 585.8149
         width: 160
         height: 30
     - id: 15
@@ -30699,8 +30545,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497
-        y: 533
+        x: 497.40918
+        y: 480.62683
         width: 160
         height: 30
     - id: 16
@@ -30772,8 +30618,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 682
-        y: 582
+        x: 682.4092
+        y: 529.62683
         width: 160
         height: 30
     - id: 17
@@ -30845,8 +30691,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497
-        y: 583
+        x: 497.40918
+        y: 530.62683
         width: 160
         height: 30
     - id: 18
@@ -30924,8 +30770,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497
-        y: 633
+        x: 497.40918
+        y: 580.62683
         width: 160
         height: 30
     - id: 19
@@ -30997,8 +30843,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497
-        y: 683
+        x: 497.40918
+        y: 630.62683
         width: 160
         height: 30
     - id: 20
@@ -31064,8 +30910,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497
-        y: 733
+        x: 497.40918
+        y: 680.62683
         width: 160
         height: 30
     - id: 21
@@ -31131,8 +30977,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 680.78046
-        y: 632
+        x: 681.18964
+        y: 579.62683
         width: 160
         height: 30
     - id: 22
@@ -31421,12 +31267,12 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 276
-        y: 581
+        x: 277.58566
+        y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 33.01703}
-    canvasZoom: 0.8200001
+    canvasScrollPosition: {x: 0, y: 330.34714}
+    canvasZoom: 0.55
   - id: 30
     fields:
     - title: Title
@@ -40617,10 +40463,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Yes socks. You see I am a collector of socks.
-
-          There are so many different styles and colours, and they each smell quite
-          interesting.'
+        value: Yes socks. You see I am a collector of socks. There are so many different
+          styles and colours, and they each smell quite interesting. I have quite
+          a few of them in my collection but I would like to add some more. I would
+          reqard you handsomely if you find any socks and bring them to me.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -40650,82 +40496,6 @@ MonoBehaviour:
       - originConversationID: 37
         originDialogueID: 7
         destinationConversationID: 37
-        destinationDialogueID: 8
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 591
-        y: 289
-        width: 160
-        height: 30
-    - id: 8
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 20
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'I have quite a few of them in my collection but I would like to add
-          some more.
-
-          I would reqard you handsomely if you find any socks and bring them to me.'
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 37
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 37
-        originDialogueID: 8
-        destinationConversationID: 37
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
@@ -40739,7 +40509,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 591
-        y: 339
+        y: 289
         width: 160
         height: 30
     - id: 9
@@ -40824,7 +40594,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 591
-        y: 389
+        y: 333.8276
         width: 160
         height: 30
     - id: 10
@@ -40897,7 +40667,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 394
-        y: 441
+        y: 385.8276
         width: 160
         height: 30
     - id: 11
@@ -40970,7 +40740,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 788
-        y: 439
+        y: 383.8276
         width: 160
         height: 30
     - id: 12
@@ -41043,7 +40813,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 591
-        y: 439
+        y: 383.8276
         width: 160
         height: 30
     - id: 13
@@ -41110,7 +40880,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 394
-        y: 491
+        y: 435.8276
         width: 160
         height: 30
     - id: 14
@@ -41177,7 +40947,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 591
-        y: 489
+        y: 433.8276
         width: 160
         height: 30
     - id: 15
@@ -41246,11 +41016,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 788
-        y: 489
+        y: 433.8276
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 0, y: 231.53403}
+    canvasZoom: 0.7000002
   - id: 38
     fields:
     - title: Title
@@ -42594,7 +42364,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'm {PlayerName}
+        value: I'm Lucky.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -42667,7 +42437,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Huh, {PlayerName}? That's not a powerful name at all. Quite dull, really
+        value: Huh, Lucky? That's not a powerful name at all. Quite dull, really
         type: 0
         typeString: 
       - title: Parenthetical

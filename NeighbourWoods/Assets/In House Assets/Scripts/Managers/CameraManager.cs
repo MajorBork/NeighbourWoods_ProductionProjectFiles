@@ -21,17 +21,6 @@ namespace Manager.Player
         private float yaw = 0;
         private float pitch = 0;
         public float dstFromTarget = 2;
-        public float distance;
-        public float smooth;
-        Vector3 dollyDir;
-        public Vector3 dollyDirAdjusted;
-        public float minDistance = 1.0f;
-        public float maxDistance = 4.0f;
-        void Awake()
-        {
-            dollyDir = transform.localPosition.normalized;
-            distance = transform.localPosition.magnitude;
-        }
         void Start() // Use this for initialization
         {
             playerCamera = GameObject.FindWithTag("MainCamera");
@@ -54,17 +43,6 @@ namespace Manager.Player
                 default:
                     break;
             }
-            Vector3 desiredCameraPos = transform.parent.TransformPoint(dollyDir * maxDistance);
-            RaycastHit hit;
-            if (Physics.Linecast(transform.parent.position, desiredCameraPos, out hit))
-            {
-                dstFromTarget = Mathf.Clamp(hit.distance, minDistance, maxDistance);
-            }
-            else
-            {
-                dstFromTarget = maxDistance;
-            }
-            transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
         }
         #region CameraController()
         void CameraController() // Controls the third person camera
