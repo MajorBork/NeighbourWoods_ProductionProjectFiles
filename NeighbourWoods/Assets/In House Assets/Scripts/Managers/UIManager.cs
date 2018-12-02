@@ -89,7 +89,6 @@ namespace Manager.UI
             itemName.text = itemNameString;
             itemImageUI.sprite = null;
             OnPlayerObjects.instance.DisableAll();
-            
         }
         public void OnCharacterTalk (int friendshipPoint)
         {

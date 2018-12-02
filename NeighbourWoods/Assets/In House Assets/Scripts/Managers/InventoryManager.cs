@@ -35,9 +35,9 @@ namespace Manager.Inventory
         {
             //AddFood();
         }
-        void OnBananaPickup()
+        void GetRidOfItem()
         {
-            
+            UIManager.instance.GetRidOfItem();
         }
         #region Food Methods
         public void UpdateFood()

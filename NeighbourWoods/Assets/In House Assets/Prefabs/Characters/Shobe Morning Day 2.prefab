@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1738007255229886}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -58.148754, y: 16.351622, z: -152.46695}
+  m_LocalPosition: {x: -58.148754, y: 16.351622, z: -152.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4108969182489688}
@@ -156,7 +156,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 1, z: 6}
+  m_Size: {x: 4, y: 1, z: 6}
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!65 &65660550686122510
 BoxCollider:
@@ -242,7 +242,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Day 1/Morning/Backyard Tutorial_Shobe
+  conversation: Day 2/Morning/Shobe
   conversationConversant: {fileID: 4281146074229214}
   conversationActor: {fileID: 0}
   exclusive: 0
