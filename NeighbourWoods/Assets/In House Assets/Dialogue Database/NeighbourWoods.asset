@@ -29189,8 +29189,8 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 398.21057, y: 131.20232}
-    canvasZoom: 0.45999962
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7599994
   - id: 29
     fields:
     - title: Title
@@ -31095,7 +31095,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7299998
+    canvasZoom: 0.9099996
   - id: 30
     fields:
     - title: Title
@@ -36505,8 +36505,8 @@ MonoBehaviour:
         y: 294.9698
         width: 160
         height: 30
-    canvasScrollPosition: {x: 104.01456, y: 1341.4111}
-    canvasZoom: 0.6099997
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.37
   - id: 33
     fields:
     - title: Title
@@ -38496,7 +38496,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000001
+    canvasZoom: 0.93999994
   - id: 36
     fields:
     - title: Title
@@ -39778,8 +39778,8 @@ MonoBehaviour:
         y: 830
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 682.2253}
-    canvasZoom: 0.58000016
+    canvasScrollPosition: {x: 0, y: 14.473694}
+    canvasZoom: 0.76
   - id: 37
     fields:
     - title: Title
@@ -40149,7 +40149,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'My name is {PlayerName} it''s nice to meet you. '
+        value: 'My name is Lucky it''s nice to meet you. '
         type: 0
         typeString: 
       - title: Parenthetical
@@ -40929,8 +40929,8 @@ MonoBehaviour:
         y: 433.8276
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 231.53403}
-    canvasZoom: 0.7000002
+    canvasScrollPosition: {x: 1.8567513, y: 20.401543}
+    canvasZoom: 1.3899996
   - id: 38
     fields:
     - title: Title
@@ -42682,7 +42682,7 @@ MonoBehaviour:
         y: 380
         width: 160
         height: 30
-    canvasScrollPosition: {x: 34.883648, y: 83.92756}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1.03
   - id: 41
     fields:

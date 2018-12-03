@@ -4584,8 +4584,8 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6699999
+    canvasScrollPosition: {x: 0, y: 311.7647}
+    canvasZoom: 0.33999997
   - id: 11
     fields:
     - title: Title
@@ -29189,8 +29189,8 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 398.21057, y: 131.20232}
-    canvasZoom: 0.45999962
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7599994
   - id: 29
     fields:
     - title: Title
@@ -29357,7 +29357,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(UpdateCharacterTalking,"Oscar",GameManager);
+        value: 'SendMessage(UpdateCharacterTalking,"Oscar",GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 29
@@ -30993,7 +30995,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 29
@@ -31090,8 +31094,8 @@ MonoBehaviour:
         y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 297.26062}
-    canvasZoom: 0.7299998
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.9099996
   - id: 30
     fields:
     - title: Title
@@ -31267,7 +31271,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("OscarQuest") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -31515,11 +31519,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 22
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31588,11 +31592,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 12
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 22
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31703,7 +31707,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("OscarQuest", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -31715,8 +31719,8 @@ MonoBehaviour:
         y: 380
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 131.5789}
-    canvasZoom: 0.76000017
+    canvasScrollPosition: {x: 0, y: 118.74997}
+    canvasZoom: 0.6400003
   - id: 31
     fields:
     - title: Title
@@ -35682,7 +35686,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 32
@@ -36042,7 +36048,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 32
@@ -36497,8 +36505,8 @@ MonoBehaviour:
         y: 294.9698
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 1329.3164}
-    canvasZoom: 0.33999974
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.37
   - id: 33
     fields:
     - title: Title
@@ -38488,7 +38496,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000001
+    canvasZoom: 0.93999994
   - id: 36
     fields:
     - title: Title
@@ -39770,8 +39778,8 @@ MonoBehaviour:
         y: 830
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 682.2253}
-    canvasZoom: 0.58000016
+    canvasScrollPosition: {x: 0, y: 14.473694}
+    canvasZoom: 0.76
   - id: 37
     fields:
     - title: Title
