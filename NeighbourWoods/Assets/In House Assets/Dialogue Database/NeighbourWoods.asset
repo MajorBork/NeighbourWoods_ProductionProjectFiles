@@ -1080,6 +1080,36 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 19
+    fields:
+    - title: Name
+      value: OscarQuest
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
   locations: []
   variables:
   - id: 1
@@ -4554,8 +4584,8 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6699999
+    canvasScrollPosition: {x: 0, y: 311.7647}
+    canvasZoom: 0.33999997
   - id: 11
     fields:
     - title: Title
@@ -29327,7 +29357,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Oscar",GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 29
@@ -29344,7 +29376,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("OscarQuest") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29384,7 +29416,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: My name is {PlayerName}
+        value: My name is Lucky.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29457,7 +29489,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Cool, nice to meet you {PlayerName}.
+        value: 'Cool, nice to meet you Lucky.
 
           ...
 
@@ -30204,10 +30236,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Ah you know. The usual stupid sibling stuff - somethimes I just annoy
-          her a bit too much.
-
-          This time went a little bit further than usual, and I feel bad about it.'
+        value: Ah you know. The usual stupid sibling stuff - somethimes I just annoy
+          her a bit too much. This time went a little bit further than usual, and
+          I feel bad about it.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30759,7 +30790,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("OscarQuest", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30831,7 +30862,7 @@ MonoBehaviour:
         destinationDialogueID: 23
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("OscarQuest") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -30964,7 +30995,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 29
@@ -31061,8 +31094,8 @@ MonoBehaviour:
         y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 330.34714}
-    canvasZoom: 0.55
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7299998
   - id: 30
     fields:
     - title: Title
@@ -31082,7 +31115,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 22
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -31124,7 +31157,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31193,7 +31226,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31238,7 +31271,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("OscarQuest") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -31270,7 +31303,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31339,7 +31372,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31413,11 +31446,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31486,11 +31519,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31559,11 +31592,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 12
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -31633,7 +31666,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -31674,7 +31707,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("OscarQuest", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -31686,8 +31719,8 @@ MonoBehaviour:
         y: 380
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.76000017
+    canvasScrollPosition: {x: 0, y: 118.74997}
+    canvasZoom: 0.6400003
   - id: 31
     fields:
     - title: Title
@@ -35653,7 +35686,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 32
@@ -36013,7 +36048,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);;
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 32
@@ -36468,8 +36505,8 @@ MonoBehaviour:
         y: 294.9698
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 1489.0498}
-    canvasZoom: 0.8799995
+    canvasScrollPosition: {x: 104.01456, y: 1341.4111}
+    canvasZoom: 0.6099997
   - id: 33
     fields:
     - title: Title
