@@ -9,6 +9,7 @@ using DG.Tweening;
 using Language.Lua;
 using PixelCrushers.DialogueSystem;
 using TMPro;
+using Manager.Player;
 
 namespace Manager.UI 
 {
@@ -39,26 +40,28 @@ namespace Manager.UI
         public int textFoodInt;
         public float fadeInTime = 1;
         public Image characterFriendshipIcon;
-        
+
+        [Header("Menu Variables")]
+        public CanvasGroup menuCanvas;
         #endregion
         #region Start and Update
         void Start() // Use this for initialization
         {
-            
+
             //InventoryCanvas.alpha = 0;
             //buttonPressBox.alpha = 0;
             fadeCanvas.alpha = 0;
             timeText.text = "";
             dayText.text = "";
             taskPoints = 0;
-            
+
             //Debug.Log(DSfood);
         }
         void Update() // Update is called once per frame
         {
             //OnTaskPointsChange(taskPoints);
             //Debug.Log(taskPoints);
-            
+
         }
         #endregion
         #region Methods
@@ -93,7 +96,7 @@ namespace Manager.UI
             itemImageUI.sprite = null;
             OnPlayerObjects.instance.DisableAll();
         }
-        public void OnCharacterTalk (int friendshipPoint)
+        public void OnCharacterTalk(int friendshipPoint)
         {
             if (friendshipPoint < -4)
             {
@@ -103,7 +106,7 @@ namespace Manager.UI
             {
                 characterFriendshipIcon.color = Color.grey;
             }
-            if(friendshipPoint > 4)
+            if (friendshipPoint > 4)
             {
                 characterFriendshipIcon.color = Color.green;
             }
@@ -124,7 +127,7 @@ namespace Manager.UI
         #endregion
         #region Listeners 
         // Listeners for Game Events
-        void OnEnable() 
+        void OnEnable()
         {
             GameEvents.OnGameStateChange += OnGameStateChange;
             GameEvents.OnTimeChange += OnTimeChange;
@@ -143,6 +146,10 @@ namespace Manager.UI
             if (gameState == GameState.DIALOGUE)
             {
                 //dialogueBoxCanvas.alpha = 1;
+            }
+            if (gameState == GameState.FREE_ROAM)
+            {
+
             }
             else
             {
@@ -197,6 +204,32 @@ namespace Manager.UI
                     return "Day 7";
                 default: return "";
             }
+        }
+        public void GoToMenu()
+        {
+            StartCoroutine(DelayMenu());
+        }
+        IEnumerator DelayMenu()
+        {
+            menuCanvas.DOFade(0, 1);
+            menuCanvas.interactable = true;
+            menuCanvas.blocksRaycasts = true;
+            PlayerManager.instance.AnimateFocus(true);
+            yield return new WaitForSeconds(1);
+            GameEvents.ReportGameStateChange(GameState.TITLE_SCREEN);
+        }
+        public void StartGame()
+        {
+            StartCoroutine(DelayStart());
+        }
+        IEnumerator DelayStart()
+        {
+            menuCanvas.DOFade(0, 1);
+            menuCanvas.interactable = false;
+            menuCanvas.blocksRaycasts = false;
+            PlayerManager.instance.AnimateFocus(false);
+            yield return new WaitForSeconds(1);
+            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
         }
         #endregion
     }

@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4958954749915102}
   - component: {fileID: 33515165350097396}
   - component: {fileID: 23277033823323280}
-  - component: {fileID: 64548007742500294}
+  - component: {fileID: 65437752674518208}
   m_Layer: 0
   m_Name: House_Wall_Medium_LP
   m_TagString: Untagged
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016192964205314}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9, y: 0, z: -3}
+  m_LocalPosition: {x: 9, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4958954749915102}
@@ -113,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1788260611076988}
   m_Mesh: {fileID: 4300000, guid: 0d177e7364d2e624992d4519b506a4ed, type: 3}
---- !u!64 &64548007742500294
-MeshCollider:
+--- !u!65 &65437752674518208
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,8 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 0d177e7364d2e624992d4519b506a4ed, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 200.00005, y: 300, z: 0}
+  m_Center: {x: 99.99905, y: 150, z: -599.99963}

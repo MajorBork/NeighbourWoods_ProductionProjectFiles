@@ -80,6 +80,9 @@ namespace Manager.Player
         private float vignIntensity = 0;
         [Tooltip("Used for the vignW")]
         private Tween vignTween;
+        public float focusMaxDis = 60;
+        public float focusDuration = 1;
+        private Tween focusTween;
         #endregion
         #endregion
         #region Start() and Update()
@@ -332,6 +335,21 @@ namespace Manager.Player
                     smellObject.SetActive(true);
                 }
             }
+        }
+        public void AnimateFocus(bool value) // Calucating the animation for the vignette for Smell-O-Vision
+        {
+            focusTween = DOTween.To(() => focusMaxDis, x => focusMaxDis = x, value ? 60 : 0, focusDuration).OnUpdate(UpdateFocusAnimation);
+            focusTween.OnComplete(OnFocusAnimationEnd);
+        }
+        void UpdateFocusAnimation() // Updating the animation for the vignette
+        {
+            DepthOfFieldModel.Settings focus = smellOVision.profile.depthOfField.settings;
+            focus.focalLength = focusMaxDis;
+            smellOVision.profile.depthOfField.settings = focus;
+        }
+        void OnFocusAnimationEnd() // At the end of the animation
+        {
+             focusTween = null;
         }
         #endregion
     }
