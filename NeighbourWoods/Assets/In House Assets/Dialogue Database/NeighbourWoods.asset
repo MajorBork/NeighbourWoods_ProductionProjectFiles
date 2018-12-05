@@ -1224,6 +1224,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 10
+    fields:
+    - title: Name
+      value: Is Oscar Quest Complete
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 7
     fields:
@@ -3509,8 +3523,8 @@ MonoBehaviour:
         y: 703.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 44.186035}
-    canvasZoom: 0.42999998
+    canvasScrollPosition: {x: 0, y: 140.54059}
+    canvasZoom: 0.36999986
   - id: 10
     fields:
     - title: Title
@@ -4584,7 +4598,7 @@ MonoBehaviour:
         y: 299.76672
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 311.7647}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.33999997
   - id: 11
     fields:
@@ -19612,7 +19626,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1214.5587
+        x: 1216.0972
         y: 108.57416
         width: 160
         height: 30
@@ -22952,8 +22966,8 @@ MonoBehaviour:
         y: 618.9673
         width: 160
         height: 30
-    canvasScrollPosition: {x: 245.24483, y: 622.87823}
-    canvasZoom: 1.0099983
+    canvasScrollPosition: {x: 43.077087, y: 19.751831}
+    canvasZoom: 0.64999855
   - id: 25
     fields:
     - title: Title
@@ -29357,7 +29371,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateCharacterTalking,"Oscar",GameManager);;
+        value: 'SendMessage(UpdateCharacterTalking,"Oscar",GameManager);
 
           Delay({{end}})'
         type: 0
@@ -29884,7 +29898,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OpenGate,,OscarBehaviour);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 29
@@ -29896,7 +29912,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("OscarQuest", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30591,7 +30607,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497.40918
+        x: 496.3103
         y: 580.62683
         width: 160
         height: 30
@@ -31094,7 +31110,7 @@ MonoBehaviour:
         y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 329.67072}
     canvasZoom: 0.9099996
   - id: 30
     fields:
@@ -35630,8 +35646,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["TurtleFriendPoint"] = Variable["TurtleFriendPoint"] +
-        -6
+      userScript: 'Variable["Is_Turtle_Quest_Complete"] = true;
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -35686,7 +35703,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateTime,,GameManager);;
+        value: 'SendMessage(UpdateTime,,GameManager);
+
+          SendMessage(UpdateFood,,GameManager);
+
+          SendMessage(GetRidOfItem,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -35700,7 +35721,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Is_Turtle_Quest_Complete"] = true
+      userScript: 'Variable["Is_Turtle_Quest_Complete"] = true;
+
+        Variable["Food"] = Variable["Food"] + 5'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -36048,7 +36071,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateTime,,GameManager);;
+        value: 'SendMessage(UpdateTime,,GameManager);
+
+          SendMessage(GetRidOfItem,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -36505,7 +36530,7 @@ MonoBehaviour:
         y: 294.9698
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 1236.6718}
+    canvasScrollPosition: {x: 0, y: 1452.3867}
     canvasZoom: 0.69999987
   - id: 33
     fields:

@@ -111,9 +111,9 @@ namespace Manager.UI
                 characterFriendshipIcon.color = Color.green;
             }
         }
-        public void UpdateCharacterFriendship(string characterTalking)
+        public void QuitGame()
         {
-
+            Application.Quit();
         }
         public void UpdateFoodText(int food) // trying to update food text
         {
