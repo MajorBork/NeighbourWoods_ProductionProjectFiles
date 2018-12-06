@@ -28350,7 +28350,7 @@ MonoBehaviour:
         destinationDialogueID: 24
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("SquirrelQuest") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -28934,7 +28934,7 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("SquirrelQuest") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29155,7 +29155,7 @@ MonoBehaviour:
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("SquirrelQuest") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29237,7 +29237,7 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 205.26355}
+    canvasScrollPosition: {x: 0, y: 297.3686}
     canvasZoom: 0.7599994
   - id: 29
     fields:

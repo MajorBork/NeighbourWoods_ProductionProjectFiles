@@ -303,6 +303,7 @@ namespace Manager.Player
             }
         }
         #endregion
+        #region MenuController
         public void MenuController()
         {
             if (Input.GetButtonDown("Escape"))
@@ -310,6 +311,7 @@ namespace Manager.Player
                 gameManagerUI.GoToMenu();
             }
         }
+        #endregion
         #endregion
         #region Vision Event Methods
         void OnEnable() //Subscribes to our game events
