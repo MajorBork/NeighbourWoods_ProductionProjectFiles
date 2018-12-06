@@ -1224,6 +1224,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 10
+    fields:
+    - title: Name
+      value: Is Oscar Quest Complete
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 7
     fields:
@@ -19612,7 +19626,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1214.5587
+        x: 1216.0972
         y: 108.57416
         width: 160
         height: 30
@@ -22952,8 +22966,8 @@ MonoBehaviour:
         y: 618.9673
         width: 160
         height: 30
-    canvasScrollPosition: {x: 245.24483, y: 622.87823}
-    canvasZoom: 1.0099983
+    canvasScrollPosition: {x: 43.077087, y: 19.751831}
+    canvasZoom: 0.64999855
   - id: 25
     fields:
     - title: Title
@@ -29357,7 +29371,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateCharacterTalking,"Oscar",GameManager);;
+        value: 'SendMessage(UpdateCharacterTalking,"Oscar",GameManager);
 
           Delay({{end}})'
         type: 0
@@ -29376,7 +29390,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("OscarQuest") == "unassigned"
+      conditionsString: CurrentQuestState("OscarQuest") == "unassigned" and (Variable["Is_Oscar_Quest_Complete"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29884,6 +29899,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 'SendMessage(OpenGate,,Oscar);
+
+          Delay({{end}})'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -29896,7 +29917,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("OscarQuest", "success");
+
+        Variable["Is_Oscar_Quest_Complete"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30591,7 +30614,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 497.40918
+        x: 496.3103
         y: 580.62683
         width: 160
         height: 30
@@ -30862,7 +30885,8 @@ MonoBehaviour:
         destinationDialogueID: 23
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("OscarQuest") == "success"
+      conditionsString: CurrentQuestState("OscarQuest") == "success" and (Variable["Is_Oscar_Quest_Complete"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -30995,7 +31019,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateTime,,GameManager);;
+        value: 'SendMessage(UpdateTime,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -31094,7 +31118,7 @@ MonoBehaviour:
         y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 46.15393, y: 27.472542}
     canvasZoom: 0.9099996
   - id: 30
     fields:

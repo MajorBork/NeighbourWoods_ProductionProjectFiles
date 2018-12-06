@@ -1110,6 +1110,40 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 20
+    fields:
+    - title: Name
+      value: SquirrelQuest
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
   locations: []
   variables:
   - id: 1
@@ -26756,7 +26790,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: Delay({{end}})
         type: 0
         typeString: 
       conversationID: 28
@@ -26773,8 +26807,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
-      userScript: 
+      conditionsString: CurrentQuestState("SquirrelQuest") == "unassigned"
+      userScript: SetQuestState("SquirrelQuest", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29203,7 +29237,7 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 205.26355}
     canvasZoom: 0.7599994
   - id: 29
     fields:
@@ -29390,7 +29424,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("OscarQuest") == "unassigned"
+      conditionsString: CurrentQuestState("OscarQuest") == "unassigned" and (Variable["Is_Oscar_Quest_Complete"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29898,9 +29933,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(OpenGate,,OscarBehaviour);
+        value: 'SendMessage(OpenGate,,Oscar);
 
           Delay({{end}})'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 29
@@ -29912,7 +29951,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("OscarQuest", "success")
+      userScript: 'SetQuestState("OscarQuest", "success");
+
+        Variable["Is_Oscar_Quest_Complete"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30878,7 +30919,8 @@ MonoBehaviour:
         destinationDialogueID: 23
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("OscarQuest") == "success"
+      conditionsString: CurrentQuestState("OscarQuest") == "success" and (Variable["Is_Oscar_Quest_Complete"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -31011,7 +31053,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(UpdateTime,,GameManager);;
+        value: 'SendMessage(UpdateTime,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -31110,8 +31152,8 @@ MonoBehaviour:
         y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 329.67072}
-    canvasZoom: 0.9099996
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7299998
   - id: 30
     fields:
     - title: Title

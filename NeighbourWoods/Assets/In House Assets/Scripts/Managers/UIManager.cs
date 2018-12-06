@@ -211,7 +211,7 @@ namespace Manager.UI
         }
         IEnumerator DelayMenu()
         {
-            menuCanvas.DOFade(0, 1);
+            menuCanvas.DOFade(1, 1);
             menuCanvas.interactable = true;
             menuCanvas.blocksRaycasts = true;
             PlayerManager.instance.AnimateFocus(true);

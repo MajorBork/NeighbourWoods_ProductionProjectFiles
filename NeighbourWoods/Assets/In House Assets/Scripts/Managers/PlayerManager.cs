@@ -116,6 +116,7 @@ namespace Manager.Player
                     DigController();
                     JumpController();
                     DebugController();
+                    MenuController();
                     break;
                 case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
                     InventoryController();
@@ -302,6 +303,13 @@ namespace Manager.Player
             }
         }
         #endregion
+        public void MenuController()
+        {
+            if (Input.GetButtonDown("Escape"))
+            {
+                gameManagerUI.GoToMenu();
+            }
+        }
         #endregion
         #region Vision Event Methods
         void OnEnable() //Subscribes to our game events
