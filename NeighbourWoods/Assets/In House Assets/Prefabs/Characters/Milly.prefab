@@ -119,7 +119,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5e60cf3a7ef869a4aa871abe50c2f1d3, type: 2}
+  - {fileID: 2100000, guid: 773a8e594a0027e4783388d92d126ef0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,7 +145,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028330445041292}
-  m_Mesh: {fileID: 4300000, guid: e62f3911c213846499252fc7d21e927c, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a94d97195ed24d64c9c47c8ba9add1e8, type: 3}
 --- !u!65 &65412939202096054
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: 
-  persistentDataName: 
+  actor: Milly
+  persistentDataName: Milly
   portrait: {fileID: 0}
   barkUISettings:
     barkUI: {fileID: 0}
@@ -208,11 +208,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 32
+  trigger: 8
   condition:
     luaConditions: []
     questConditions: []
-    acceptedTags: []
+    acceptedTags:
+    - Player
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
@@ -241,12 +242,12 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: 
-  conversationConversant: {fileID: 0}
+  conversation: Freeroam/Milly
+  conversationConversant: {fileID: 4944033403208826}
   conversationActor: {fileID: 0}
   exclusive: 0
   skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
+  stopConversationOnTriggerExit: 1
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
@@ -278,17 +279,50 @@ MonoBehaviour:
   conversationEvents:
     onConversationStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
         Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onConversationEnd:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: EndDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
         Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onConversationCancelled:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: EndDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
         Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onConversationLine:

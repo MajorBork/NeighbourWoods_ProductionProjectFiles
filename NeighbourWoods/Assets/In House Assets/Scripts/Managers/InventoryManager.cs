@@ -26,6 +26,7 @@ namespace Manager.Inventory
         public bool hasItem;
         public string uiManagerMethod = "UpdateFoodText";
         public int masterFood;
+        public int masterClue;
         void Start() // Use this for initialization
         {
             inventoryShowing = false;
@@ -50,6 +51,15 @@ namespace Manager.Inventory
             //masterFood += foodValue;
             Debug.Log("I have Food " + masterFood);
             UIManager.instance.UpdateFoodText(masterFood);
+        }
+        #endregion
+        #region 
+        public void UpdateClue()
+        {
+            int DSClue = DialogueLua.GetVariable("Clues").asInt;
+            masterClue = DSClue;
+            Debug.Log("I have Clue " + masterClue);
+            UIManager.instance.UpdateClueText(masterClue);
         }
         #endregion
         #region Inventory Event Methods

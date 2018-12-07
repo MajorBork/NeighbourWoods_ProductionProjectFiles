@@ -27,6 +27,7 @@ namespace Manager.UI
         public TextMeshProUGUI tmpFoodText;
         public TextMeshProUGUI itemName;
         public TextMeshProUGUI dogBoneText;
+        public TextMeshProUGUI tmpClueText;
         //Image Variables
         public Icons icons;
         public Image itemImageUI;
@@ -123,6 +124,10 @@ namespace Manager.UI
         {
             dogBoneCollected++;
             dogBoneText.text = "Bones: " + dogBoneCollected + "/20";
+        }
+        public void UpdateClueText(int clue)
+        {
+            tmpClueText.text = ("Clue: " + clue);
         }
         #endregion
         #region Listeners 
