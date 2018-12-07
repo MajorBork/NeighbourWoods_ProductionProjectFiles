@@ -25,6 +25,7 @@ namespace Manager.Player
         public Vision vision;
         #region Object Variables
         // All of the Variables that link to objects or components
+        [Header("Object Variables")]
         [Tooltip("The GameObject variable that is the player object in the scene")]
         public GameObject player;
         [Tooltip("The variable that references the UIManager script on the canvas")]
@@ -41,8 +42,8 @@ namespace Manager.Player
         public GameObject[] smellObjects = new GameObject[0];
         #endregion
         #region Control Variables
-        //Space//
         //All of the controls variables used in the movement functions
+        [Header("Control Variables")]
         [Tooltip("The speed of the walk of the character")]
         public float walkSpeed = 2;
         [Tooltip("The spped of the run of the character")]
@@ -70,25 +71,25 @@ namespace Manager.Player
         private Vector3 rotationSmoothVelocity;
         #endregion
         #region Vision Variables
-        [Tooltip("")]
+        [Header("Vision Variables")]
+        [Tooltip("The max intensity of the Vign")]
         [SerializeField]
         public float maxVignIntensity = 0.3f;
-        [Tooltip("")]
+        [Tooltip("The duration of the animation")]
         [SerializeField]
         public float vignDuration = 0.5f;
         [Tooltip("Used for the intensity for the vignTween")]
         private float vignIntensity = 0;
-        [Tooltip("Used for the vignW")]
+        [Tooltip("Used for the vignmethods")]
         private Tween vignTween;
         public float focusMaxDis = 60;
         public float focusDuration = 1;
         private Tween focusTween;
         #endregion
         #endregion
-        #region Start() and Update()
+        #region Start and Update Methods
         void Start() // Use this for initialization
         {
-            // Setting 
             player = GameObject.FindWithTag("Player");
             playerCameraTransform = Camera.main.transform;
             playerCameraTransform = Camera.main.transform;
@@ -322,7 +323,6 @@ namespace Manager.Player
         {
             GameEvents.OnVisionChange -= OnVisionChange;
         }
-        //float visionLevel;
         void OnVisionChange(Vision vision) // OnVisionChange function that run if statements if the vision state is in normal or smell
         {
             //Debug.Log("vision mode");
@@ -346,6 +346,8 @@ namespace Manager.Player
                 }
             }
         }
+        #endregion
+        #region Menu Animation Methods
         public void AnimateFocus(bool value) // Calucating the animation for the vignette for Smell-O-Vision
         {
             focusTween = DOTween.To(() => focusMaxDis, x => focusMaxDis = x, value ? 60 : 0, focusDuration).OnUpdate(UpdateFocusAnimation);

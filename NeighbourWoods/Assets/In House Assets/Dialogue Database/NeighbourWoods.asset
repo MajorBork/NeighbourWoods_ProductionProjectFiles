@@ -941,7 +941,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: You get the Welcome Gift from the shopkeeper
+      value: 
       type: 0
       typeString: 
     - title: Success Description
@@ -1121,7 +1121,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 
+      value: '[lua(Variable["SquirrelAcorns"])]'
       type: 0
       typeString: 
     - title: Success Description
@@ -1228,6 +1228,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: The friend points for the Turtles
+      type: 0
+      typeString: 
+  - id: 12
+    fields:
+    - title: Name
+      value: SquirrelAcorns
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
       type: 0
       typeString: 
   - id: 6
@@ -26773,7 +26787,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 464.70587
+        x: 465.97168
         y: 72.94118
         width: 160
         height: 30
@@ -28313,8 +28327,9 @@ MonoBehaviour:
         destinationDialogueID: 24
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("SquirrelQuest") == "success"
-      userScript: 
+      conditionsString: (CurrentQuestState("SquirrelQuest") == "active") and (Variable["SquirrelAcorns"]
+        == 6)
+      userScript: CurrentQuestState("SquirrelQuest") == "success"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28827,7 +28842,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Clues"] = Variable["Clues"] + 1
+      userScript: 'Variable["Clues"] = Variable["Clues"] + 1;
+
+        Variable["Is_Squirrel_Quest_Complete"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28899,8 +28916,9 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("SquirrelQuest") == "active"
-      userScript: 
+      conditionsString: CurrentQuestState("SquirrelQuest") == "active" and (1 <= Variable["SquirrelAcorns"]
+        and Variable["SquirrelAcorns"] <= 5)
+      userScript: CurrentQuestState("SquirrelQuest") == "success"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29048,7 +29066,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Is_Squirrel_Quest_Complete"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29120,7 +29138,8 @@ MonoBehaviour:
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("SquirrelQuest") == "active"
+      conditionsString: (CurrentQuestState("SquirrelQuest") == "active") and (Variable["SquirrelAcorns"]
+        == 0)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29190,7 +29209,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Is_Squirrel_Quest_Complete"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29202,8 +29221,8 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 190.78973, y: 306.57953}
-    canvasZoom: 0.7599994
+    canvasScrollPosition: {x: 0, y: 1.2658234}
+    canvasZoom: 0.78999937
   - id: 29
     fields:
     - title: Title

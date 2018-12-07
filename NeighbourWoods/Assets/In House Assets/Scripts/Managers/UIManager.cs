@@ -6,8 +6,6 @@ using Manager.Level;
 using Manager.Inventory;
 using Manager;
 using DG.Tweening;
-using Language.Lua;
-using PixelCrushers.DialogueSystem;
 using TMPro;
 using Manager.Player;
 
@@ -48,7 +46,7 @@ namespace Manager.UI
         #region Start and Update
         void Start() // Use this for initialization
         {
-
+            GoToMenu();
             //InventoryCanvas.alpha = 0;
             //buttonPressBox.alpha = 0;
             fadeCanvas.alpha = 0;
@@ -210,6 +208,8 @@ namespace Manager.UI
                 default: return "";
             }
         }
+        #endregion
+        #region Menu Methods
         public void GoToMenu()
         {
             StartCoroutine(DelayMenu());

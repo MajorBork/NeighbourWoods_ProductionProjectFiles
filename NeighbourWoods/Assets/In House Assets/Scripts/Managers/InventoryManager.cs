@@ -53,7 +53,7 @@ namespace Manager.Inventory
             UIManager.instance.UpdateFoodText(masterFood);
         }
         #endregion
-        #region 
+        #region Clue Methods
         public void UpdateClue()
         {
             int DSClue = DialogueLua.GetVariable("Clues").asInt;
