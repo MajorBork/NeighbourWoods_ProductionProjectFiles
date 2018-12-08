@@ -3,14 +3,14 @@ guid: bf91663e4493b1d47981560d54c8405e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Plant
+    100000: pCube1
     100002: //RootNode
-    400000: Plant
+    400000: pCube1
     400002: //RootNode
-    2100000: PlantMat
-    2300000: Plant
-    3300000: Plant
-    4300000: Plant
+    2100000: pCube1Mat
+    2300000: pCube1
+    3300000: pCube1
+    4300000: pCube1
   externalObjects: {}
   materials:
     importMaterials: 1

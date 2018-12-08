@@ -3,14 +3,14 @@ guid: 38c63570eb288a543bef0c4202c2c5d8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Acorn
-    100002: //RootNode
-    400000: Acorn
-    400002: //RootNode
-    2100000: AcornMat
-    2300000: Acorn
-    3300000: Acorn
-    4300000: Acorn
+    100000: //RootNode
+    100002: Acorn_Acorn
+    400000: //RootNode
+    400002: Acorn_Acorn
+    2100000: Acorn_AcornMat
+    2300000: Acorn_Acorn
+    3300000: Acorn_Acorn
+    4300000: Acorn_Acorn
   externalObjects: {}
   materials:
     importMaterials: 1
