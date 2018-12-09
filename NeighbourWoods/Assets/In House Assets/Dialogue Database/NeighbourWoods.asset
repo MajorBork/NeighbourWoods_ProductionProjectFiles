@@ -59,7 +59,7 @@ MonoBehaviour:
       value: 5
       type: 1
       typeString: CustomFieldType_Number
-    portrait: {fileID: 2800000, guid: 17aca7e13c8518144834a2c73c6794a4, type: 3}
+    portrait: {fileID: 2800000, guid: efbb41708d3893e448efc546b4734976, type: 3}
     alternatePortraits: []
   - id: 2
     fields:
@@ -753,11 +753,11 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Trackable
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Track
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
   - id: 1
@@ -1467,7 +1467,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+        value: 'SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 7
@@ -2370,7 +2372,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+        value: 'SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 7
@@ -3082,7 +3086,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1672.8159
-        y: 395.18286
+        y: 396.61142
         width: 160
         height: 30
     - id: 28
@@ -3518,7 +3522,7 @@ MonoBehaviour:
         y: 653.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 678.81226, y: 536.5639}
+    canvasScrollPosition: {x: 175.71436, y: 31.428574}
     canvasZoom: 0.6999997
   - id: 10
     fields:
@@ -29221,7 +29225,7 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 1.2658234}
+    canvasScrollPosition: {x: 0, y: 3.7974777}
     canvasZoom: 0.78999937
   - id: 29
     fields:

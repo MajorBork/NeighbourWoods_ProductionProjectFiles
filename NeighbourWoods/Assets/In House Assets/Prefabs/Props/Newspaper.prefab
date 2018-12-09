@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33709183115115280}
   - component: {fileID: 23626803341565154}
   - component: {fileID: 114090595670320420}
-  - component: {fileID: 65050152490484522}
+  - component: {fileID: 65261879772898962}
   m_Layer: 0
   m_Name: Newspaper
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796759686481562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.11, y: 0.088, z: -63.94}
+  m_LocalPosition: {x: -65.14876, y: 16.426, z: -141.46695}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4627480406604948}
@@ -116,7 +116,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796759686481562}
   m_Mesh: {fileID: 4300000, guid: 53187666a8d49d345b9a0d03160e1ccd, type: 3}
---- !u!65 &65050152490484522
+--- !u!65 &65261879772898962
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,8 +126,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 3, z: 4}
+  m_Center: {x: 1, y: 0, z: 1.273202}
 --- !u!114 &114090595670320420
 MonoBehaviour:
   m_ObjectHideFlags: 1
