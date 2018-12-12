@@ -10,14 +10,17 @@ namespace Manager.Environment
     public class EnvironmentManager : Singleton<EnvironmentManager>
     {
         #region Variables
+        [Header("Script Object References")]
         public Day day;
         public TimeSlot timeSlot;
         public Level.LevelManager levelManager;
+        [Header("Day Light Colour Setting")]
         public Light sceneLight;
         public Color morningLightColour;
         public Color middayLightColour;
         public Color afternoonLightColour;
         public Color eveningLightColour;
+        [Header("TimeSlot Sky box Setting")]
         public Material morningSkyBox;
         public Material middaySkyBox;
         public Material afternoonSkyBox;

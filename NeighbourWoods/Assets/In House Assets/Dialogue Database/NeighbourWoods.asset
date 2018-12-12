@@ -28909,6 +28909,8 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(UpdateClue,,GameManager);
 
+          SendMessage(UpdateTime,,GameManager);
+
           Delay({{end}})'
         type: 0
         typeString: 
@@ -29300,7 +29302,7 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 3.7974777}
+    canvasScrollPosition: {x: 16.455688, y: 263.29132}
     canvasZoom: 0.78999937
   - id: 29
     fields:

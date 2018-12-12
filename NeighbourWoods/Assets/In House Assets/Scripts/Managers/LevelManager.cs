@@ -34,6 +34,7 @@ namespace Manager.Level
         //public Levels[] levels;
         public Day day;
         public TimeSlot timeSlot;
+        [Header("TimeSlot specific objects")]
         public GameObject[] day1MorningObjects;
         public GameObject[] day1MiddayObjects;
         public GameObject[] day1AfternoonObjects;
@@ -43,6 +44,7 @@ namespace Manager.Level
         public GameObject[] day2AfternoonObjects;
         public GameObject[] day2EveningObjects;
         public GameObject Player;
+        [Header("TimeSlot teleport object")]
         public Transform day1MorningTeleportLocation;
         public Transform day1AfternoonTeleportLocation;
         public Transform day2MorningTeleportLocation;
