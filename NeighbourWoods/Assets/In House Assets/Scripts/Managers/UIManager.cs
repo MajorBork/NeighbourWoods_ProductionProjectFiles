@@ -77,6 +77,9 @@ namespace Manager.UI
                 case "Pizzabox":
                     itemImageUI.sprite = icons.rizzaboxIcon;
                     break;
+                case "Acorn":
+                    itemImageUI.sprite = icons.acornIcon;
+                    break;
                 default: itemImageUI.sprite = null;
                     break;
             }

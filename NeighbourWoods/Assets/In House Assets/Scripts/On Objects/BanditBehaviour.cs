@@ -13,7 +13,7 @@ public class BanditBehaviour : MonoBehaviour
     {
 		
 	}
-    void BanditRetreat()
+    public void BanditRetreat()
     {
         Bandit.SetActive(false);
     }

@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acorn: {fileID: 1606029795885930}
+  uiManager: {fileID: 0}
+  itemNameOnObject: Acorn
 --- !u!114 &114739283096478662
 MonoBehaviour:
   m_ObjectHideFlags: 1
