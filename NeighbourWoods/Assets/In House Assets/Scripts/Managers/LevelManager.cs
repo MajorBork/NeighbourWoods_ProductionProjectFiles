@@ -47,6 +47,7 @@ namespace Manager.Level
         [Header("TimeSlot teleport object")]
         public Transform day1MorningTeleportLocation;
         public Transform day1AfternoonTeleportLocation;
+        public Transform day1EveningTeleportLocation;
         public Transform day2MorningTeleportLocation;
         public Transform day2AfternoonTeleportLocation;
         public int currentTime;

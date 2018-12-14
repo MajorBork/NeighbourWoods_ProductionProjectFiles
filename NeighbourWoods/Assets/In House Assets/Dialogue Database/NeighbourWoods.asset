@@ -219,7 +219,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 1fdf14fc1e9610f47bd50671c9aca6bc, type: 3}
     alternatePortraits: []
   - id: 12
     fields:
@@ -479,7 +479,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: bf07b56e07b6d5e468ca07c0ba820fa8, type: 3}
     alternatePortraits: []
   - id: 24
     fields:
@@ -619,7 +619,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: d373fd06e3d6a78499b846a9f737f1f7, type: 3}
     alternatePortraits: []
   - id: 31
     fields:
@@ -639,7 +639,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 63230cbc5d87ff4489194fe966127283, type: 3}
     alternatePortraits: []
   - id: 32
     fields:
@@ -18536,7 +18536,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MufflesRetreat,,MufflesBehaviour);
+        value: 'SendMessage(RunAway,SquirrelBehaviour);
 
           Delay({{end}})'
         type: 0
@@ -19275,7 +19275,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MufflesRetreat,,MufflesBehaviour);
+        value: 'SendMessage(RunAway,SquirrelBehaviour);
 
           Delay({{end}})'
         type: 0
@@ -19522,7 +19522,7 @@ MonoBehaviour:
         y: 931.567
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 441.27722}
+    canvasScrollPosition: {x: 0, y: 631.52075}
     canvasZoom: 0.41000083
   - id: 24
     fields:
@@ -27314,7 +27314,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(RunAwaySquirrel,,Squirrel);
+        value: 'SendMessage(RunAway,,Squirrel);
 
           Delay({{end}})'
         type: 0
@@ -27456,7 +27456,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(RunAwaySquirrel,,Squirrel);
+        value: 'SendMessage(RunAway,,Squirrel);
 
           Delay({{end}})'
         type: 0
@@ -28340,7 +28340,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(RunAwaySquirrel,,Squirrel);
+        value: 'SendMessage(RunAway,,Squirrel);
 
           Delay({{end}})'
         type: 0
@@ -29322,7 +29322,7 @@ MonoBehaviour:
         y: 111.81816
         width: 160
         height: 30
-    canvasScrollPosition: {x: 16.455688, y: 263.29132}
+    canvasScrollPosition: {x: 0, y: 365.82278}
     canvasZoom: 0.78999937
   - id: 29
     fields:
@@ -30019,6 +30019,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'SendMessage(OpenGate,,Oscar);
+
+          SendMessage(UpdateTime,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -30853,7 +30855,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 29
@@ -31237,7 +31241,7 @@ MonoBehaviour:
         y: 532.15625
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 326.02774}
     canvasZoom: 0.7299998
   - id: 30
     fields:
@@ -36584,7 +36588,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 27.946854
+        x: 29.375427
         y: 1463.107
         width: 160
         height: 30
@@ -36661,7 +36665,7 @@ MonoBehaviour:
         y: 294.9698
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 1387.1434}
     canvasZoom: 0.69999987
   - id: 33
     fields:
@@ -45883,11 +45887,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 36
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 36
+      value: 1
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -45929,7 +45933,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 36
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -46084,7 +46088,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I don't like this place
+        value: I don't like this place.
         type: 0
         typeString: 
       - title: Parenthetical

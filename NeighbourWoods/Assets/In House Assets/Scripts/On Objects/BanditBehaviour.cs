@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class BanditBehaviour : MonoBehaviour
 {
-    public GameObject Bandit;
-	void Start () // Use this for initialization
+    public GameObject animal;
+    public GameObject animal1;
+    public GameObject animal2;
+    public GameObject animal3;
+    public GameObject animal4;
+    public GameObject animal5;
+    public GameObject animal6;
+    void Start () // Use this for initialization
     {
 		
 	}
@@ -13,8 +19,19 @@ public class BanditBehaviour : MonoBehaviour
     {
 		
 	}
-    public void BanditRetreat()
+    void RunAway()
     {
-        Bandit.SetActive(false);
+        StartCoroutine(DelayedRunAway());
+    }
+    IEnumerator DelayedRunAway()
+    {
+        yield return new WaitForSeconds(6);
+        animal.SetActive(false);
+        animal1.SetActive(false);
+        animal2.SetActive(false);
+        animal3.SetActive(false);
+        animal4.SetActive(false);
+        animal5.SetActive(false);
+        animal6.SetActive(false);
     }
 }

@@ -5,7 +5,7 @@ using PixelCrushers.DialogueSystem;
 
 public class SquirrelBehaviour : MonoBehaviour
 {
-    public GameObject squirrel;
+    public GameObject animal;
     public 
 	void Start () // Use this for initialization
     {
@@ -15,8 +15,13 @@ public class SquirrelBehaviour : MonoBehaviour
     {
 		
 	}
-    void RunAwaySquirrel()
+    void RunAway()
     {
-        squirrel.SetActive(false);
+        StartCoroutine(DelayedRunAway());
+    }
+    IEnumerator DelayedRunAway()
+    {
+        yield return new WaitForSeconds(5);
+        animal.SetActive(false);
     }
 }

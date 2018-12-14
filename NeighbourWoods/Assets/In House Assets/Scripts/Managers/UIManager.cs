@@ -80,6 +80,9 @@ namespace Manager.UI
                 case "Acorn":
                     itemImageUI.sprite = icons.acornIcon;
                     break;
+                case "Bread":
+                    itemImageUI.sprite = icons.foodIcon;
+                    break;
                 default: itemImageUI.sprite = null;
                     break;
             }
