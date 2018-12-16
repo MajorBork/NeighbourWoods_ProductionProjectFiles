@@ -17,8 +17,11 @@ namespace Manager.UI
         #region Variables
         //public CanvasGroup dialogueBoxCanvas;
         //public CanvasGroup buttonPressBox;
+        [Header("Menu Variables")]
+        public CanvasGroup menuCanvas;
         public CanvasGroup fadeCanvas;
         public CanvasGroup inventoryCanvas;
+        [Header("TMP object references")]
         //TextMeshProUGUI object variables
         public TextMeshProUGUI dayText;
         public TextMeshProUGUI timeText;
@@ -26,9 +29,12 @@ namespace Manager.UI
         public TextMeshProUGUI itemName;
         public TextMeshProUGUI dogBoneText;
         public TextMeshProUGUI tmpClueText;
+        [Header("UI Variables")]
         //Image Variables
         public Icons icons;
         public Image itemImageUI;
+        public Image characterFriendshipIcon;
+        [Header("Other variables")]
         // other Variables
         public GameState gameState;
         public int taskPoints;
@@ -38,10 +44,9 @@ namespace Manager.UI
         public string itemNameString;
         public int textFoodInt;
         public float fadeInTime = 1;
-        public Image characterFriendshipIcon;
 
-        [Header("Menu Variables")]
-        public CanvasGroup menuCanvas;
+
+
         #endregion
         #region Start and Update
         void Start() // Use this for initialization

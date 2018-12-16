@@ -90,6 +90,10 @@ public class OldCodeManager
     //public int backwardSpeed = 10;
     //public int leftSpeed = 10;
     //public int rightSpeed = 10;
+    //private string inventoryManagerMethodPickupItem = "PickupItem";
+    //private string inventoryManagerUpdateItemIcon = "OnItemPickup";
+    //public Levels[] levels;
+    //public Image ballIcon;
     //public List<DialogueList> dialogueList;
     //public TMP_Text characterNameText;
     //public TMP_Text characterDialogueText;
@@ -143,6 +147,12 @@ public class OldCodeManager
     //    }
     //    GameEvents.ReportOnTimeChange(timeSlot, day);
     //}
+    //uiManager.SendMessage("UpdateItemIcon");
+    //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
+    //int foodValue;
+    //attempt to parse the value using the TryParse functionality of the integer type
+    //int.TryParse(food, out foodValue);
+    //masterFood += foodValue;
     // Old movement code
     //if (Input.GetKey(KeyCode.W))
     //{
@@ -348,3 +358,13 @@ public class OldCodeManager
 //    [TextArea(3, 10)]
 //    public string[] sentences;
 //}
+//#region Levels Class
+//[Groups("Base Settings")]
+//[System.Serializable]
+//public class Levels
+//{
+//    public LocationID locationID; 
+//    public BoxCollider areaCollider;
+//    public Tasks tasksInArea;
+//}
+//#endregion

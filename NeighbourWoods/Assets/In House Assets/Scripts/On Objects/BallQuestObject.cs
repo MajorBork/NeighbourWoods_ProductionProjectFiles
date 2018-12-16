@@ -6,26 +6,21 @@ using Manager.UI;
 
 public class BallQuestObject : MonoBehaviour
 {
-    //private string inventoryManagerMethodPickupItem = "PickupItem";
     public string questTitle;
-    //private string inventoryManagerUpdateItemIcon = "OnItemPickup";
     public QuestState newQuestState = QuestState.Active;
     //private QuestState newQuestState = QuestState.Success;
     public GameObject questObject;
     public string message;
     public string itemNameOnObject;
-    //public Image ballIcon;
     public InventoryManager inventoryManager;
     public UIManager uiManager;
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //uiManager.SendMessage("UpdateItemIcon");
             uiManager.SendMessage("UpdateItem",itemNameOnObject);
             QuestLog.SetQuestState(questTitle, newQuestState);
             DialogueManager.ShowAlert(message);
-            //inventoryManager.SendMessage(inventoryManagerMethodPickupItem, bananaIcon);
             questObject.SetActive(false);
         }
     }

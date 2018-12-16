@@ -20,13 +20,18 @@ namespace Manager.Inventory
     public class InventoryManager : Singleton<InventoryManager>
     {
         //public Items iteminInventory;
+        [Header("Object Variables")]
         public UIManager gameManagerUI;
         public GameObject itemObject;
+        [Header("Bool Variables (do not touch)")]
         public bool inventoryShowing;
         public bool hasItem;
+        [Header("String Variables (do not touch)")]
         public string uiManagerMethod = "UpdateFoodText";
+        [Header("Int Variables (do not touch)")]
         public int masterFood;
         public int masterClue;
+        #region Start and Update
         void Start() // Use this for initialization
         {
             inventoryShowing = false;
@@ -36,6 +41,7 @@ namespace Manager.Inventory
         {
             //AddFood();
         }
+        #endregion
         void GetRidOfItem()
         {
             UIManager.instance.GetRidOfItem();
@@ -45,10 +51,6 @@ namespace Manager.Inventory
         {
             int DSfood = DialogueLua.GetVariable("Food").asInt;
             masterFood = DSfood;
-            //int foodValue;
-            //attempt to parse the value using the TryParse functionality of the integer type
-            //int.TryParse(food, out foodValue);
-            //masterFood += foodValue;
             Debug.Log("I have Food " + masterFood);
             UIManager.instance.UpdateFoodText(masterFood);
         }

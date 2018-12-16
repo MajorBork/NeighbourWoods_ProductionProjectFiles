@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager.UI;
 
 public class MufflesBehaviour : MonoBehaviour
 {
-    public GameObject Muffle;
-	void Start () // Use this for initialization
+    public GameObject animal;
+    void Start () // Use this for initialization
     {
 
     }
@@ -13,8 +14,13 @@ public class MufflesBehaviour : MonoBehaviour
     {
 
     }
-    public void MufflesRetreat()
+    void RunAway()
     {
-        Muffle.SetActive(false);
+        StartCoroutine(DelayedRunAway());
+    }
+    IEnumerator DelayedRunAway()
+    {
+        yield return new WaitForSeconds(5);
+        animal.SetActive(false);
     }
 }

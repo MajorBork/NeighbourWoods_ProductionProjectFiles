@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PixelCrushers.DialogueSystem;
-using Manager.Player;
 namespace Manager.Level
 {
     #region Days Enum
@@ -31,18 +30,27 @@ namespace Manager.Level
     public class LevelManager : Singleton<LevelManager>
     {
         #region Variables
-        //public Levels[] levels;
+        [Header("Enums variables used for keeping the game time")]
         public Day day;
         public TimeSlot timeSlot;
         [Header("TimeSlot specific objects")]
+        [Tooltip("Objects that are turned on when it is Day 1 Morning")]
         public GameObject[] day1MorningObjects;
+        [Tooltip("Objects that are turned on when it is Day 1 Midday")]
         public GameObject[] day1MiddayObjects;
+        [Tooltip("Objects that are turned on when it is Day 1 Afternoon")]
         public GameObject[] day1AfternoonObjects;
+        [Tooltip("Objects that are turned on when it is Day 1 Evening")]
         public GameObject[] day1EveningObjects;
+        [Tooltip("Objects that are turned on when it is Day 2 Morning")]
         public GameObject[] day2MorningObjects;
+        [Tooltip("Objects that are turned on when it is Day 2 Midday")]
         public GameObject[] day2MiddayObjects;
+        [Tooltip("Objects that are turned on when it is Day 2 Afternoon")]
         public GameObject[] day2AfternoonObjects;
+        [Tooltip("Objects that are turned on when it is Day 2 Evening")]
         public GameObject[] day2EveningObjects;
+        [Tooltip("reference to the player object in this script")]
         public GameObject Player;
         [Header("TimeSlot teleport object")]
         public Transform day1MorningTeleportLocation;
@@ -50,6 +58,7 @@ namespace Manager.Level
         public Transform day1EveningTeleportLocation;
         public Transform day2MorningTeleportLocation;
         public Transform day2AfternoonTeleportLocation;
+        [Header("ints for time")]
         public int currentTime;
         public int maxTaskPoints = 4;
         #endregion
@@ -85,7 +94,6 @@ namespace Manager.Level
             {
                 day++;    
                 timeSlot = TimeSlot.MORNING;
-                
                 if ((int)day == 3)
                 {
                     SceneManager.LoadScene("OverworldScene");
@@ -98,6 +106,7 @@ namespace Manager.Level
             GameEvents.ReportOnTimeChange(timeSlot,day);
         }
         #region Utility Time Methods
+        // Utility functions for testing the game
         public void UpdateTimeToMorningDay1()
         {
             if (day == Day.DAY_2)
@@ -513,15 +522,5 @@ namespace Manager.Level
         }
         #endregion
     }
-    #endregion
-    #region Levels Class
-    //[Groups("Base Settings")]
-    //[System.Serializable]
-    //public class Levels
-    //{
-    //    public LocationID locationID; 
-    //    public BoxCollider areaCollider;
-    //    public Tasks tasksInArea;
-    //}
     #endregion
 }

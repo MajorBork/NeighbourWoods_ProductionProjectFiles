@@ -6,7 +6,6 @@ using TMPro;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
 using Language.Lua;
-using Manager.Character;
 using Manager.Environment;
 using Manager;
 namespace Manager.GameDialogue
@@ -14,8 +13,10 @@ namespace Manager.GameDialogue
     public class GameDialogueManager : MonoBehaviour
     {
         #region Variables
+        [Header("Object references for scripts")]
         public EnvironmentManager environmentManager;
         public GameManager gameManager;
+        [Header("Random Variables")]
         public int food;
         public int taskPoints;
         public string currentActor;
