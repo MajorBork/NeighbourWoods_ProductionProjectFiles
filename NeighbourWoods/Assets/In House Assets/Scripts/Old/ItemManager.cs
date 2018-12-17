@@ -53,13 +53,13 @@ namespace Manager.Item
     //    WEIRD_WEED,
     //}
     //#endregion
-    #region ItemManager Class
-    public class ItemManager : Singleton<ItemManager>
-    {
-        //public Items[] item;
-    }
-    #endregion
-    #region Items Class
+    //#region ItemManager Class
+    //public class ItemManager : Singleton<ItemManager>
+    //{
+    //    public Items[] item;
+    //}
+    //#endregion
+    //#region Items Class
     //[Groups("Base Settings")]
     //[System.Serializable]
     //public class Items
@@ -69,5 +69,5 @@ namespace Manager.Item
     //    public Image itemIcon;
     //    public GameObject itemObject;
     //}
-    #endregion 
+    //#endregion 
 }
