@@ -6,7 +6,6 @@ using PixelCrushers.DialogueSystem;
 public class SquirrelBehaviour : MonoBehaviour
 {
     public GameObject animal;
-    public 
 	void Start () // Use this for initialization
     {
 		
