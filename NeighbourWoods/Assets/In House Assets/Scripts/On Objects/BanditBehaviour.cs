@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class BanditBehaviour : MonoBehaviour
 {
@@ -10,18 +11,19 @@ public class BanditBehaviour : MonoBehaviour
     public GameObject animal3;
     public GameObject animal4;
     public GameObject animal5;
-    public GameObject animal6;
-    void Start () // Use this for initialization
+    public Usable BanditUsable;
+    void Start() // Use this for initialization
     {
-		
-	}
-	void Update () // Update is called once per frame
+
+    }
+    void Update() // Update is called once per frame
     {
-		
-	}
+
+    }
     void RunAway()
     {
         StartCoroutine(DelayedRunAway());
+        BanditUsable.enabled = false;
     }
     IEnumerator DelayedRunAway()
     {
@@ -32,6 +34,5 @@ public class BanditBehaviour : MonoBehaviour
         animal3.SetActive(false);
         animal4.SetActive(false);
         animal5.SetActive(false);
-        animal6.SetActive(false);
     }
 }

@@ -5,18 +5,18 @@ using UnityEngine.Audio;
 using Manager.Player;
 namespace Manager.Audio
 {
-    #region AudioType Enum
-    public enum AudioType
-    {
-        CHARACTER,
-        CHARACTER_DIALOGUE,
-        PLAYER_DIALOGUE,
-        PLAYER,
-        SOUND_EFFECT,
-        GAME,
-        MUSIC,
-    }
-    #endregion
+    //#region AudioType Enum
+    //public enum AudioType
+    //{
+    //    CHARACTER,
+    //    CHARACTER_DIALOGUE,
+    //    PLAYER_DIALOGUE,
+    //    PLAYER,
+    //    SOUND_EFFECT,
+    //    GAME,
+    //    MUSIC,
+    //}
+    //#endregion
     #region AudioManager Class
     public class AudioManager : Singleton<AudioManager>
     {

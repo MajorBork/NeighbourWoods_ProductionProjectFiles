@@ -6,21 +6,24 @@ using PixelCrushers.DialogueSystem;
 public class SquirrelBehaviour : MonoBehaviour
 {
     public GameObject animal;
-	void Start () // Use this for initialization
+    public Usable squirrelUsable;
+    void Start() // Use this for initialization
     {
-		
-	}
-	void Update () // Update is called once per frame
+        squirrelUsable = GetComponent<Usable>();
+    }
+    void Update() // Update is called once per frame
     {
-		
-	}
+
+    }
     void RunAway()
     {
         StartCoroutine(DelayedRunAway());
     }
     IEnumerator DelayedRunAway()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        squirrelUsable.enabled = false;
+        yield return new WaitForSeconds(3);
         animal.SetActive(false);
     }
 }

@@ -21086,6 +21086,8 @@ MonoBehaviour:
 
           SendMessage(TurnOnConversation,,Max);
 
+          SendMessage(RunAway,,Bandit);
+
           Delay({{end}})'
         type: 0
         typeString: 
@@ -21162,6 +21164,8 @@ MonoBehaviour:
 
           SendMessage(TurnOnConversation,,Max);
 
+          SendMessage(RunAway,,Bandit);
+
           Delay({{end}})'
         type: 0
         typeString: 
@@ -21237,6 +21241,8 @@ MonoBehaviour:
         value: 'SendMessage(OnConversationPoint,,GameManager);
 
           SendMessage(TurnOnConversation,,Max);
+
+          SendMessage(RunAway,,Bandit);
 
           Delay({{end}})'
         type: 0
@@ -21317,6 +21323,8 @@ MonoBehaviour:
         value: 'SendMessage(OnConversationPoint,,GameManager);
 
           SendMessage(TurnOnConversation,,Max);
+
+          SendMessage(RunAway,,Bandit);
 
           Delay({{end}})'
         type: 0
@@ -21549,6 +21557,8 @@ MonoBehaviour:
 
         SendMessage(TurnOnConversation,,Max);
 
+        SendMessage(RunAway,,Bandit);
+
         Delay({{end}})'
       userScript: Variable["BanditFriendPoint"] = Variable["BanditFriendPoint"] +
         -4
@@ -21560,7 +21570,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1021.10156
-        y: 503.1462
+        y: 504.03116
         width: 160
         height: 30
     - id: 35
@@ -22449,7 +22459,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(BanditRetreat,,Bandit);
+        value: 'SendMessage(OnConversationPoint,,GameManager);
+
+          SendMessage(RunAway,,Max);
+
+          SendMessage(BanditRetreat,,Bandit);
 
           Delay({{end}})'
         type: 0
@@ -22476,8 +22490,8 @@ MonoBehaviour:
         y: 616.9673
         width: 160
         height: 30
-    canvasScrollPosition: {x: 80.402016, y: 428.35498}
-    canvasZoom: 1.1299978
+    canvasScrollPosition: {x: 8, y: 385.865}
+    canvasZoom: 0.49999818
   - id: 25
     fields:
     - title: Title
@@ -24470,7 +24484,90 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh hey {PlayerName}, you all tuckered out and ready to head home?
+        value: 'Oh hey Lucky, you all tuckered?
+
+          Lets head home then.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SendMessage(,,);
+
+          Delay({{end}})'
+        type: 0
+        typeString: 
+      conversationID: 26
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 26
+        originDialogueID: 1
+        destinationConversationID: 26
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      - originConversationID: 26
+        originDialogueID: 1
+        destinationConversationID: 26
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 19
+        y: 82
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24506,8 +24603,75 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 80
+        x: 19
+        y: 132
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 26
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 221
+        y: 130
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}

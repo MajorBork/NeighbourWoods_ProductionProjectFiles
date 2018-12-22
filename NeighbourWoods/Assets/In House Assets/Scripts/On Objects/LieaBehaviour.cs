@@ -1,20 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class LieaBehaviour : MonoBehaviour
 {
-    public GameObject Liea;
-	void Start () // Use this for initialization
+    public GameObject animal;
+    public Usable lieaUsable;
+    void Start() // Use this for initialization
     {
-		
-	}
-	void Update () // Update is called once per frame
+        lieaUsable = GetComponent<Usable>();
+    }
+    void Update() // Update is called once per frame
     {
-		
-	}
-    public void LieaRetreat()
+
+    }
+    public void RunAway()
     {
-        Liea.SetActive(false);
+        StartCoroutine(DelayRunAway());
+        
+    }
+    public IEnumerator DelayRunAway()
+    {
+        yield return new WaitForSeconds(3);
+        lieaUsable.enabled = false;
+        yield return new WaitForSeconds(3);
+        animal.SetActive(false);
     }
 }

@@ -15,7 +15,7 @@ public class CarBehaviour : MonoBehaviour
     private float angle;
     public float carSpeed = 1.5f;
     public float carRotation = 0.1f;
-    void Start () // Use this for initialization
+    void Start() // Use this for initialization
     {
         Vector3[] waypoints = new Vector3[pathHolder.childCount];
         for (int i = 0; i < waypoints.Length; i++)
@@ -24,10 +24,8 @@ public class CarBehaviour : MonoBehaviour
             waypoints[i] = new Vector3(waypoints[i].x, transform.position.y, waypoints[i].z);
         }
     }
-	void Update () // Update is called once per frame
+    void Update() // Update is called once per frame
     {
-        direction = player.position - this.transform.position; // distance between the player and the demon
-        direction.y = 0;
         angle = Vector3.Angle(direction, this.transform.forward); // The angle
         direction.y = 0;
         if (Vector3.Distance(waypoints[currentWP].transform.position, transform.position) < wpAccuracy)
