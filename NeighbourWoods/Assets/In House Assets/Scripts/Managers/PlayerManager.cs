@@ -7,6 +7,7 @@ using Manager.Inventory;
 using TMPro;
 using DG.Tweening;
 using Manager.Level;
+using Manager.Audio;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -30,6 +31,8 @@ namespace Manager.Player
         public GameObject player;
         [Tooltip("The variable that references the UIManager script on the canvas")]
         public UIManager gameManagerUI;
+        [Tooltip("The variable that references the AudioManager Script on the GameManager object")]
+        public AudioManager audioManager;
         [Tooltip("The variable that references the LevelManager Script on the GameManager object")]
         public LevelManager levelManager;
         [Tooltip("The variable that references the GameManager Script on the GameManager object")]
@@ -220,8 +223,9 @@ namespace Manager.Player
         {
             if (Input.GetButtonDown("Dig"))
             {
+                audioManager.PlayAudio("Bark 1");
                 Debug.Log("Test Digging");
-                //testTMP.text = ("Test Digging to be coded");
+                
             }
         }
         #endregion

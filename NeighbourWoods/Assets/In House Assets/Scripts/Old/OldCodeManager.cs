@@ -1,4 +1,16 @@
-﻿//#region LocationID Enum
+﻿//#region AudioType Enum
+//public enum AudioType
+//{
+//    CHARACTER,
+//    CHARACTER_DIALOGUE,
+//    PLAYER_DIALOGUE,
+//    PLAYER,
+//    SOUND_EFFECT,
+//    GAME,
+//    MUSIC,
+//}
+//#endregion
+//#region LocationID Enum
 //public enum LocationID
 //{
 //    HOME,

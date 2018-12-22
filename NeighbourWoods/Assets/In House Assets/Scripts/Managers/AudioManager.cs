@@ -1,28 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using Manager.Player;
 namespace Manager.Audio
 {
-    //#region AudioType Enum
-    //public enum AudioType
-    //{
-    //    CHARACTER,
-    //    CHARACTER_DIALOGUE,
-    //    PLAYER_DIALOGUE,
-    //    PLAYER,
-    //    SOUND_EFFECT,
-    //    GAME,
-    //    MUSIC,
-    //}
-    //#endregion
     #region AudioManager Class
     public class AudioManager : Singleton<AudioManager>
     {
-        //AudioFiles[] audioFiles;
-        public float volume;
-        public static bool mute;
+        public AudioFiles[] audioFiles;
+        void Start()
+        {
+            foreach (AudioFiles a in audioFiles)
+            {
+                a.audioSource = gameObject.AddComponent<AudioSource>();
+                a.audioSource.clip = a.audioClip;
+                a.audioSource.volume = a.volume;
+                a.audioSource.pitch = a.pitch;
+                a.audioSource.loop = a.loop;
+            }
+        }
+        public void PlayAudio(string audioName)
+        {
+            AudioFiles a = Array.Find(audioFiles, audioFiles => audioFiles.audioName == audioName);
+            if (a == null)
+            {
+                Debug.LogWarning("Audio" + audioName + "not found or typo");
+                return;
+            }
+            a.audioSource.Play();
+        }
         void OnEnable()  //Subscribes to our game events
         {
             GameEvents.OnVisionChange += OnVisionChange;
@@ -34,16 +42,25 @@ namespace Manager.Audio
         void OnVisionChange(Vision vision)
         {
             Debug.Log("DOG SOUND");
+
         }
     }
     #endregion
-    //#region AudioFiles Class
-    //[Groups("Base Settings")]
-    //[System.Serializable]
-    //public class AudioFiles
-    //{
-    //    public AudioClip audioClip;
-    //    public AudioType audioType;
-    //}
-    //#endregion
+    #region AudioFiles Class
+    [System.Serializable]
+    public class AudioFiles
+    {
+        public string audioName;
+        public AudioClip audioClip;
+        [HideInInspector]
+        public AudioSource audioSource;
+        public static bool mute;
+        public bool loop;
+        [Range(0f, 1f)]
+        public float volume;
+        [Range(0.1f, 3f)]
+        public float pitch;
+    }
+    #endregion
+
 }

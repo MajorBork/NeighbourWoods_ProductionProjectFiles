@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager.Audio;
 
 public class Singleton <T>:MonoBehaviour where T:MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class Singleton <T>:MonoBehaviour where T:MonoBehaviour
         }
     }
     protected virtual void Awake ()
-    { if (instance_ == null )
+    {
+        if (instance_ == null )
         {
             instance_ =this as T;
             DontDestroyOnLoad (gameObject );
