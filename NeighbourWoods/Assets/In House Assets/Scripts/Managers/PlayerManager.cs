@@ -234,16 +234,16 @@ namespace Manager.Player
         {
             if (Input.GetButtonDown("Bark"))
             {
-                int number = Random.Range(1, 3);
+                int number = Random.Range(1, 4);
                 if (number == 1)
                 {
                     audioManager.PlayAudio("Bark 1");
                 }
-                if (number == 1)
+                if (number == 2)
                 {
                     audioManager.PlayAudio("Bark 2");
                 }
-                if (number == 1)
+                if (number == 3)
                 {
                     audioManager.PlayAudio("Bark 3");
                 }

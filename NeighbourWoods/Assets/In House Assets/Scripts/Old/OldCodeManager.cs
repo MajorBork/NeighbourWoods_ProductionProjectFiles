@@ -380,3 +380,11 @@ public class OldCodeManager
 //    public Tasks tasksInArea;
 //}
 //#endregion
+//#region Environment Class
+//[Groups("Base Settings")]
+//[System.Serializable]
+//public class Environments
+//{
+
+//}
+//#endregion

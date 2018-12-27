@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager;
 using Manager.Level;
-using PixelCrushers.DialogueSystem;
-using Language.Lua;
+using Manager.Audio;
 namespace Manager.Environment
 {
 
@@ -11,9 +11,13 @@ namespace Manager.Environment
     {
         #region Variables
         [Header("Script Object References")]
+        
         public Day day;
         public TimeSlot timeSlot;
         public Level.LevelManager levelManager;
+        public AudioManager audioManager;
+        public GameManager gameManager;
+        public string lastMusicPlaying;
         [Header("Day Light Colour Setting")]
         public Light sceneLight;
         public Color morningLightColour;
@@ -38,10 +42,35 @@ namespace Manager.Environment
         void OnEnable()
         {
             GameEvents.OnTimeChange += OnTimeChange;
+            GameEvents.OnGameStateChange += OnGameStateChange;
         }
         void OnDisable()
         {
             GameEvents.OnTimeChange -= OnTimeChange;
+            GameEvents.OnGameStateChange -= OnGameStateChange;
+        }
+        void OnGameStateChange(GameState gameState)
+        {
+            switch (gameManager.gameState)
+            {
+                case GameState.FREE_ROAM:
+                    audioManager.PlayAudio(lastMusicPlaying);
+                    break;
+                case GameState.DIALOGUE:
+                    audioManager.PlayAudio(lastMusicPlaying);
+                    break;
+                case GameState.TITLE_SCREEN:
+                    audioManager.PlayAudio("sonk");
+                    break;
+                case GameState.PAUSE_SCREEN:
+                    audioManager.PlayAudio("sonk");
+                    break;
+                case GameState.CREDIT_SCREEN:
+                    audioManager.PlayAudio("sonk");
+                    break;
+                default:
+                    break;
+            }
         }
         void OnTimeChange(TimeSlot timeSlot, Day day)
         {
@@ -55,30 +84,30 @@ namespace Manager.Environment
                 case TimeSlot.MORNING: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     sceneLight.color = morningLightColour;
                     RenderSettings.skybox = morningSkyBox;
+                    audioManager.PlayAudio("Town - Day");
+                    lastMusicPlaying = "Town - Day";
                     break;
                 case TimeSlot.MIDDAY:
                     sceneLight.color = middayLightColour;
                     RenderSettings.skybox = middaySkyBox;
+                    audioManager.PlayAudio("Town - Day");
+                    lastMusicPlaying = "Town - Day";
                     break;
                 case TimeSlot.AFTERNOON:
                     sceneLight.color = afternoonLightColour;
                     RenderSettings.skybox = afternoonSkyBox;
+                    audioManager.PlayAudio("Town - Night");
+                    lastMusicPlaying = "Town - Night";
                     break;
                 case TimeSlot.EVENING:
                     sceneLight.color = eveningLightColour;
                     RenderSettings.skybox = eveningSkyBox;
+                    audioManager.PlayAudio("Town - Night");
+                    lastMusicPlaying = "Town - Night";
                     break;
                 default: break;
             }
         }
         #endregion
     }
-    #region Environment Class
-    //[Groups("Base Settings")]
-    //[System.Serializable]
-    //public class Environments
-    //{
-
-    //}
-    #endregion
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Manager.Audio;
 using PixelCrushers.DialogueSystem;
 namespace Manager.Level
 {
@@ -248,7 +249,7 @@ namespace Manager.Level
                 }
                 foreach (GameObject day2eveningObject in day1EveningObjects)
                 {
-                    day2eveningObject.SetActive(false);
+                    day2eveningObject.SetActive(false);    
                 }
             }
             if (timeSlot == TimeSlot.MIDDAY && day == Day.DAY_1)

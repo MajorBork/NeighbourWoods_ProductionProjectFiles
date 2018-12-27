@@ -19,6 +19,7 @@ namespace Manager.Audio
                 a.audioSource.volume = a.volume;
                 a.audioSource.pitch = a.pitch;
                 a.audioSource.loop = a.loop;
+                a.audioSource.priority = a.priority;
             }
         }
         public void PlayAudio(string audioName)
@@ -60,6 +61,8 @@ namespace Manager.Audio
         public float volume;
         [Range(0.1f, 3f)]
         public float pitch;
+        [Range(0, 256)]
+        public int priority;
     }
     #endregion
 
