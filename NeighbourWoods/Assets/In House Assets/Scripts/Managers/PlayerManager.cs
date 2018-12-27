@@ -223,7 +223,7 @@ namespace Manager.Player
         {
             if (Input.GetButtonDown("Dig"))
             {
-                audioManager.PlayAudio("Bark 1");
+                audioManager.PlayAudio("Digging");
                 Debug.Log("Test Digging");
                 
             }
@@ -234,6 +234,19 @@ namespace Manager.Player
         {
             if (Input.GetButtonDown("Bark"))
             {
+                int number = Random.Range(1, 3);
+                if (number == 1)
+                {
+                    audioManager.PlayAudio("Bark 1");
+                }
+                if (number == 1)
+                {
+                    audioManager.PlayAudio("Bark 2");
+                }
+                if (number == 1)
+                {
+                    audioManager.PlayAudio("Bark 3");
+                }
                 Debug.Log("Bark");
                 //testTMP.text = ("Bark to be coded");
             }
