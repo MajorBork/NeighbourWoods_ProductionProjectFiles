@@ -29,6 +29,7 @@ namespace Manager.Player
         [Header("Object Variables")]
         [Tooltip("The GameObject variable that is the player object in the scene")]
         public GameObject player;
+        public AudioSource dogAudioSource;
         [Tooltip("The variable that references the UIManager script on the canvas")]
         public UIManager gameManagerUI;
         [Tooltip("The variable that references the AudioManager Script on the GameManager object")]
@@ -43,6 +44,11 @@ namespace Manager.Player
         public CharacterController characterController;
         [Tooltip("The array variable that holds smellObject")]
         public GameObject[] smellObjects = new GameObject[0];
+        // All of the Variables for audio stuff
+        [Header("Audio Variables")]
+        public AudioClip Bark1;
+        public AudioClip Bark2;
+        public AudioClip Bark3;
         #endregion
         #region Control Variables
         //All of the controls variables used in the movement functions
@@ -237,15 +243,24 @@ namespace Manager.Player
                 int number = Random.Range(1, 4);
                 if (number == 1)
                 {
-                    audioManager.PlayAudio("Bark 1");
+                    dogAudioSource.clip = Bark1;
+                    dogAudioSource.Play();
+                    //audioManager.FindsSoundSource(dogAudioSource);
+                    //audioManager.PlayAudio("Bark 1");
                 }
                 if (number == 2)
                 {
-                    audioManager.PlayAudio("Bark 2");
+                    dogAudioSource.clip = Bark2;
+                    dogAudioSource.Play();
+                    //audioManager.FindsSoundSource(dogAudioSource);
+                    //audioManager.PlayAudio("Bark 2");
                 }
                 if (number == 3)
                 {
-                    audioManager.PlayAudio("Bark 3");
+                    dogAudioSource.clip = Bark3;
+                    dogAudioSource.Play();
+                    //audioManager.FindsSoundSource(dogAudioSource);
+                    //audioManager.PlayAudio("Bark 3");
                 }
                 Debug.Log("Bark");
                 //testTMP.text = ("Bark to be coded");

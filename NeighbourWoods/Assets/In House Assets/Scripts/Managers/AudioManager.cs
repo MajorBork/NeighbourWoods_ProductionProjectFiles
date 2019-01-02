@@ -9,7 +9,10 @@ namespace Manager.Audio
     #region AudioManager Class
     public class AudioManager : Singleton<AudioManager>
     {
+        
+        public bool hasAudioSource;
         public AudioFiles[] audioFiles;
+        
         void Start()
         {
             foreach (AudioFiles a in audioFiles)
@@ -30,7 +33,28 @@ namespace Manager.Audio
                 Debug.LogWarning("Audio" + audioName + "not found or typo");
                 return;
             }
-            a.audioSource.Play();
+            if (hasAudioSource == true)
+            {
+                a.audioSource.clip = a.audioClip;
+                a.audioSource.volume = a.volume;
+                a.audioSource.pitch = a.pitch;
+                a.audioSource.loop = a.loop;
+                a.audioSource.priority = a.priority;
+            }
+            hasAudioSource = false;
+        }
+        public void FindsSoundSource(AudioSource audioSource)
+        {
+            AudioSource aS = audioSource;
+            if (aS == null)
+            {
+                aS = gameObject.AddComponent<AudioSource>();
+                hasAudioSource = false;
+            }
+            else
+            {
+                hasAudioSource = true;
+            }
         }
         void OnEnable()  //Subscribes to our game events
         {
