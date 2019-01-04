@@ -73,7 +73,8 @@ namespace Manager.Player
         public float speedSmoothTime = 0.1f;
         private float turnSmoothVelocity;
         private float speedSmoothVelocity;
-        private float currentSpeed;
+        public float currentSpeed;
+        public bool isStill;
         [Tooltip("")]
         public bool lockCursor;
         [Tooltip("The variable that references the transform of the playerCamera")]
@@ -105,9 +106,8 @@ namespace Manager.Player
         {
             player = GameObject.FindWithTag("Player");
             playerCameraTransform = Camera.main.transform;
-            playerCameraTransform = Camera.main.transform;
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
-            vision = Vision.NORMAL;;
+            vision = Vision.NORMAL;
             characterController = GetComponent<CharacterController>();
             if (lockCursor)
             {
@@ -125,10 +125,20 @@ namespace Manager.Player
                 playerAnimator.SetBool("IsRunning", true);
                 playerAnimator.SetBool("IsWalking", false);
             }
-            if (running == false || currentSpeed == 0)
+            else if (running == false && isStill == false)
             {
+                playerAnimator.SetBool("IsRunning", false);
                 playerAnimator.SetBool("IsWalking", true);
-
+            }
+            else if (running == false && isStill == true)
+            {
+                playerAnimator.SetBool("IsRunning", false);
+                playerAnimator.SetBool("IsWalking", false);
+            }
+            else if (running == true && isStill == true)
+            {
+                playerAnimator.SetBool("IsRunning", false);
+                playerAnimator.SetBool("IsWalking", false);
             }
             else
             {
@@ -149,12 +159,16 @@ namespace Manager.Player
                     break;
                 case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
                     InventoryController();
+                    isStill = true;
                     break;
                 case GameState.TITLE_SCREEN:
+                    isStill = true;
                     break;
                 case GameState.PAUSE_SCREEN:
+                    isStill = true;
                     break;
                 case GameState.CREDIT_SCREEN:
+                    isStill = true;
                     break;
                 default: break;
             }
@@ -171,6 +185,14 @@ namespace Manager.Player
             }
             float targetSpeed = (running ? runSpeed : walkSpeed) * inputDir.magnitude;
             currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime));
+            if (currentSpeed == 0 || currentSpeed <= 1)
+            {
+                isStill = true;
+            }
+            else
+            {
+                isStill = false;
+            }
             velocityY += Time.deltaTime * gravity;
             Vector3 velocity = transform.forward * currentSpeed + Vector3.up * velocityY;
             characterController.Move(velocity * Time.deltaTime);
