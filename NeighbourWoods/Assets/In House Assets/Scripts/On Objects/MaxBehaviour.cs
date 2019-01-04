@@ -17,10 +17,6 @@ public class MaxBehaviour : MonoBehaviour
     {
 		
 	}
-    public void TurnOnConversation()
-    {
-        maxCollider.isTrigger = true;
-    }
     public void RunAway()
     {
         StartCoroutine(DelayedRunAway());

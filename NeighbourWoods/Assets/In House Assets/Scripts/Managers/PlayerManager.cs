@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.Animations;
 using Manager.UI;
 using Manager.Inventory;
 using TMPro;
@@ -49,6 +50,7 @@ namespace Manager.Player
         public AudioClip Bark1;
         public AudioClip Bark2;
         public AudioClip Bark3;
+        public AudioClip Digging;
         #endregion
         #region Control Variables
         //All of the controls variables used in the movement functions
@@ -78,6 +80,8 @@ namespace Manager.Player
         public Transform playerCameraTransform;
         private Vector3 currentRotation;
         private Vector3 rotationSmoothVelocity;
+        [Tooltip("The variable that references animator on the player object")]
+        public Animator playerAnimator;
         #endregion
         #region Vision Variables
         [Header("Vision Variables")]
@@ -116,6 +120,21 @@ namespace Manager.Player
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             Vector2 inputDir = input.normalized;
             bool running = Input.GetButton("Sprint"); // Sprinting in Game
+            if (running == true)
+            {
+                playerAnimator.SetBool("IsRunning", true);
+                playerAnimator.SetBool("IsWalking", false);
+            }
+            if (running == false || currentSpeed == 0)
+            {
+                playerAnimator.SetBool("IsWalking", true);
+
+            }
+            else
+            {
+                playerAnimator.SetBool("IsRunning", false);
+                playerAnimator.SetBool("IsWalking", false);
+            }
             switch (GameManager.instance.gameState)
             {
                 case GameState.FREE_ROAM: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
@@ -150,7 +169,7 @@ namespace Manager.Player
                 float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + playerCameraTransform.eulerAngles.y;
                 transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, GetModifiedSmoothTime(turnSmoothTime));
             }
-            float targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;
+            float targetSpeed = (running ? runSpeed : walkSpeed) * inputDir.magnitude;
             currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime));
             velocityY += Time.deltaTime * gravity;
             Vector3 velocity = transform.forward * currentSpeed + Vector3.up * velocityY;
@@ -229,9 +248,13 @@ namespace Manager.Player
         {
             if (Input.GetButtonDown("Dig"))
             {
-                audioManager.PlayAudio("Digging");
-                Debug.Log("Test Digging");
-                
+                dogAudioSource.clip = Digging;
+                dogAudioSource.Play();
+                playerAnimator.SetBool("IsDigging", true);
+            }
+            if (Input.GetButtonUp("Dig"))
+            {
+                playerAnimator.SetBool("IsDigging", false);
             }
         }
         #endregion
@@ -262,8 +285,12 @@ namespace Manager.Player
                     //audioManager.FindsSoundSource(dogAudioSource);
                     //audioManager.PlayAudio("Bark 3");
                 }
-                Debug.Log("Bark");
-                //testTMP.text = ("Bark to be coded");
+                //Debug.Log("Bark");
+                playerAnimator.SetBool("IsBarking", true);
+            }
+            if (Input.GetButtonUp("Bark"))
+            {
+                playerAnimator.SetBool("IsBarking", false);
             }
         }
         #endregion

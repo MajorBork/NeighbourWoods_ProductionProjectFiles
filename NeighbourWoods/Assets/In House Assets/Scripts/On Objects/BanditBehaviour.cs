@@ -12,6 +12,7 @@ public class BanditBehaviour : MonoBehaviour
     public GameObject animal4;
     public GameObject animal5;
     public Usable BanditUsable;
+    public MaxBehaviour maxBehaviour; 
     void Start() // Use this for initialization
     {
 
@@ -28,6 +29,7 @@ public class BanditBehaviour : MonoBehaviour
     IEnumerator DelayedRunAway()
     {
         yield return new WaitForSeconds(6);
+        maxBehaviour.maxCollider.enabled = true;
         animal.SetActive(false);
         animal1.SetActive(false);
         animal2.SetActive(false);
