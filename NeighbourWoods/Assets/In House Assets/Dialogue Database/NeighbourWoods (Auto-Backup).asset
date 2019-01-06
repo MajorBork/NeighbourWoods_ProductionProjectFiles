@@ -59,7 +59,7 @@ MonoBehaviour:
       value: 5
       type: 1
       typeString: CustomFieldType_Number
-    portrait: {fileID: 2800000, guid: efbb41708d3893e448efc546b4734976, type: 3}
+    portrait: {fileID: 2800000, guid: d234d2a970598174cbf7ca75c4e611b3, type: 3}
     alternatePortraits: []
   - id: 2
     fields:
@@ -139,7 +139,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 27c1c781f1470594f9eb53dca7041dfb, type: 3}
     alternatePortraits: []
   - id: 8
     fields:
@@ -159,7 +159,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: b27cad429f731dd48a674a3f06bd0938, type: 3}
     alternatePortraits: []
   - id: 9
     fields:
@@ -239,7 +239,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: fcc5ff831fa333642bf4a8a2d399a65c, type: 3}
     alternatePortraits: []
   - id: 3
     fields:
@@ -279,7 +279,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: f9181ea172944d2469aecd11eac824b1, type: 3}
     alternatePortraits: []
   - id: 14
     fields:
@@ -299,7 +299,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 1f51b4cf9e4e9c245ab248b73750bd44, type: 3}
     alternatePortraits: []
   - id: 15
     fields:
@@ -339,7 +339,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 76ca289f3fa4c12438fb6464ef1765a5, type: 3}
     alternatePortraits: []
   - id: 17
     fields:
@@ -379,7 +379,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: aa30f037bf81a6a4f8ed4bab18feba89, type: 3}
     alternatePortraits: []
   - id: 19
     fields:
@@ -459,7 +459,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: fcc5ff831fa333642bf4a8a2d399a65c, type: 3}
     alternatePortraits: []
   - id: 23
     fields:
@@ -644,7 +644,7 @@ MonoBehaviour:
   - id: 32
     fields:
     - title: Name
-      value: Trio 1
+      value: Malo
       type: 0
       typeString: 
     - title: Pictures
@@ -659,12 +659,12 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: a98978fa238148545a600f77e0a79983, type: 3}
     alternatePortraits: []
   - id: 33
     fields:
     - title: Name
-      value: Trio 2
+      value: Velvet
       type: 0
       typeString: 
     - title: Pictures
@@ -679,12 +679,12 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 3bca137b890726343affdd4c23137a7e, type: 3}
     alternatePortraits: []
   - id: 34
     fields:
     - title: Name
-      value: Trio 3
+      value: Pepper
       type: 0
       typeString: 
     - title: Pictures
@@ -699,7 +699,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: dc91d447fc0c6f0429421349d0893cf1, type: 3}
     alternatePortraits: []
   - id: 35
     fields:
@@ -1294,6 +1294,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: The friend points for Bandit
+      type: 0
+      typeString: 
+  - id: 13
+    fields:
+    - title: Name
+      value: MillyFriendPoint
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: The friend points for Milly
       type: 0
       typeString: 
   - id: 7
@@ -3602,7 +3616,7 @@ MonoBehaviour:
         y: 653.6936
         width: 160
         height: 30
-    canvasScrollPosition: {x: 175.71436, y: 31.428574}
+    canvasScrollPosition: {x: 160.00006, y: 142.8572}
     canvasZoom: 0.6999997
   - id: 10
     fields:
@@ -5688,7 +5702,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 12
@@ -8575,7 +8589,7 @@ MonoBehaviour:
         y: 566.0571
         width: 160
         height: 30
-    canvasScrollPosition: {x: 373.43735, y: 377.9675}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.6400003
   - id: 13
     fields:
@@ -12112,7 +12126,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+        value: 'SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 18
@@ -13595,7 +13611,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 18
@@ -13959,7 +13977,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Shobe",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 18
@@ -14597,7 +14617,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Mole",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 21
@@ -16197,7 +16219,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateCharacterTalking,"Milly",GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 22
@@ -16923,7 +16947,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Hey Doggie, that''s wrong huh?
+        value: 'Hey Doggie, what''s wrong huh?
 
           Oh, there''s a kitty up there.
 
@@ -17020,7 +17044,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(OnConversationPoint,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 22
@@ -17032,7 +17058,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["MillyFriendPoint"] = Variable["MillyFriendPoint"] + 5
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17044,7 +17070,7 @@ MonoBehaviour:
         y: 360.81815
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 31.403671}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.58000004
   - id: 23
     fields:
@@ -24340,7 +24366,7 @@ MonoBehaviour:
         y: 1130
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 989.09064}
+    canvasScrollPosition: {x: 0, y: 776.3634}
     canvasZoom: 0.55000013
   - id: 26
     fields:
@@ -24502,7 +24528,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(,,);
+        value: 'SendMessage(UpdateTime,,GameManager);
 
           Delay({{end}})'
         type: 0
@@ -24567,7 +24593,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: '{Bark}'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24583,7 +24609,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SendMessage(UpdateTime,,GameManager);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 26
@@ -24634,7 +24662,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: '{Run away}'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24671,7 +24699,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 221
-        y: 130
+        y: 129
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -44407,8 +44435,8 @@ MonoBehaviour:
         y: 320.9696
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 73.273865}
-    canvasZoom: 0.90999997
+    canvasScrollPosition: {x: 0, y: 620.0123}
+    canvasZoom: 0.93999994
   - id: 43
     fields:
     - title: Title
@@ -45278,7 +45306,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(RunAway,,Max);;
+        value: 'SendMessage(RunAway,,Max);
 
           Delay({{end}})'
         type: 0
@@ -45420,7 +45448,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(RunAway,,Max);;
+        value: 'SendMessage(RunAway,,Max);
 
           Delay({{end}})'
         type: 0

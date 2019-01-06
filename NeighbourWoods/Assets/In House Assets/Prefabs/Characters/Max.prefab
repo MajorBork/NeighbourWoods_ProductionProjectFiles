@@ -204,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animal: {fileID: 1578123094101240}
   maxCollider: {fileID: 65362599017749620}
+  maxUsable: {fileID: 114231178207064604}
 --- !u!114 &114231178207064604
 MonoBehaviour:
   m_ObjectHideFlags: 1
